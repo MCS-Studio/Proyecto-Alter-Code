@@ -1,0 +1,128 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/img/Sprites/Saltear.png" type="Texture" id=2]
+[ext_resource path="res://assets/img/Sprites/Jefe.png" type="Texture" id=3]
+[ext_resource path="res://assets/img/Vida/Backs/Back6.png" type="Texture" id=4]
+[ext_resource path="res://assets/img/Vida/Bars/Bar2.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/Vida/Boarders/Boarder1.png" type="Texture" id=6]
+[ext_resource path="res://scripts/Batalla.gd" type="Script" id=7]
+[ext_resource path="res://assets/img/Vida/Backs/Back1.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/Vida/Bars/Bar1.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="Combate" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 761.0, 918.0 ],
+"_edit_vertical_guides_": [ 32.0, 767.0 ]
+}
+
+[node name="Acciones" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Ataque1" type="Button" parent="Acciones"]
+margin_left = 33.0
+margin_top = 764.0
+margin_right = 720.0
+margin_bottom = 888.0
+custom_fonts/font = SubResource( 1 )
+text = "Disparar subsuficil"
+
+[node name="Ataque2" type="Button" parent="Acciones"]
+margin_left = 33.0
+margin_top = 919.0
+margin_right = 711.0
+margin_bottom = 1043.0
+custom_fonts/font = SubResource( 1 )
+text = "Granada de plasma"
+
+[node name="Ataque3" type="Button" parent="Acciones"]
+margin_left = 769.0
+margin_top = 920.0
+margin_right = 1151.0
+margin_bottom = 1044.0
+custom_fonts/font = SubResource( 1 )
+text = "Embestida"
+
+[node name="Ataque4" type="Button" parent="Acciones"]
+margin_left = 769.0
+margin_top = 763.0
+margin_right = 1559.0
+margin_bottom = 887.0
+custom_fonts/font = SubResource( 1 )
+text = "Pedido de suministros"
+
+[node name="Ultimate" type="Button" parent="Acciones"]
+margin_left = 1225.0
+margin_top = 603.0
+margin_right = 1903.0
+margin_bottom = 727.0
+custom_fonts/font = SubResource( 1 )
+text = "Ataque orbital MAC"
+clip_text = true
+expand_icon = true
+
+[node name="Personajes" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Jefe" type="TextureRect" parent="Personajes"]
+margin_left = 38.0
+margin_top = 173.0
+margin_right = 628.0
+margin_bottom = 757.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Vida Jefe" type="TextureProgress" parent="Personajes/Jefe"]
+margin_left = 98.0
+margin_top = 524.0
+margin_right = 498.0
+margin_bottom = 574.0
+texture_under = ExtResource( 8 )
+texture_over = ExtResource( 6 )
+texture_progress = ExtResource( 9 )
+
+[node name="lblVidajefe" type="Label" parent="Personajes/Jefe"]
+margin_left = 514.0
+margin_top = 514.0
+margin_right = 592.0
+margin_bottom = 573.0
+custom_fonts/font = SubResource( 2 )
+
+[node name="Salter" type="TextureRect" parent="Personajes"]
+margin_left = 1330.0
+margin_right = 1920.0
+margin_bottom = 584.0
+texture = ExtResource( 2 )
+expand = true
+flip_h = true
+
+[node name="VidaSalter" type="TextureProgress" parent="Personajes/Salter"]
+margin_left = 159.0
+margin_top = 537.0
+margin_right = 559.0
+margin_bottom = 587.0
+texture_under = ExtResource( 4 )
+texture_over = ExtResource( 6 )
+texture_progress = ExtResource( 5 )
+
+[node name="lblVidaSalter" type="Label" parent="Personajes/Salter"]
+margin_left = 71.0
+margin_top = 528.0
+margin_right = 149.0
+margin_bottom = 587.0
+custom_fonts/font = SubResource( 2 )
+
+[connection signal="pressed" from="Acciones/Ataque1" to="." method="_on_Ataque1_pressed"]
