@@ -4,12 +4,11 @@ onready var tree = get_tree()
 
 #Reinicia la animacion de inicio(Para debug)
 func _on_reiniciar_pressed():
-	tree.change_scene("res://Esenas/Intro.tscn")
+	tree.change_scene("res://Esenas/Inicio.tscn")
 
 #Inicia el juego
 func _on_Iniciar_pressed():
-	pass
-	#Actualizar escena
+	tree.change_scene("res://Esenas/Batalla/Batalla.tscn")
 
 #Salir de el juego
 func _on_Salir_pressed():

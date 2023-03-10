@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Videos/LogoFinal.webm" type="VideoStream" id=1]
+[ext_resource path="res://scripts/Intro.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 4 )
+
+[node name="Intro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="LogoAnimado" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="SaltarIntro" type="TextureButton" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Saltar" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -255.0
+margin_top = -128.0
+margin_right = 255.0
+margin_bottom = -45.0
+custom_fonts/font = SubResource( 1 )
+text = "Da click para omitir..."
+
+[connection signal="finished" from="LogoAnimado" to="." method="_on_LogoAnimado_finished"]
+[connection signal="pressed" from="SaltarIntro" to="." method="_on_SaltarIntro_pressed"]
