@@ -45,7 +45,7 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Ataque1" type="Button" parent="Acciones"]
+[node name="Subfusil" type="Button" parent="Acciones"]
 margin_left = 33.0
 margin_top = 764.0
 margin_right = 720.0
@@ -53,7 +53,7 @@ margin_bottom = 888.0
 custom_fonts/font = SubResource( 1 )
 text = "Disparar subsuficil"
 
-[node name="Ataque2" type="Button" parent="Acciones"]
+[node name="Granada" type="Button" parent="Acciones"]
 margin_left = 33.0
 margin_top = 919.0
 margin_right = 711.0
@@ -61,7 +61,7 @@ margin_bottom = 1043.0
 custom_fonts/font = SubResource( 1 )
 text = "Granada de plasma"
 
-[node name="Ataque3" type="Button" parent="Acciones"]
+[node name="Embestida" type="Button" parent="Acciones"]
 margin_left = 769.0
 margin_top = 920.0
 margin_right = 1151.0
@@ -183,7 +183,9 @@ margin_bottom = 1056.0
 custom_fonts/font = SubResource( 4 )
 text = "Regresar"
 
-[connection signal="pressed" from="Acciones/Ataque1" to="." method="_on_Ataque1_pressed"]
+[connection signal="pressed" from="Acciones/Subfusil" to="." method="_on_Ataque1_pressed"]
+[connection signal="pressed" from="Acciones/Granada" to="." method="_on_Granada_pressed"]
+[connection signal="pressed" from="Acciones/Embestida" to="." method="_on_Embestida_pressed"]
 [connection signal="pressed" from="Acciones/Vida" to="." method="_on_Vida_pressed"]
 [connection signal="pressed" from="Menu/Salir" to="." method="_on_Salir_pressed"]
 [connection signal="pressed" from="Menu/RegresarMenu" to="." method="_on_RegresarMenu_pressed"]

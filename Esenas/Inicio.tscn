@@ -20,20 +20,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 stream = ExtResource( 1 )
 autoplay = true
+buffering_msec = 1000
 
 [node name="SaltarIntro" type="TextureButton" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Saltar" type="Label" parent="."]
-anchor_left = 0.5
+visible = false
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -255.0
-margin_top = -128.0
-margin_right = 255.0
-margin_bottom = -45.0
+margin_left = -510.0
+margin_top = -83.0
 custom_fonts/font = SubResource( 1 )
 text = "Da click para omitir..."
 
@@ -44,5 +44,6 @@ autoplay = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Intro = ExtResource( 5 )
 
+[connection signal="finished" from="LogoAnimado" to="." method="_on_LogoAnimado_finished"]
 [connection signal="pressed" from="SaltarIntro" to="." method="_on_SaltarIntro_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

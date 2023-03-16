@@ -1,6 +1,7 @@
 extends Control
 
 onready var tree = get_tree()
+var WinFlag = false
 
 #Reinicia la animacion de inicio(Para debug)
 func _on_reiniciar_pressed():
@@ -66,3 +67,13 @@ func HabilitarBotones():
 	get_node("MenuInicial/Botones/Secreto").disabled = false
 	get_node("MenuInicial/Botones/Salir").disabled = false
 	get_node("ColorRect").hide()
+
+
+func _on_CheckButton_pressed():
+	if WinFlag !=  true:
+		OS.window_fullscreen = true
+		WinFlag = true
+	else:
+		OS.window_fullscreen = false
+		WinFlag = false
+	

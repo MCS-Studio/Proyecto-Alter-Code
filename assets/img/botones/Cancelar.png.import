@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Salir.png-710305ae463014fa65907f6e3b62b297.stex"
+path="res://.import/Cancelar.png-2f04b7987acf0c64c967655885cc2ab0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/botones/Salir.png"
-dest_files=[ "res://.import/Salir.png-710305ae463014fa65907f6e3b62b297.stex" ]
+source_file="res://assets/img/botones/Cancelar.png"
+dest_files=[ "res://.import/Cancelar.png-2f04b7987acf0c64c967655885cc2ab0.stex" ]
 
 [params]
 

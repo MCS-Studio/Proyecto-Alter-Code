@@ -18,14 +18,13 @@ default_bus_layout=""
 
 [autoload]
 
-SalirPop="*res://Esenas/Popups/SalirPop.gd"
+Globales="*res://scripts/Globales.gd"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
 window/size/resizable=false
-window/size/fullscreen=true
 
 [gui]
 
