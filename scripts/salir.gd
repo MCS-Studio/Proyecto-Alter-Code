@@ -73,6 +73,7 @@ func _on_CheckButton_pressed():
 	if WinFlag !=  true:
 		OS.window_fullscreen = true
 		WinFlag = true
+		Globales.cambiarResolusion()
 	else:
 		OS.window_fullscreen = false
 		WinFlag = false

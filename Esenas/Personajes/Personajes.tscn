@@ -16,8 +16,9 @@ animations = [ {
 [node name="Personajes" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1598, 665 )
+position = Vector2( 1346, 431 )
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 playing = true
 centered = false

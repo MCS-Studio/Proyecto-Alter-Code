@@ -9,18 +9,16 @@
 script = ExtResource( 2 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2( 2909, 0 )
+motion_mirroring = Vector2( 2898, 0 )
 
 [node name="FondoParalax" type="Sprite" parent="ParallaxLayer"]
-position = Vector2( 936, 387 )
-scale = Vector2( 1.42077, 1.42857 )
+position = Vector2( 930.602, 386.465 )
+scale = Vector2( 1.4155, 1.42327 )
 texture = ExtResource( 1 )
-region_enabled = true
 region_rect = Rect2( 0, 0, 2048, 756 )
 
 [node name="Degradado" type="Sprite" parent="."]
-position = Vector2( 960, 538 )
-scale = Vector2( 0.999479, 1 )
+position = Vector2( 960, 540 )
 texture = ExtResource( 4 )
 
 [node name="Rocas" type="Sprite" parent="."]

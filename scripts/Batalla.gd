@@ -17,7 +17,6 @@ func _process(delta):
 	get_node("Personajes/Salter/lblVidaSalter").text = str(Globales.VidaSalter) + str(" HP")
 	#Label Turno
 	get_node("Acciones/Turno").text = str("Turno: " ) + str(Globales.Turno)
-	get_node("Timer/LblTimer").text = str("Numero ") + str(Globales.timeDamage)
 
 func _on_Ataque1_pressed():
 	SubfusilJefe()
