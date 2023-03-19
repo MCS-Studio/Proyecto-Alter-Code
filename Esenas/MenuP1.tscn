@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/salir.gd" type="Script" id=2]
@@ -21,6 +21,9 @@
 [ext_resource path="res://assets/img/botones/Cancelar Hover.png" type="Texture" id=19]
 [ext_resource path="res://assets/img/botones/Cancelar.png" type="Texture" id=20]
 [ext_resource path="res://assets/img/botones/Cancelar Press.png" type="Texture" id=21]
+[ext_resource path="res://assets/img/config/Controles Hover.png" type="Texture" id=22]
+[ext_resource path="res://assets/img/config/Controles.png" type="Texture" id=23]
+[ext_resource path="res://assets/img/config/Controles Press.png" type="Texture" id=24]
 
 [sub_resource type="DynamicFont" id=1]
 size = 29
@@ -163,12 +166,29 @@ texture_hover = ExtResource( 19 )
 expand = true
 
 [node name="MenuConfig" type="TextureRect" parent="."]
+visible = false
 material = SubResource( 3 )
 margin_left = 249.0
 margin_top = 159.0
 margin_right = 1757.0
 margin_bottom = 921.0
 texture = ExtResource( 13 )
+expand = true
+
+[node name="Lateral" type="Control" parent="MenuConfig"]
+margin_left = 48.0
+margin_top = 106.0
+margin_right = 495.0
+margin_bottom = 716.0
+
+[node name="Controles" type="TextureButton" parent="MenuConfig/Lateral"]
+margin_left = 32.0
+margin_top = 12.0
+margin_right = 395.0
+margin_bottom = 101.0
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 22 )
 expand = true
 
 [node name="SalirConfig" type="Button" parent="MenuConfig"]
@@ -189,22 +209,20 @@ anchor_left = 0.463
 anchor_top = 0.202
 anchor_right = 0.463
 anchor_bottom = 0.202
-margin_left = -124.204
-margin_top = -38.924
-margin_right = 122.796
-margin_bottom = 39.076
+margin_left = -111.204
+margin_top = -46.924
+margin_right = 135.796
+margin_bottom = 31.076
 custom_fonts/font = SubResource( 5 )
 text = "Resolucion"
 
 [node name="CheckButton" type="CheckButton" parent="MenuConfig"]
-margin_left = 732.0
-margin_top = 30.0
-margin_right = 1446.0
-margin_bottom = 777.0
+margin_left = 586.0
+margin_top = 189.0
+margin_right = 1300.0
+margin_bottom = 264.0
 size_flags_horizontal = 2
 custom_fonts/font = SubResource( 6 )
-custom_icons/off = ExtResource( 15 )
-custom_icons/on = ExtResource( 14 )
 text = "Pantalla completa"
 clip_text = true
 
