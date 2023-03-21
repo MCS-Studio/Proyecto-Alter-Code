@@ -68,6 +68,7 @@ func HabilitarBotones():
 	get_node("MenuInicial/Botones/Salir").disabled = false
 	get_node("ColorRect").hide()
 
+
 func _on_CheckButton_pressed():
 	if WinFlag !=  true:
 		OS.window_fullscreen = true
@@ -75,13 +76,4 @@ func _on_CheckButton_pressed():
 	else:
 		OS.window_fullscreen = false
 		WinFlag = false
-
-func _on_Creditos_pressed():
-	get_node("ColorRect").hide()
-	get_node("MenuConfig").hide()
-	get_node("Creditos").visible = true
-
-func _on_Reresar_pressed():
-	get_node("Creditos").visible = false
-	get_node("MenuConfig").visible = true
-	get_node("ColorRect").visible = true
+	
