@@ -2,6 +2,7 @@ extends Control
 
 onready var tree = get_tree()
 var WinFlag = false
+var EscFlag = false
 
 #Reinicia la animacion de inicio(Para debug)
 func _on_reiniciar_pressed():
@@ -36,9 +37,18 @@ func _on_Cancelarpop_pressed():
 func _on_SalirConfig_pressed():
 	MostrarMenu()
 
-func _physics_process(delta):
+func _input(event):
+	#Abre el menu de config al precionar la tecla ESC
 	if Input.is_action_pressed("Escape"):
-		get_node("ConfirmacionSalida").visible = true
+		if EscFlag != true:
+			OcultarMenu()
+			EscFlag = true
+		else:
+			MostrarMenu()
+			EscFlag = false
+
+func _physics_process(delta):
+	pass
 
 func OcultarMenu():
 	get_node("MenuInicial").hide()
