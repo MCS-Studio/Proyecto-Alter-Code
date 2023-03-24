@@ -1,5 +1,7 @@
 extends Control
 
+
+
 func _ready():
 	get_node("Personajes/Jefe/Vida Jefe").max_value = Globales.VidaJefe
 	get_node("Personajes/Jefe/EstaminaJefe").max_value = Globales.EstaminaJefe
@@ -23,9 +25,6 @@ func _on_Ataque1_pressed():
 
 func _on_Vida_pressed():
 	SuministrosJefe()
-
-func _on_Granada_pressed():
-	pass
 
 func _on_Embestida_pressed():
 	pass
@@ -51,7 +50,6 @@ func EvaluarVida(var vida, var vidaMaxima):
 		return vida
 
 #Funciones de ataque
-
 func SubfusilJefe():
 	if Globales.EstaminaJefe >= 10:
 		Globales.VidaSalter = Globales.VidaSalter - (Globales.Ataquejefe - (Globales.DefensaSalter * (Globales.Ataquejefe/100.00)))
@@ -65,8 +63,6 @@ func SuministrosJefe():
 	Globales.EstaminaJefe = EvaluarEstamina(Globales.EstaminaJefe, Globales.EstaminaMaximaJefe)
 	Globales.Turno = Globales.Turno + 1
 
-func GranadaJefe():
-	pass
-
 func EnvestidaJefe():
+	
 	pass
