@@ -95,3 +95,6 @@ func _on_Reresar_pressed():
 	get_node("Creditos").visible = false
 	get_node("MenuConfig").visible = true
 	get_node("ColorRect").visible = true
+
+func _on_SalirConfiig_pressed():
+	MostrarMenu()

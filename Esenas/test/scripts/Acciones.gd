@@ -1,8 +1,10 @@
-extends Button
+extends Control
 
 var time = 0
 var timer_on = false
 var suma = 0
+var turnoActivacion = Globales.Turno
+var activacion = false
 
 func _process(delta):
 	if(timer_on == true):
@@ -20,7 +22,25 @@ func _process(delta):
 			suma = 0
 			print(suma)
 			print(timer_on)
-
+	if activacion ==  true:
+		Globales.evadir = 0
+		print("evadi")
+		if Globales.Turno == turnoActivacion+2:
+			activacion = false 
+			print("ya no evado")
+		
 func _on_Granada_pressed():
 	Globales.Turno += 1
 	timer_on = true
+
+
+
+func _on_Embestida_pressed():
+	turnoActivacion = Globales.Turno
+	Globales.Turno += 1
+	print("hola")
+	print(Globales.Turno)
+	print(turnoActivacion)
+	activacion = true
+	
+	

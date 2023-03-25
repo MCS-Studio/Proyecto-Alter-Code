@@ -1,5 +1,6 @@
 extends Node
-
+#Variables
+var evadir = 1.00
 
 #Estadisticas Jefe
 

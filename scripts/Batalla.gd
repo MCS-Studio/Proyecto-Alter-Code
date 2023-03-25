@@ -26,9 +26,6 @@ func _on_Ataque1_pressed():
 func _on_Vida_pressed():
 	SuministrosJefe()
 
-func _on_Embestida_pressed():
-	pass
-
 func _on_Salir_pressed():
 	get_tree().quit()
 
@@ -54,6 +51,7 @@ func SubfusilJefe():
 	if Globales.EstaminaJefe >= 10:
 		Globales.VidaSalter = Globales.VidaSalter - (Globales.Ataquejefe - (Globales.DefensaSalter * (Globales.Ataquejefe/100.00)))
 		Globales.EstaminaJefe = Globales.EstaminaJefe - 10
+		Globales.VidaJefe = Globales.VidaJefe - (Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00)))
 	Globales.Turno = Globales.Turno + 1
 
 func SuministrosJefe():
@@ -62,7 +60,3 @@ func SuministrosJefe():
 	Globales.EstaminaJefe = Globales.EstaminaJefe + (Globales.EstaminaMaximaJefe * 0.10)
 	Globales.EstaminaJefe = EvaluarEstamina(Globales.EstaminaJefe, Globales.EstaminaMaximaJefe)
 	Globales.Turno = Globales.Turno + 1
-
-func EnvestidaJefe():
-	
-	pass

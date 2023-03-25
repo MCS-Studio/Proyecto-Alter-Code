@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/img/Vida/Bars/Bar1.png" type="Texture" id=9]
 [ext_resource path="res://assets/img/Vida/Bars/Bar4.png" type="Texture" id=10]
 [ext_resource path="res://assets/img/Vida/Backs/Back2.png" type="Texture" id=11]
-[ext_resource path="res://scripts/Granada.gd" type="Script" id=12]
+[ext_resource path="res://Esenas/test/scripts/Acciones.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -45,6 +45,7 @@ __meta__ = {
 [node name="Acciones" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+script = ExtResource( 12 )
 
 [node name="Subfusil" type="Button" parent="Acciones"]
 margin_left = 33.0
@@ -61,7 +62,6 @@ margin_right = 711.0
 margin_bottom = 1043.0
 custom_fonts/font = SubResource( 1 )
 text = "Granada de plasma"
-script = ExtResource( 12 )
 
 [node name="Embestida" type="Button" parent="Acciones"]
 margin_left = 769.0
@@ -186,8 +186,8 @@ custom_fonts/font = SubResource( 4 )
 text = "Regresar"
 
 [connection signal="pressed" from="Acciones/Subfusil" to="." method="_on_Ataque1_pressed"]
-[connection signal="pressed" from="Acciones/Granada" to="Acciones/Granada" method="_on_Granada_pressed"]
-[connection signal="pressed" from="Acciones/Embestida" to="." method="_on_Embestida_pressed"]
+[connection signal="pressed" from="Acciones/Granada" to="Acciones" method="_on_Granada_pressed"]
+[connection signal="pressed" from="Acciones/Embestida" to="Acciones" method="_on_Embestida_pressed"]
 [connection signal="pressed" from="Acciones/Vida" to="." method="_on_Vida_pressed"]
 [connection signal="pressed" from="Menu/Salir" to="." method="_on_Salir_pressed"]
 [connection signal="pressed" from="Menu/RegresarMenu" to="." method="_on_RegresarMenu_pressed"]
