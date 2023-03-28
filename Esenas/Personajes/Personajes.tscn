@@ -19,6 +19,5 @@ animations = [ {
 position = Vector2( 1346, 431 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 1
 playing = true
 centered = false

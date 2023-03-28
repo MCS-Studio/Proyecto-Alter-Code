@@ -10,12 +10,13 @@ func _on_reiniciar_pressed():
 
 #Inicia el juego
 func _on_Iniciar_pressed():
-	tree.change_scene("res://Esenas/Batalla/Batalla.tscn")
+	$Fade.visible = true
+	$AnimacionSalir.play("Cargar")
+#	tree.change_scene("res://Esenas/Batalla/Batalla.tscn")
 
 #Salir de el juego
 func _on_Salir_pressed():
 	get_node("ColorRect").visible = true
-	get_node("AnimationPlayer").play("Fade_In")
 	get_node("ConfirmacionSalida").visible = true
 	get_node("MenuInicial").hide()
 
@@ -54,7 +55,7 @@ func OcultarMenu():
 	get_node("MenuInicial").hide()
 	get_node("MenuConfig").visible = true
 	get_node("ColorRect").visible = true
-	get_node("AnimationPlayer").play("Fade_In")
+	get_node("Fades").play("Fade_In")
 
 func MostrarMenu():
 	get_node("MenuInicial").visible = true
@@ -98,3 +99,6 @@ func _on_Reresar_pressed():
 
 func _on_SalirConfiig_pressed():
 	MostrarMenu()
+
+func _on_AnimacionSalir_animation_finished(anim_name):
+	Globales.call_deferred("goto_scene", "res://Esenas/Batalla/Batalla.tscn", self)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/salir.gd" type="Script" id=2]
@@ -61,6 +61,10 @@
 [ext_resource path="res://assets/img/botones/Configuracion/images/Salir hover.png" type="Texture" id=59]
 [ext_resource path="res://assets/img/botones/Configuracion/images/Salir press.png" type="Texture" id=60]
 [ext_resource path="res://assets/img/botones/Configuracion/images/salir.png" type="Texture" id=61]
+[ext_resource path="res://animaciones/Cargar.tres" type="Animation" id=62]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Sonido press.png" type="Texture" id=63]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Sonido.png" type="Texture" id=64]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Sonido hover.png" type="Texture" id=65]
 
 [sub_resource type="DynamicFont" id=1]
 size = 29
@@ -123,10 +127,6 @@ animations = [ {
 size = 39
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=11]
-size = 25
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=12]
 size = 50
 font_data = ExtResource( 1 )
@@ -134,6 +134,21 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=13]
 size = 80
 font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Logo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [node name="menu" type="Control"]
 anchor_right = 1.0
@@ -146,8 +161,8 @@ script = ExtResource( 2 )
 [node name="MenuInicial" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -637.0
-margin_bottom = -357.0
+margin_right = -3.0
+margin_bottom = -2.0
 
 [node name="Logo" type="Sprite" parent="MenuInicial"]
 position = Vector2( 48, 26 )
@@ -197,7 +212,6 @@ texture_hover = ExtResource( 17 )
 expand = true
 
 [node name="reiniciar" type="Button" parent="MenuInicial/Botones"]
-visible = false
 margin_left = 26.0
 margin_top = 540.0
 margin_right = 276.0
@@ -218,7 +232,7 @@ centered = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 0, 0, 0, 0.509804 )
 margin_right = 1280.0
 margin_bottom = 720.0
 
@@ -313,6 +327,7 @@ position = Vector2( 57.3333, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Abajo"
+frame = 1
 playing = true
 
 [node name="Abajo" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -320,6 +335,7 @@ position = Vector2( 57.3333, 64.6666 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Arriba"
+frame = 1
 playing = true
 
 [node name="Izquierda" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -327,6 +343,7 @@ position = Vector2( 15.9999, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Izquierda"
+frame = 1
 playing = true
 
 [node name="Derecha" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -334,6 +351,7 @@ position = Vector2( 99.3336, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Derecha"
+frame = 1
 playing = true
 
 [node name="Interactuar" type="Label" parent="MenuConfig/Controles/ControlesCtrl"]
@@ -348,7 +366,7 @@ text = "Interactuar"
 position = Vector2( 61.3333, 64.6666 )
 scale = Vector2( 2.83334, 2.83334 )
 frames = SubResource( 7 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="AbrirMenu" type="Label" parent="MenuConfig/Controles/ControlesCtrl"]
@@ -363,6 +381,7 @@ text = "Abrir el menú"
 position = Vector2( 62.8333, 64.5 )
 scale = Vector2( 2.875, 2.875 )
 frames = SubResource( 9 )
+frame = 1
 playing = true
 
 [node name="Jugador" parent="MenuConfig/Controles/ControlesCtrl" instance=ExtResource( 58 )]
@@ -393,16 +412,15 @@ text = "Pantalla completa"
 clip_text = true
 
 [node name="Audio" type="TextureButton" parent="MenuConfig"]
-margin_left = -98.1667
-margin_top = 62.8333
-margin_right = -58.1667
-margin_bottom = 102.833
-
-[node name="Accesibilidad" type="TextureButton" parent="MenuConfig"]
-margin_left = 230.5
-margin_top = -27.8333
-margin_right = 270.5
-margin_bottom = 12.1667
+margin_left = 29.8333
+margin_top = 199.5
+margin_right = 269.833
+margin_bottom = 259.5
+texture_normal = ExtResource( 64 )
+texture_pressed = ExtResource( 63 )
+texture_hover = ExtResource( 65 )
+texture_disabled = ExtResource( 63 )
+expand = true
 
 [node name="Creditos" type="TextureButton" parent="MenuConfig"]
 margin_left = 29.8333
@@ -424,20 +442,6 @@ texture_normal = ExtResource( 61 )
 texture_pressed = ExtResource( 60 )
 texture_hover = ExtResource( 59 )
 expand = true
-
-[node name="SalirConfig" type="Button" parent="MenuConfig"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -219.333
-margin_top = 145.333
-margin_right = -167.333
-margin_bottom = 181.333
-custom_fonts/font = SubResource( 11 )
-text = "Salir"
-expand_icon = true
 
 [node name="Creditos" type="Control" parent="."]
 visible = false
@@ -533,9 +537,28 @@ text = "Programacion"
 margin_right = 1293.0
 margin_bottom = 733.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 0.0666667, 0.0509804, 0.270588, 1 )
+margin_right = 1280.0
+margin_bottom = 720.0
+
+[node name="Logo" type="Sprite" parent="."]
+visible = false
+position = Vector2( 89.3333, 170 )
+scale = Vector2( 0.720123, 0.720123 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="Fades" type="AnimationPlayer" parent="."]
 anims/Fade_In = ExtResource( 12 )
 anims/Fade_Out = ExtResource( 18 )
+
+[node name="AnimacionSalir" type="AnimationPlayer" parent="."]
+anims/Cargar = ExtResource( 62 )
+anims/Fade_In = ExtResource( 12 )
+anims/Fade_Out = ExtResource( 18 )
+anims/RESET = SubResource( 14 )
 
 [connection signal="pressed" from="MenuInicial/Botones/Iniciar" to="." method="_on_Iniciar_pressed"]
 [connection signal="pressed" from="MenuInicial/Botones/Salir" to="." method="_on_Salir_pressed"]
@@ -547,7 +570,8 @@ anims/Fade_Out = ExtResource( 18 )
 [connection signal="pressed" from="MenuConfig/Controles" to="MenuConfig" method="_on_Controles_pressed"]
 [connection signal="pressed" from="MenuConfig/Video" to="MenuConfig" method="_on_Video_pressed"]
 [connection signal="pressed" from="MenuConfig/Video/CheckButton" to="." method="_on_CheckButton_pressed"]
+[connection signal="pressed" from="MenuConfig/Audio" to="MenuConfig" method="_on_Audio_pressed"]
 [connection signal="pressed" from="MenuConfig/Creditos" to="." method="_on_Creditos_pressed"]
 [connection signal="pressed" from="MenuConfig/SalirConfiig" to="." method="_on_SalirConfiig_pressed"]
-[connection signal="pressed" from="MenuConfig/SalirConfig" to="." method="_on_SalirConfig_pressed"]
 [connection signal="pressed" from="Creditos/Reresar" to="." method="_on_Reresar_pressed"]
+[connection signal="animation_finished" from="AnimacionSalir" to="." method="_on_AnimacionSalir_animation_finished"]

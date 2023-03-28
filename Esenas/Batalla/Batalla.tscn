@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/img/Sprites/Saltear.png" type="Texture" id=2]
@@ -7,11 +7,12 @@
 [ext_resource path="res://assets/img/Vida/Bars/Bar2.png" type="Texture" id=5]
 [ext_resource path="res://assets/img/Vida/Boarders/Boarder1.png" type="Texture" id=6]
 [ext_resource path="res://scripts/Batalla.gd" type="Script" id=7]
-[ext_resource path="res://assets/img/Vida/Backs/Back1.png" type="Texture" id=8]
-[ext_resource path="res://assets/img/Vida/Bars/Bar1.png" type="Texture" id=9]
-[ext_resource path="res://assets/img/Vida/Bars/Bar4.png" type="Texture" id=10]
-[ext_resource path="res://assets/img/Vida/Backs/Back2.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/barras/Vida full.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/barras/Energia full.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/barras/Energia empty.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/barras/Vida empty.png" type="Texture" id=11]
 [ext_resource path="res://Esenas/test/scripts/Acciones.gd" type="Script" id=12]
+[ext_resource path="res://animaciones/DañoJefe.tres" type="Animation" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -37,10 +38,6 @@ font_data = ExtResource( 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 7 )
-__meta__ = {
-"_edit_horizontal_guides_": [ 761.0, 918.0 ],
-"_edit_vertical_guides_": [ 32.0, 767.0 ]
-}
 
 [node name="Acciones" type="Control" parent="."]
 margin_right = 40.0
@@ -96,6 +93,11 @@ margin_right = 871.0
 margin_bottom = 601.0
 custom_fonts/font = SubResource( 5 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Acciones"]
+root_node = NodePath("../..")
+"anims/Daño" = ExtResource( 13 )
+"anims/DañoJefe" = ExtResource( 13 )
+
 [node name="Personajes" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -108,32 +110,32 @@ margin_bottom = 609.0
 texture = ExtResource( 3 )
 expand = true
 
-[node name="Vida Jefe" type="TextureProgress" parent="Personajes/Jefe"]
-margin_left = 31.0
-margin_top = 597.0
-margin_right = 431.0
-margin_bottom = 647.0
-texture_under = ExtResource( 8 )
-texture_over = ExtResource( 6 )
-texture_progress = ExtResource( 9 )
+[node name="Vida Jefe" type="TextureProgress" parent="Personajes"]
+margin_left = 86.0
+margin_top = 622.0
+margin_right = 983.0
+margin_bottom = 672.0
+texture_under = ExtResource( 11 )
+texture_progress = ExtResource( 8 )
+nine_patch_stretch = true
 
-[node name="lblVidajefe" type="Label" parent="Personajes/Jefe/Vida Jefe"]
+[node name="lblVidajefe" type="Label" parent="Personajes/Vida Jefe"]
 margin_left = 423.0
 margin_top = -2.0
 margin_right = 501.0
 margin_bottom = 57.0
 custom_fonts/font = SubResource( 2 )
 
-[node name="EstaminaJefe" type="TextureProgress" parent="Personajes/Jefe"]
-margin_left = 33.0
-margin_top = 661.0
-margin_right = 433.0
-margin_bottom = 711.0
-texture_under = ExtResource( 11 )
-texture_over = ExtResource( 6 )
-texture_progress = ExtResource( 10 )
+[node name="EstaminaJefe" type="TextureProgress" parent="Personajes"]
+margin_left = 88.0
+margin_top = 686.0
+margin_right = 802.0
+margin_bottom = 736.0
+texture_under = ExtResource( 10 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
 
-[node name="lblEstamina" type="Label" parent="Personajes/Jefe/EstaminaJefe"]
+[node name="lblEstamina" type="Label" parent="Personajes/EstaminaJefe"]
 margin_left = 414.0
 margin_top = -2.0
 margin_right = 491.0
@@ -185,9 +187,10 @@ margin_bottom = 1056.0
 custom_fonts/font = SubResource( 4 )
 text = "Regresar"
 
-[connection signal="pressed" from="Acciones/Subfusil" to="." method="_on_Ataque1_pressed"]
+[connection signal="pressed" from="Acciones/Subfusil" to="Acciones" method="_on_Subfusil_pressed"]
 [connection signal="pressed" from="Acciones/Granada" to="Acciones" method="_on_Granada_pressed"]
 [connection signal="pressed" from="Acciones/Embestida" to="Acciones" method="_on_Embestida_pressed"]
-[connection signal="pressed" from="Acciones/Vida" to="." method="_on_Vida_pressed"]
+[connection signal="pressed" from="Acciones/Vida" to="Acciones" method="_on_Vida_pressed"]
+[connection signal="pressed" from="Acciones/Ultimate" to="Acciones" method="_on_Ultimate_pressed"]
 [connection signal="pressed" from="Menu/Salir" to="." method="_on_Salir_pressed"]
 [connection signal="pressed" from="Menu/RegresarMenu" to="." method="_on_RegresarMenu_pressed"]

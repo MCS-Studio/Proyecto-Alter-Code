@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/img/Carga/Cargando 0.png" type="Texture" id=1]
+[ext_resource path="res://assets/img/Vida/Boarders/Boarder9.png" type="Texture" id=2]
+[ext_resource path="res://assets/img/Vida/Bars/Bar4.png" type="Texture" id=3]
+[ext_resource path="res://assets/img/AlterCode.png" type="Texture" id=4]
+[ext_resource path="res://assets/img/Carga/Cargando 1.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/Vida/Backs/Back5.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/Carga/Cargando 2.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/Carga/Cargando 3.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "loading",
+"speed": 3.0
+} ]
+
+[node name="LoadingBar" type="CanvasLayer"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 540.0 ],
+"_edit_vertical_guides_": [ 960.0, 517.0, 1406.0 ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.0666667, 0.0509804, 0.270588, 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 519, 66 )
+frames = SubResource( 1 )
+animation = "loading"
+playing = true
+centered = false
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -444.5
+margin_top = -257.0
+margin_right = 444.5
+margin_bottom = -170.0
+texture_under = ExtResource( 7 )
+texture_over = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+nine_patch_stretch = true
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 120, 251 )
+scale = Vector2( 1.10153, 1.10153 )
+texture = ExtResource( 4 )
+centered = false
