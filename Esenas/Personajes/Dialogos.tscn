@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/img/Dialogos/CuadroDialogo.png" type="Texture" id=1]
+[ext_resource path="res://assets/img/Dialogos/FinDialogo.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/Dialogo.gd" type="Script" id=4]
+[ext_resource path="res://Animaciones/Esperando.tres" type="Animation" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Dialogo" type="Control" parent="."]
+anchor_left = 0.502
+anchor_top = 1.0
+anchor_right = 0.502
+anchor_bottom = 1.0
+margin_left = -957.84
+margin_top = -474.0
+margin_right = 962.16
+margin_bottom = -6.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Dialogo"]
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.064
+texture = ExtResource( 1 )
+expand = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 850.0
+margin_top = 150.0
+margin_right = -50.0
+margin_bottom = -50.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Hola Pe "
+text = "Hola Pe "
+
+[node name="Tween" type="Tween" parent="Dialogo"]
+
+[node name="Next" type="TextureRect" parent="Dialogo"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -131.0
+margin_top = -92.9747
+margin_right = -33.0
+margin_bottom = -39.9747
+texture = ExtResource( 2 )
+expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogo/Next"]
+autoplay = "Esperando"
+anims/Esperando = ExtResource( 5 )
+
+[connection signal="tween_completed" from="Dialogo/Tween" to="Dialogo" method="_on_Tween_tween_completed"]

@@ -41,12 +41,3 @@ func _physics_process(delta):
 		
 	move_and_slide(movimiento)
 	animaciones.play(animacion)
-
-func _on_Colision_pelican_body_entered(body):
-	var layer_to_hide = get_node("/root/mapa/Mapa/cesped/Pelican/pelican abajo")
-	layer_to_hide.set_visible(false)
-
-
-func _on_Colision_pelican_body_exited(body):
-	var layer_to_hide = get_node("/root/mapa/Mapa/cesped/Pelican/pelican abajo")
-	layer_to_hide.set_visible(true)

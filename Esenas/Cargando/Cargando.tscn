@@ -33,6 +33,7 @@ visible = false
 position = Vector2( 519, 66 )
 frames = SubResource( 1 )
 animation = "loading"
+frame = 2
 playing = true
 centered = false
 
