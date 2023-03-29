@@ -62,3 +62,9 @@ func SuministrosJefe():
 	Globales.EstaminaJefe = Globales.EstaminaJefe + (Globales.EstaminaMaximaJefe * 0.10)
 	Globales.EstaminaJefe = EvaluarEstamina(Globales.EstaminaJefe, Globales.EstaminaMaximaJefe)
 	Globales.Turno = Globales.Turno + 1
+
+
+#Funciones de daño se Salter
+
+func Excalibur():
+	pass
