@@ -11,18 +11,13 @@ func _process(delta):
 	if(timer_on == true):
 		time += delta
 		suma += 1
-		if suma % 100 == 0:
-			print(suma)
-			print(timer_on)
 		if suma == 100 or suma == 200 or suma == 300 :
-			print("=========WOOOO======\n", suma)
+			print("====Quemadura====\n")
 			Globales.VidaSalter = Globales.VidaSalter - 10.00
 		if suma == 301:
 			timer_on = false
 			time = 0
 			suma = 0
-			print(suma)
-			print(timer_on)
 	if activacion ==  true:
 		Globales.evadir = 0
 		if Globales.Turno == turnoActivacion + 3:
@@ -43,7 +38,7 @@ func _on_Vida_pressed():
 	SuministrosJefe()
 
 func _on_Ultimate_pressed():
-	pass # Replace with function body.
+	ultimate()
 
 #Funciones de Evaluacion
 
@@ -64,7 +59,7 @@ func SubfusilJefe():
 	if Globales.EstaminaJefe >= 10:
 		Globales.VidaSalter = Globales.VidaSalter - (Globales.Ataquejefe - (Globales.DefensaSalter * (Globales.Ataquejefe/100.00)))
 		Globales.EstaminaJefe = Globales.EstaminaJefe - 10
-		Globales.VidaJefe = Globales.VidaJefe - ((Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00))) * Globales.evadir ) 
+	Globales.VidaJefe = Globales.VidaJefe - ((Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00))) * Globales.evadir ) 
 	Globales.Turno = Globales.Turno + 1
 	$AnimationPlayer.play("DañoJefe")
 	$AnimationPlayer.play("Daño")
@@ -85,5 +80,5 @@ func EmbestidaJefe():
 	Globales.Turno += 1
 	activacion = true
 	
-func DPS():
-	pass
+func ultimate():
+	Globales.VidaSalter = Globales.VidaSalter - (Globales.EspecialJefe * (Globales.VelocidadJefe*0.5))

@@ -1,7 +1,5 @@
 extends Control
 
-
-
 func _ready():
 	get_node("Personajes/Vida Jefe").max_value = Globales.VidaJefe
 	get_node("Personajes/EstaminaJefe").max_value = Globales.EstaminaJefe
@@ -21,15 +19,6 @@ func _process(delta):
 	get_node("Personajes/Salter/lblVidaSalter").text = str(Globales.VidaSalter) + str(" HP")
 	#Label Turno
 	get_node("Acciones/Turno").text = str("Turno: " ) + str(Globales.Turno)
-
-func _on_Ataque1_pressed():
-	SubfusilJefe()
-
-func _on_Vida_pressed():
-	SuministrosJefe()
-
-func _on_Salir_pressed():
-	get_tree().quit()
 
 func _on_RegresarMenu_pressed():
 	get_tree().change_scene("res://Esenas/MenuP1.tscn")
@@ -68,3 +57,5 @@ func SuministrosJefe():
 
 func Excalibur():
 	pass
+func _on_Salir_pressed():
+	get_tree().quit()
