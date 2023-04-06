@@ -95,7 +95,3 @@ Alternatively, download or clone this repository and copy the contents of the
 `addons` folder to your own project's `addons` folder.
 
 Then enable the plugin on the Project Settings.
-
-## License
-
-[MIT License](LICENSE). Copyright (c) 2022 Nikolay Lebedev aka nklbdev.
