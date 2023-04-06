@@ -76,4 +76,11 @@ Juego desarrollando en Godot Engine 3.5.1, para proyecto final de la materia sis
       <td>No resuelto</td>
       <td></td>
     </tr>
-    <tr
+    <tr>
+  <td>Cambiar los colores de las siguientes interfaces</td>
+  <td>menu de salida...</td>
+  <td>05/04/2023</td>
+  <td></td>
+  <td>No resuelto</td>
+  <td>Luis Jackniel Arellano Sandoval</td>
+</tr>
