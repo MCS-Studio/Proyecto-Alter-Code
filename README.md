@@ -1,5 +1,5 @@
 # Proyecto-Alter-Code
-Juego desarrollando en Godot Engine 3.5.1, para proyecto final de la materia sistemas inteligentes
+Juego desarrollando en Godot Engine 3.5.2, para proyecto final de la materia sistemas inteligentes
 
 #version de Godot Utilizada 3.5.2 [Download](https://godotengine.org/download/3.x/windows/)
 
