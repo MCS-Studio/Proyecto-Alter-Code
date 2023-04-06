@@ -18,3 +18,4 @@ func cargando():
 #	else:
 #		cargando = 0
 #		puntos = ""
+	pass

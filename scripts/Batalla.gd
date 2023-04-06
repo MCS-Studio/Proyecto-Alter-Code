@@ -24,6 +24,5 @@ func _process(delta):
 func _on_RegresarMenu_pressed():
 	get_tree().change_scene("res://Esenas/MenuP1.tscn")
 
-
 func _on_Salir_pressed():
 	get_tree().quit()
