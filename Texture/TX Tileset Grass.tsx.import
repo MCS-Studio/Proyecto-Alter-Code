@@ -1,0 +1,19 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/TX Tileset Grass.tsx-934d0a69e36044903ddb8750172618eb.res"
+
+[deps]
+
+source_file="res://Texture/TX Tileset Grass.tsx"
+dest_files=[ "res://.import/TX Tileset Grass.tsx-934d0a69e36044903ddb8750172618eb.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+post_import_script=""

@@ -1,0 +1,19 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/bosque.tsx-8d42c9e494c971f890dc1c6c34ecd327.res"
+
+[deps]
+
+source_file="res://Texture/bosque.tsx"
+dest_files=[ "res://.import/bosque.tsx-8d42c9e494c971f890dc1c6c34ecd327.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+post_import_script=""

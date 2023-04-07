@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Sprite/png/master_chief_sprite_by_aetherwings_d2xk731-fullview.png" type="Texture" id=1]
-[ext_resource path="res://Sprite/Jugador.gd" type="Script" id=2]
+[ext_resource path="res://Codigo/Jugador.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.0
@@ -139,6 +139,12 @@ frame = 3
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -4, -4 )
+z_index = 1
+current = true
+zoom = Vector2( 0.5, 0.5 )
 
 [node name="cabeza" type="CollisionShape2D" parent="."]
 position = Vector2( -1, -13 )

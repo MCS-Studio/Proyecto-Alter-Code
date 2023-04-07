@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprite/Jugador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mapas/cesped.tmx" type="PackedScene" id=2]
+
+[node name="cesped" instance=ExtResource( 2 )]
+
+[node name="muralla alta" parent="muralla" index="1"]
+z_index = 2
+
+[node name="murallas" parent="muralla" index="2"]
+z_index = 2
+
+[node name="Sprite" type="Sprite" parent="." index="3"]
+
+[node name="Jugador" parent="Sprite" index="0" instance=ExtResource( 1 )]
+position = Vector2( 1608, 4312 )
+
+[node name="collisiones muralla" type="StaticBody2D" parent="." index="4"]
+
+[node name="muralla izquierda" type="CollisionPolygon2D" parent="collisiones muralla" index="0"]
+polygon = PoolVector2Array( 0, 3678, 0, 3712, 375, 3712, 450, 3712, 450, 3743, 541, 3743, 541, 3711, 676, 3712, 961, 3712, 962, 3743, 1054, 3744, 1054, 3711, 1442, 3711, 1443, 3744, 1532, 3744, 1536, 3740, 1535, 3698, 1535, 3646, 1534, 3649, 1439, 3648, 1440, 3678, 1056, 3678, 1054, 3650, 960, 3650, 960, 3678, 544, 3678, 543, 3648, 448, 3649, 448, 3678, 418, 3678 )
+
+[node name="muralla derecha" type="CollisionPolygon2D" parent="collisiones muralla" index="1"]
+polygon = PoolVector2Array( 1664, 3648, 1664, 3698, 1667, 3700, 1667, 3745, 1758, 3744, 1758, 3711, 2242, 3713, 2243, 3709, 2327, 3709, 2334, 3709, 2334, 3713, 2334.67, 3700.3, 2335, 3694, 2336, 3680, 2688, 3680, 2690, 3703, 2782, 3713, 2782, 3712, 3200, 3712, 3200, 3678, 2784, 3678, 2784, 3648, 2688, 3648, 2688, 3678, 2336, 3678, 2336, 3650, 2240, 3648, 2240, 3679, 1760, 3678, 1760, 3648 )

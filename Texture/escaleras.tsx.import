@@ -1,0 +1,19 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/escaleras.tsx-500f030a25637c860f1c539337732582.res"
+
+[deps]
+
+source_file="res://Texture/escaleras.tsx"
+dest_files=[ "res://.import/escaleras.tsx-500f030a25637c860f1c539337732582.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+post_import_script=""
