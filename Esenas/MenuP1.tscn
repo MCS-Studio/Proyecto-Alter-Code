@@ -232,7 +232,7 @@ centered = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
-modulate = Color( 0, 0, 0, 0.509804 )
+modulate = Color( 0, 0, 0, 0 )
 margin_right = 1280.0
 margin_bottom = 720.0
 
@@ -327,7 +327,7 @@ position = Vector2( 57.3333, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Abajo"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Abajo" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -335,7 +335,7 @@ position = Vector2( 57.3333, 64.6666 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Arriba"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Izquierda" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -343,7 +343,7 @@ position = Vector2( 15.9999, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Izquierda"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Derecha" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -351,7 +351,7 @@ position = Vector2( 99.3336, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Derecha"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Interactuar" type="Label" parent="MenuConfig/Controles/ControlesCtrl"]
@@ -366,7 +366,6 @@ text = "Interactuar"
 position = Vector2( 61.3333, 64.6666 )
 scale = Vector2( 2.83334, 2.83334 )
 frames = SubResource( 7 )
-frame = 3
 playing = true
 
 [node name="AbrirMenu" type="Label" parent="MenuConfig/Controles/ControlesCtrl"]
@@ -381,7 +380,6 @@ text = "Abrir el menú"
 position = Vector2( 62.8333, 64.5 )
 scale = Vector2( 2.875, 2.875 )
 frames = SubResource( 9 )
-frame = 1
 playing = true
 
 [node name="Jugador" parent="MenuConfig/Controles/ControlesCtrl" instance=ExtResource( 58 )]

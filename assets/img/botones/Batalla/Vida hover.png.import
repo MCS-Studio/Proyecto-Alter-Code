@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ultimate Full.png-cd701ec55646f5d1a6b0d6ca0959c2f3.stex"
+path="res://.import/Vida hover.png-d772179ae8b46f662cbaa73f78a7e5c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/barras/Ultimate Full.png"
-dest_files=[ "res://.import/Ultimate Full.png-cd701ec55646f5d1a6b0d6ca0959c2f3.stex" ]
+source_file="res://assets/img/botones/Batalla/Vida hover.png"
+dest_files=[ "res://.import/Vida hover.png-d772179ae8b46f662cbaa73f78a7e5c7.stex" ]
 
 [params]
 

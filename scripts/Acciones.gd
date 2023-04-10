@@ -143,6 +143,7 @@ func quemadura():
 		if suma == 100 or suma == 200 or suma == 300 :
 			if activacionBurn == true:
 				Globales.VidaSalter = Globales.VidaSalter - 100.00
+				$AnimationPlayer.play("DamageSalter")
 			if activacionEnemy == true:
 				
 				Globales.VidaJefe -= 20.00
@@ -153,16 +154,18 @@ func quemadura():
 			activacionBurn = false
 			activacionEnemy = false
 
+#FUNCIONES DE ATAQUE DEL JEFE
+
+func _on_Subfusil_pressed():
+	SubfusilJefe()
+	SalterGod()
+
 func _on_Granada_pressed():
 	GranadaJefe()
 	SalterGod()
 
 func _on_Embestida_pressed():
 	EmbestidaJefe()
-	SalterGod()
-
-func _on_Subfusil_pressed():
-	SubfusilJefe()
 	SalterGod()
 
 func _on_Vida_pressed():
@@ -195,8 +198,7 @@ func SubfusilJefe():
 		Globales.EstaminaJefe = Globales.EstaminaJefe - 10
 	#Globales.VidaJefe = Globales.VidaJefe - ((Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00))) * Globales.evadir ) 
 	Globales.Turno = Globales.Turno + 1
-	$AnimationPlayer.play("DañoJefe")
-	$AnimationPlayer.play("Daño")
+	$AnimationPlayer.play("DamageSalter")
 
 func SuministrosJefe():
 	Globales.VidaJefe = Globales.VidaJefe + (Globales.VidaMaximaJefe * 0.10)
@@ -210,17 +212,19 @@ func GranadaJefe():
 		Globales.Turno += 1
 		activacionBurn = true
 		timer_on = true
+		$AnimationPlayer.play("DamageSalter")
 
 func EmbestidaJefe():
 	if Globales.EstaminaJefe >= 20:
 		turnoActivacion = Globales.Turno
 		Globales.Turno += 1
 		activacion = true
+		$AnimationPlayer.play("DamageSalter")
 	
 func ultimate():
 	multiplicadorDamage = ComparacionDeTipo(6,2)
 	Globales.VidaSalter = Globales.VidaSalter - (multiplicadorDamage * (Globales.EspecialJefe * ((Globales.VelocidadJefe - (Globales.VelocidadSalter/3)) *0.5)))
-	
+	$AnimationPlayer.play("DamageSalter")
 	#Funciones de daño se Salter
 
 func Excalibur():
@@ -231,8 +235,6 @@ func Excalibur():
 	if test == 1:
 		activacionEnemy = true
 		timer_on = true
-	
-	pass
 
 func avalon():
 	Globales.VidaSalter = Globales.VidaSalter + (Globales.VidaMaximaSalter * 0.10)
@@ -261,16 +263,24 @@ func SalterGod():
 	if accion == 1:
 		print("excalibur")
 		Excalibur()
+		$AnimationPlayer.play("DamageJefe")
 		HPlow()
 	if accion == 2:
 		print("barrera de viento")
 		Barrera_del_viento_del_rey()
+		$AnimationPlayer.play("DamageJefe")
 		HPlow()
 	if accion == 3:
 		print("corte buster")
 		Corte_lateral_Buster()
+		$AnimationPlayer.play("DamageJefe")
 		HPlow()
 	if accion == 4:
-		
+		print("avalon")
 		avalon()
+		$AnimationPlayer.play("DamageJefe")
 		HPlow()
+
+func ultimateJefe():
+	$AnimationPlayer.play("Ultimate")
+	pass
