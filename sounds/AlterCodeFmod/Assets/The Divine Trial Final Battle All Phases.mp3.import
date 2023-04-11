@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Divine Trial Final Battle All Phases.mp3-fecc6bbc21191a83862672275c74d82a.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/The Divine Trial Final Battle All Phases.mp3"
+dest_files=[ "res://.import/The Divine Trial Final Battle All Phases.mp3-fecc6bbc21191a83862672275c74d82a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

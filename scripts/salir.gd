@@ -4,18 +4,23 @@ onready var tree = get_tree()
 var WinFlag = false
 var EscFlag = false
 
+
 #Reinicia la animacion de inicio(Para debug)
 func _on_reiniciar_pressed():
+	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.stopEvent("Title")
 	tree.change_scene("res://Esenas/Inicio.tscn")
 
 #Inicia el juego
 func _on_Iniciar_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	$Fade.visible = true
 	$AnimacionSalir.play("Cargar")
 #	tree.change_scene("res://Esenas/Batalla/Batalla.tscn")
 
 #Salir de el juego
 func _on_Salir_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	get_node("ColorRect").visible = true
 	get_node("ConfirmacionSalida").visible = true
 	get_node("MenuInicial").hide()
