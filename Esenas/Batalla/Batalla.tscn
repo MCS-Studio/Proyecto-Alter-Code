@@ -1,11 +1,11 @@
 [gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
-[ext_resource path="res://assets/img/Sprites/Saltear.png" type="Texture" id=2]
+[ext_resource path="res://Jeanne.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/img/Sprites/Jefe.png" type="Texture" id=3]
 [ext_resource path="res://assets/img/barras/Salter Empty.png" type="Texture" id=4]
 [ext_resource path="res://assets/img/barras/Salter Full.png" type="Texture" id=5]
-[ext_resource path="res://assets/img/ConfigBack.png" type="Texture" id=6]
+[ext_resource path="res://Esenas/Batalla/ParallaxBatalla.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/Batalla.gd" type="Script" id=7]
 [ext_resource path="res://assets/img/barras/Vida full.png" type="Texture" id=8]
 [ext_resource path="res://assets/img/barras/Energia full.png" type="Texture" id=9]
@@ -60,11 +60,6 @@ script = ExtResource( 7 )
 [node name="GUI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-
-[node name="Fondo" type="TextureRect" parent="GUI"]
-margin_right = 1920.0
-margin_bottom = 1502.0
-texture = ExtResource( 6 )
 
 [node name="Dialogo" type="TextureRect" parent="GUI"]
 anchor_top = 1.0
@@ -129,7 +124,7 @@ margin_bottom = 990.0
 [node name="UltimateProgress" type="TextureProgress" parent="Acciones/Ultimate"]
 margin_right = 237.0
 margin_bottom = 237.0
-value = 10.0
+value = 100.0
 texture_under = ExtResource( 28 )
 texture_progress = ExtResource( 29 )
 fill_mode = 8
@@ -224,20 +219,14 @@ margin_bottom = 33.0
 custom_fonts/font = SubResource( 3 )
 text = "100 %"
 
-[node name="Salter" type="TextureRect" parent="Personajes"]
-margin_left = 1437.0
-margin_top = 8.0
-margin_right = 1927.0
-margin_bottom = 493.0
-texture = ExtResource( 2 )
-expand = true
-flip_h = true
+[node name="Jeanne" parent="Personajes" instance=ExtResource( 2 )]
+position = Vector2( 1506, -12 )
 
 [node name="VidaSalter" type="TextureProgress" parent="Personajes"]
-margin_left = 1152.0
-margin_top = 509.0
-margin_right = 1897.0
-margin_bottom = 552.0
+margin_left = 988.0
+margin_top = 35.0
+margin_right = 1733.0
+margin_bottom = 78.0
 texture_under = ExtResource( 4 )
 texture_progress = ExtResource( 5 )
 nine_patch_stretch = true
@@ -249,6 +238,8 @@ margin_right = -27.0
 margin_bottom = 46.0
 custom_fonts/font = SubResource( 2 )
 text = "100%"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 
 [connection signal="pressed" from="Acciones/Subfusil" to="Acciones" method="_on_Subfusil_pressed"]
 [connection signal="pressed" from="Acciones/Granada" to="Acciones" method="_on_Granada_pressed"]

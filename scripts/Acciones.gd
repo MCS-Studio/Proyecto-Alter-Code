@@ -20,6 +20,7 @@ func _process(delta):
 	time += delta
 	quemadura()
 	evasion()
+	ultimateJefe()
 
 func evasion():
 	if activacion ==  true:
@@ -282,5 +283,6 @@ func SalterGod():
 		HPlow()
 
 func ultimateJefe():
-	$AnimationPlayer.play("Ultimate")
+	if $Ultimate/UltimateProgress.value == 100:
+		$AnimationPlayer.play("Ultimate")
 	pass
