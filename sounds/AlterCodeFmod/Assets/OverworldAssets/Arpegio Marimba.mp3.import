@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Arpegio Marimba.mp3-0452ee9be8a543576c7cef2692e6f3f0.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/OverworldAssets/Arpegio Marimba.mp3"
+dest_files=[ "res://.import/Arpegio Marimba.mp3-0452ee9be8a543576c7cef2692e6f3f0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

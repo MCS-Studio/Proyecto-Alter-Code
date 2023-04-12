@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Timbal.mp3-418969d67776644b9b23f41c1f5917e8.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/BattleTheme/Timbal.mp3"
+dest_files=[ "res://.import/Timbal.mp3-418969d67776644b9b23f41c1f5917e8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

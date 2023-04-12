@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sustain Strings.mp3-b1787f6733f8d955cf5398a682e642af.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/BattleTheme/Sustain Strings.mp3"
+dest_files=[ "res://.import/Sustain Strings.mp3-b1787f6733f8d955cf5398a682e642af.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

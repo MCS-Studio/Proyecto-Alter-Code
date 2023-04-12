@@ -3,12 +3,18 @@ extends Node
 var Battle
 var Title
 var Overworld
+var Item
 
 
 func _ready():
 	#Prepara al escuchador de fmod
+	print("Fmod listener initializing...")
 	Fmod.add_listener(0, self)
-	#Crea las instancias de los eventos puestos como variables
+	print("Fmod Listener initialized")
+	print("cargando?")
+	print(Fmod.banks_still_loading())
+	while(Fmod.banks_still_loading()):
+		print("...")
 	reloadInstances()
 	
 func selectInstance(name):
@@ -19,51 +25,50 @@ func selectInstance(name):
 			return Title
 		"Overworld":
 			return Overworld
+		"ItemCollected":
+			return Item
+
 
 func playMusicOnce(name):
 	name = "event:/Musica/" + name
 	Fmod.play_one_shot(name, self)
 		
 func playMusicParamOnce(name, parameters):
-	name = "event:/Musica/" + name
-	Fmod.play_one_shot_with_params(name, self, parameters)
+	#name = "event:/Musica/" + name
+	#Fmod.play_one_shot_with_params(name, self, parameters)
+	print("Estas de parametro no funcionan por el momento. Utilice setLocalParameter o setGloblaParameter para conseguir un resultado similar")
 
 func playSFXOnce(name):
 	name = "event:/SFX/" + name
 	Fmod.play_one_shot(name, self)
 	
 func playSFXParametersOnce(name, parameters):
-	name = "event:/SFX/" + name
-	Fmod.play_one_shot_with_params(name, self, parameters)
+	#name = "event:/SFX/" + name
+	#Fmod.play_one_shot_with_params(name, self, parameters)
+	print("Estas de parametro no funcionan por el momento. Utilice setLocalParameter o setGloblaParameter para conseguir un resultado similar")
 
 func playEvent(name):
+	#Como hay veces que no se cargan las instancias,
+	#Pondré un verificador para comprobar si estan vacias para crearlas
+	if Battle == 0 and Title == 0 and Overworld == 0:
+		print("No se encontraron las instancias de los eventos; se crearán de nuevo.")
+		reloadInstances()
 	#Reproduce un evento de una instancia ya creada
-	if Fmod.get_event_playback_state(selectInstance(name)) != Fmod.FMOD_STUDIO_PLAYBACK_PLAYING or Fmod.get_event_playback_state(selectInstance(name)) != Fmod.FMOD_STUDIO_PLAYBACK_STARTING:
+#	
+	#Esta es una validación que no me agarró, pero que antes si. la dejo por si acaso
+	#if Fmod.get_event_playback_state(selectInstance(name)) != Fmod.FMOD_STUDIO_PLAYBACK_PLAYING or Fmod.get_event_playback_state(selectInstance(name)) != Fmod.FMOD_STUDIO_PLAYBACK_STARTING:
+	
+	#Esta es otra validación que ya ni se si de verdad sirve o no
+	if not is_instance_valid(selectInstance(name)):
+		print("es valido")
 		Fmod.start_event(selectInstance(name))
-
-#
-#	match (name):
-#		"Battle":
-#			if Fmod.get_event_playback_state(Battle) != Fmod.FMOD_STUDIO_PLAYBACK_PLAYING or Fmod.get_event_playback_state(Battle) != Fmod.FMOD_STUDIO_PLAYBACK_STARTING:
-#				Fmod.start_event(Battle)
-#		"Title":
-#			if Fmod.get_event_playback_state(Title) != Fmod.FMOD_STUDIO_PLAYBACK_PLAYING or Fmod.get_event_playback_state(Title) != Fmod.FMOD_STUDIO_PLAYBACK_STARTING:
-#				Fmod.start_event(Title)
-#		"Overworld":
-#			if Fmod.get_event_playback_state(Overworld) != Fmod.FMOD_STUDIO_PLAYBACK_PLAYING or Fmod.get_event_playback_state(Overworld) != Fmod.FMOD_STUDIO_PLAYBACK_STARTING:
-#				Fmod.start_event(Overworld)
+	else:
+		print("Algo salio mal, creo")
 
 func stopEvent(name):
 	#Para los eventos segun el nombre.
 	#Talvez el tipo de parada tambien la ponga como parametro de la func
 	Fmod.stop_event(selectInstance(name), Fmod.FMOD_STUDIO_STOP_ALLOWFADEOUT)
-#	match (name):
-#		"Battle":
-#			Fmod.stop_event(Battle, Fmod.FMOD_STUDIO_STOP_ALLOWFADEOUT)
-#		"Title":
-#			Fmod.stop_event(Title, Fmod.FMOD_STUDIO_STOP_ALLOWFADEOUT)
-#		"Overworld":
-#			Fmod.stop_event(Overworld, Fmod.Fmod.FMOD_STUDIO_STOP_IMMEDIATE)
 			
 func setGlobalParameter(parameter, value):
 	#Establece parametros globales
@@ -73,35 +78,67 @@ func setGlobalParameter(parameter, value):
 func setLocalParameter(name, parameter, value):
 	#Establece parametros locales (para un solo evento)
 	Fmod.set_event_parameter_by_name(selectInstance(name), parameter, value)
-#	match(name):
-#		"Battle":
-#			Fmod.set_event_parameter_by_name(Battle, parameter, value)
-#		"Title":
-#			Fmod.set_event_parameter_by_name(Title, parameter, value)
-#		"Overworld":
-#			Fmod.set_event_parameter_by_name(Overworld, parameter, value)
 
-func pauseEvents(pausar):
+func pauseEvents():
 	#Se pausan los eventos, dependiendo de una variable booleana (Verdadero o falso)
-	Fmod.pause_all_events(pausar)
+	Fmod.pause_all_events(true)
+
+func resumeEvents():
+	Fmod.pause_all_events(false)
+
+func isEventPaused(name):
+	Fmod.get_event_paused(selectInstance(name))
+
+func pauseEvent(name):
+	Fmod.set_event_paused(selectInstance(name), true)
+
+func resumeEvent(name):
+	Fmod.set_event_paused(selectInstance(name), false)
+	
+func togglePauseEvent(name):
+	#Similar to pause event, but this one pauses and resumes from the same function.
+	var event = selectInstance(name)
+	Fmod.set_event_paused(event, not Fmod.get_event_paused(event))
 
 func muteEvents():
 	#Se mutean los eventos
 	Fmod.mute_all_events()
 
+func unmuteEvents():
+	#Se mutean los eventos
+	Fmod.unmute_all_events()
+
 func releaseEvent(name):
 	#Quita las instancias de la memoria, creo
 	Fmod.release_event(selectInstance(name))
-#	match (name):
-#		"Battle":
-#			Fmod.release_event(Battle)
-#		"Title":
-#			Fmod.release_event(Title)
-#		"Overworld":
-#			Fmod.release_event(Overworld)
 		
 func reloadInstances():
 	#Recarga las instancias del principio
 	Battle = Fmod.create_event_instance("event:/Musica/Battle")
+	print(Battle)
 	Title = Fmod.create_event_instance("event:/Musica/TitleTheme")
+	print(Title)
 	Overworld = Fmod.create_event_instance("event:/Musica/Overworld")
+	print(Overworld)
+	Item = Fmod.create_event_instance("event:/SFX/ItemCollected")
+
+func setMasterVolume(value):
+	#El valor del volumen:
+	#0 es silencio total
+	#1 es defalut
+	#Entre 0 y 1 es para el volumen debajo del default
+	#Se puede subir encima de 1.
+	#Casi nunca se necesita llegar arriba de 20 a menos que se le haya bajado al master y
+	#se quiera subir el volumen a los otros.
+	Fmod.set_bus_volume("bus:/", value)
+
+func setMusicVolume(value):
+	#Se mide igual que el master
+	Fmod.set_bus_volume("bus:/Musica", value)
+	
+func setSFXVolume(value):
+	#Se mide igual que el master
+	Fmod.set_bus_volume("bus:/SFX", value)
+
+func help():
+	print("Para ayuda adicional, te falto la suerte porque no hay xd")
