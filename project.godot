@@ -74,6 +74,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot_editor_discord_presence/Discord RPC/RPC.gd"
 }, {
+"base": "VBoxContainer",
+"class": "FMOD_Config",
+"language": "GDScript",
+"path": "res://addons/fmod/fmod_config_window.gd"
+}, {
+"base": "Node2D",
+"class": "FmodEventEmitter",
+"language": "GDScript",
+"path": "res://addons/fmod/nodes/FmodEventEmitter.gd"
+}, {
+"base": "",
+"class": "FmodNative",
+"language": "NativeScript",
+"path": "res://addons/fmod/Fmod.gdns"
+}, {
 "base": "PanelContainer",
 "class": "HistoryRow",
 "language": "GDScript",
@@ -133,6 +148,9 @@ _global_script_class_icons={
 "DiscordRPC": "",
 "DiscordRPCEnum": "",
 "DiscordRPCUtil": "",
+"FMOD_Config": "",
+"FmodEventEmitter": "res://addons/fmod/nodes/fmod.svg",
+"FmodNative": "",
 "HistoryRow": "",
 "IPCUtil": "",
 "RichPresence": "",
