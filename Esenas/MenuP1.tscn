@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/salir.gd" type="Script" id=2]
@@ -57,6 +57,7 @@
 [ext_resource path="res://scripts/MenuConfig.gd" type="Script" id=55]
 [ext_resource path="res://assets/img/logo-logo.png" type="Texture" id=56]
 [ext_resource path="res://assets/img/botones/Configuracion/images/Desconocido.png" type="Texture" id=57]
+[ext_resource path="res://escenas/Main.tscn" type="PackedScene" id=58]
 [ext_resource path="res://assets/img/botones/Configuracion/images/Salir hover.png" type="Texture" id=59]
 [ext_resource path="res://assets/img/botones/Configuracion/images/Salir press.png" type="Texture" id=60]
 [ext_resource path="res://assets/img/botones/Configuracion/images/salir.png" type="Texture" id=61]
@@ -158,6 +159,7 @@ rect_scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 2 )
 
 [node name="MenuInicial" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -3.0
@@ -283,7 +285,6 @@ texture_hover = ExtResource( 19 )
 expand = true
 
 [node name="MenuConfig" type="TextureRect" parent="."]
-visible = false
 material = SubResource( 3 )
 anchor_left = 0.5
 anchor_top = 0.5
@@ -326,7 +327,7 @@ position = Vector2( 57.3333, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Abajo"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Abajo" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -334,7 +335,7 @@ position = Vector2( 57.3333, 64.6666 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Arriba"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Izquierda" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -342,7 +343,7 @@ position = Vector2( 15.9999, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Izquierda"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Derecha" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -350,7 +351,7 @@ position = Vector2( 99.3336, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Derecha"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Interactuar" type="Label" parent="MenuConfig/Controles/ControlesCtrl"]
@@ -365,6 +366,7 @@ text = "Interactuar"
 position = Vector2( 61.3333, 64.6666 )
 scale = Vector2( 2.83334, 2.83334 )
 frames = SubResource( 7 )
+frame = 1
 playing = true
 
 [node name="AbrirMenu" type="Label" parent="MenuConfig/Controles/ControlesCtrl"]
@@ -379,6 +381,7 @@ text = "Abrir el menú"
 position = Vector2( 62.8333, 64.5 )
 scale = Vector2( 2.875, 2.875 )
 frames = SubResource( 9 )
+frame = 1
 playing = true
 
 [node name="Video" type="TextureButton" parent="MenuConfig"]
@@ -553,6 +556,14 @@ anims/Cargar = ExtResource( 62 )
 anims/Fade_In = ExtResource( 12 )
 anims/Fade_Out = ExtResource( 18 )
 anims/RESET = SubResource( 14 )
+
+[node name="Mostrar Mapa" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Main" parent="Mostrar Mapa" instance=ExtResource( 58 )]
+position = Vector2( 549.333, 284.667 )
+scale = Vector2( 0.14808, 0.0310591 )
 
 [connection signal="pressed" from="MenuInicial/Botones/Iniciar" to="." method="_on_Iniciar_pressed"]
 [connection signal="pressed" from="MenuInicial/Botones/Salir" to="." method="_on_Salir_pressed"]

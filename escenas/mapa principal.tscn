@@ -254,7 +254,7 @@ animations = [ {
 [node name="mapa" type="Node2D"]
 
 [node name="Jugador" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1831, 4399 )
+position = Vector2( 1537, 4125 )
 rotation = 0.0028171
 z_index = 1
 script = ExtResource( 5 )
@@ -314,7 +314,7 @@ position = Vector2( 2, 42 )
 modulate = Color( 0.760784, 0.815686, 0.658824, 1 )
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 28
+frame = 34
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
