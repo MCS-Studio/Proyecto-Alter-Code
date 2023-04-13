@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Sprite/Mobile - FateGrand Order - Jeanne dArc Alter Ruler NPC.png" type="Texture" id=1]
 [ext_resource path="res://Sprite/janne.png" type="Texture" id=2]
 [ext_resource path="res://animaciones/Idle.tres" type="Animation" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "damage"
 
 [node name="Jeanne" type="KinematicBody2D"]
 position = Vector2( 1410, -40 )
@@ -446,16 +449,18 @@ rest = Transform2D( 1, 0, 0, 1, 23, -64 )
 
 [node name="head" type="Bone2D" parent="Skeleton2D/hip/Chest/neck"]
 position = Vector2( 6, -19 )
-rotation = -1.90241
+rotation = -1.90005
 rest = Transform2D( -0.325568, -0.945519, 0.945519, -0.325568, 6, -19 )
 default_length = 75.0
 
 [node name="RArm" type="Bone2D" parent="Skeleton2D/hip/Chest"]
 position = Vector2( 57, -50 )
+rotation = 0.00472215
 rest = Transform2D( 1, 0, 0, 1, 57, -50 )
 
 [node name="codoD" type="Bone2D" parent="Skeleton2D/hip/Chest/RArm"]
 position = Vector2( 41, 67 )
+rotation = 0.00472215
 rest = Transform2D( 1, 0, 0, 1, 41, 67 )
 
 [node name="BrazoD" type="Bone2D" parent="Skeleton2D/hip/Chest/RArm/codoD"]
@@ -483,6 +488,7 @@ rest = Transform2D( 1, 0, 0, 1, -329.457, -4.78214 )
 
 [node name="LArm" type="Bone2D" parent="Skeleton2D/hip/Chest"]
 position = Vector2( -10, -55 )
+rotation = 0.00472215
 rest = Transform2D( 1, 0, 0, 1, -10, -55 )
 
 [node name="CodoI" type="Bone2D" parent="Skeleton2D/hip/Chest/LArm"]
@@ -526,3 +532,4 @@ default_length = 50.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
 anims/Idle = ExtResource( 3 )
+anims/damage = SubResource( 1 )
