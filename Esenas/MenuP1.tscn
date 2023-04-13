@@ -326,7 +326,6 @@ position = Vector2( 57.3333, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Abajo"
-frame = 2
 playing = true
 
 [node name="Abajo" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -334,7 +333,6 @@ position = Vector2( 57.3333, 64.6666 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Arriba"
-frame = 2
 playing = true
 
 [node name="Izquierda" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -342,7 +340,6 @@ position = Vector2( 15.9999, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Izquierda"
-frame = 2
 playing = true
 
 [node name="Derecha" type="AnimatedSprite" parent="MenuConfig/Controles/ControlesCtrl/Movimiento"]
@@ -350,7 +347,6 @@ position = Vector2( 99.3336, 104.667 )
 scale = Vector2( 2.86198, 2.86198 )
 frames = SubResource( 5 )
 animation = "Derecha"
-frame = 2
 playing = true
 
 [node name="Interactuar" type="Label" parent="MenuConfig/Controles/ControlesCtrl"]
@@ -365,6 +361,7 @@ text = "Interactuar"
 position = Vector2( 61.3333, 64.6666 )
 scale = Vector2( 2.83334, 2.83334 )
 frames = SubResource( 7 )
+frame = 2
 playing = true
 
 [node name="AbrirMenu" type="Label" parent="MenuConfig/Controles/ControlesCtrl"]
