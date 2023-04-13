@@ -5,6 +5,9 @@ var WinFlag = false
 var EscFlag = false
 
 
+func _ready():
+	ControlsFmod.playEvent("Title")
+
 #Reinicia la animacion de inicio(Para debug)
 func _on_reiniciar_pressed():
 	ControlsFmod.playSFXOnce("Button")
@@ -14,6 +17,7 @@ func _on_reiniciar_pressed():
 #Inicia el juego
 func _on_Iniciar_pressed():
 	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.stopEvent("Title")
 	$Fade.visible = true
 	$AnimacionSalir.play("Cargar")
 #	tree.change_scene("res://Esenas/Batalla/Batalla.tscn")
@@ -106,4 +110,4 @@ func _on_SalirConfiig_pressed():
 	MostrarMenu()
 
 func _on_AnimacionSalir_animation_finished(anim_name):
-	Globales.call_deferred("goto_scene", "res://Esenas/Batalla/Batalla.tscn", self)
+	Globales.call_deferred("goto_scene", "res://juego.tscn", self)
