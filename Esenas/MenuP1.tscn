@@ -231,7 +231,7 @@ centered = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
-modulate = Color( 0, 0, 0, 0.509804 )
+modulate = Color( 0, 0, 0, 0 )
 margin_right = 1280.0
 margin_bottom = 720.0
 

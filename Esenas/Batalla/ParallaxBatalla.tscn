@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/img/Fondos/Parallax.png" type="Texture" id=1]
+[ext_resource path="res://scripts/ParallaxBatalla.gd" type="Script" id=2]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource( 2 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 3077, 0 )
+
+[node name="FondoParallax" type="Sprite" parent="ParallaxLayer"]
+position = Vector2( -853, 0 )
+scale = Vector2( 1.50278, 1.50278 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 2048, 720 )
