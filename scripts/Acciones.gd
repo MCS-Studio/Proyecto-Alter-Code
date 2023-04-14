@@ -20,6 +20,7 @@ func _process(delta):
 	time += delta
 	quemadura()
 	evasion()
+	ultimateJefe()
 
 func evasion():
 	if activacion ==  true:
@@ -143,6 +144,7 @@ func quemadura():
 		if suma == 100 or suma == 200 or suma == 300 :
 			if activacionBurn == true:
 				Globales.VidaSalter = Globales.VidaSalter - 100.00
+				$AnimationPlayer.play("DamageSalter")
 			if activacionEnemy == true:
 				
 				Globales.VidaJefe -= 20.00
@@ -153,6 +155,12 @@ func quemadura():
 			activacionBurn = false
 			activacionEnemy = false
 
+#FUNCIONES DE ATAQUE DEL JEFE
+
+func _on_Subfusil_pressed():
+	SubfusilJefe()
+	SalterGod()
+
 func _on_Granada_pressed():
 	ControlsFmod.playSFXOnce("Button")
 	GranadaJefe()
@@ -161,11 +169,6 @@ func _on_Granada_pressed():
 func _on_Embestida_pressed():
 	ControlsFmod.playSFXOnce("Button")
 	EmbestidaJefe()
-	SalterGod()
-
-func _on_Subfusil_pressed():
-	ControlsFmod.playSFXOnce("Button")
-	SubfusilJefe()
 	SalterGod()
 
 func _on_Vida_pressed():
@@ -200,9 +203,7 @@ func SubfusilJefe():
 		Globales.EstaminaJefe = Globales.EstaminaJefe - 10
 	#Globales.VidaJefe = Globales.VidaJefe - ((Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00))) * Globales.evadir ) 
 	Globales.Turno = Globales.Turno + 1
-	$AnimationPlayer.play("DañoJefe")
-	$AnimationPlayer.play("Daño")
-	ControlsFmod.playSFXOnce("AtaquesJefe/Subfusil")
+	$AnimationPlayer.play("DamageSalter")
 
 func SuministrosJefe():
 	Globales.VidaJefe = Globales.VidaJefe + (Globales.VidaMaximaJefe * 0.10)
@@ -217,19 +218,19 @@ func GranadaJefe():
 		Globales.Turno += 1
 		activacionBurn = true
 		timer_on = true
-		ControlsFmod.playSFXOnce("AtaquesJefe/PlasmaGrenade")
+		$AnimationPlayer.play("DamageSalter")
 
 func EmbestidaJefe():
 	if Globales.EstaminaJefe >= 20:
 		turnoActivacion = Globales.Turno
 		Globales.Turno += 1
 		activacion = true
-		ControlsFmod.playSFXOnce("AtaquesJefe/Embestida")
+		$AnimationPlayer.play("DamageSalter")
 	
 func ultimate():
 	multiplicadorDamage = ComparacionDeTipo(6,2)
 	Globales.VidaSalter = Globales.VidaSalter - (multiplicadorDamage * (Globales.EspecialJefe * ((Globales.VelocidadJefe - (Globales.VelocidadSalter/3)) *0.5)))
-	ControlsFmod.playSFXOnce("AtaquesJefe/MAC")
+	$AnimationPlayer.play("DamageSalter")
 	#Funciones de daño se Salter
 
 func Excalibur():
@@ -241,8 +242,6 @@ func Excalibur():
 	if test == 1:
 		activacionEnemy = true
 		timer_on = true
-	
-	pass
 
 func avalon():
 	Globales.VidaSalter = Globales.VidaSalter + (Globales.VidaMaximaSalter * 0.10)
@@ -275,16 +274,25 @@ func SalterGod():
 	if accion == 1:
 		print("excalibur")
 		Excalibur()
+		$AnimationPlayer.play("DamageJefe")
 		HPlow()
 	if accion == 2:
 		print("barrera de viento")
 		Barrera_del_viento_del_rey()
+		$AnimationPlayer.play("DamageJefe")
 		HPlow()
 	if accion == 3:
 		print("corte buster")
 		Corte_lateral_Buster()
+		$AnimationPlayer.play("DamageJefe")
 		HPlow()
 	if accion == 4:
-		
+		print("avalon")
 		avalon()
+		$AnimationPlayer.play("DamageJefe")
 		HPlow()
+
+func ultimateJefe():
+	if $Ultimate/UltimateProgress.value == 100:
+		$AnimationPlayer.play("Ultimate")
+	pass

@@ -1,33 +1,40 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
-[ext_resource path="res://assets/img/Sprites/Saltear.png" type="Texture" id=2]
+[ext_resource path="res://Jeanne.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/img/Sprites/Jefe.png" type="Texture" id=3]
 [ext_resource path="res://assets/img/barras/Salter Empty.png" type="Texture" id=4]
 [ext_resource path="res://assets/img/barras/Salter Full.png" type="Texture" id=5]
-[ext_resource path="res://assets/img/ConfigBack.png" type="Texture" id=6]
+[ext_resource path="res://Esenas/Batalla/ParallaxBatalla.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/Batalla.gd" type="Script" id=7]
 [ext_resource path="res://assets/img/barras/Vida full.png" type="Texture" id=8]
 [ext_resource path="res://assets/img/barras/Energia full.png" type="Texture" id=9]
 [ext_resource path="res://assets/img/barras/Energia empty.png" type="Texture" id=10]
 [ext_resource path="res://assets/img/barras/Vida empty.png" type="Texture" id=11]
 [ext_resource path="res://scripts/Acciones.gd" type="Script" id=12]
-[ext_resource path="res://animaciones/DañoJefe.tres" type="Animation" id=13]
+[ext_resource path="res://animaciones/DamageSalter.tres" type="Animation" id=13]
 [ext_resource path="res://assets/img/Dialogos/CuadroDialogo.png" type="Texture" id=14]
 [ext_resource path="res://assets/img/botones/Batalla/Subfusil hover.png" type="Texture" id=15]
 [ext_resource path="res://assets/img/botones/Batalla/Subfusil.png" type="Texture" id=16]
 [ext_resource path="res://assets/img/botones/Batalla/Subfusil press.png" type="Texture" id=17]
-
-[sub_resource type="DynamicFont" id=1]
-size = 50
-font_data = ExtResource( 1 )
+[ext_resource path="res://assets/img/botones/Batalla/Embestida.png" type="Texture" id=18]
+[ext_resource path="res://assets/img/botones/Batalla/Embestida press.png" type="Texture" id=19]
+[ext_resource path="res://assets/img/botones/Batalla/Embestida hover.png" type="Texture" id=20]
+[ext_resource path="res://assets/img/botones/Batalla/Granada press.png" type="Texture" id=21]
+[ext_resource path="res://assets/img/botones/Batalla/Vida press.png" type="Texture" id=22]
+[ext_resource path="res://assets/img/botones/Batalla/Vida hover.png" type="Texture" id=23]
+[ext_resource path="res://assets/img/botones/Batalla/Granada hover.png" type="Texture" id=24]
+[ext_resource path="res://assets/img/botones/Batalla/Vida.png" type="Texture" id=25]
+[ext_resource path="res://assets/img/botones/Batalla/Granada.png" type="Texture" id=26]
+[ext_resource path="res://animaciones/DamageJefe.tres" type="Animation" id=27]
+[ext_resource path="res://assets/img/barras/Ultimaate empty.png" type="Texture" id=28]
+[ext_resource path="res://assets/img/barras/Ultimate Full.png" type="Texture" id=29]
+[ext_resource path="res://assets/img/barras/Ultimate.png" type="Texture" id=30]
+[ext_resource path="res://animaciones/Ultimate.tres" type="Animation" id=31]
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
 font_data = ExtResource( 1 )
-
-[sub_resource type="Animation" id=6]
-resource_name = "Ultimmate"
 
 [sub_resource type="DynamicFont" id=4]
 size = 60
@@ -54,11 +61,6 @@ script = ExtResource( 7 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Fondo" type="TextureRect" parent="GUI"]
-margin_right = 1920.0
-margin_bottom = 1502.0
-texture = ExtResource( 6 )
-
 [node name="Dialogo" type="TextureRect" parent="GUI"]
 anchor_top = 1.0
 anchor_right = 1.0
@@ -74,56 +76,68 @@ margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 12 )
 
-[node name="Subfusil" type="Button" parent="Acciones"]
-visible = false
-margin_left = 617.0
-margin_top = 834.0
-margin_right = 971.0
-margin_bottom = 899.0
-custom_fonts/font = SubResource( 1 )
-text = "Disparar subsuficil"
-
-[node name="Sub" type="TextureButton" parent="Acciones"]
-margin_left = 644.0
-margin_top = 822.0
-margin_right = 944.0
-margin_bottom = 931.0
+[node name="Subfusil" type="TextureButton" parent="Acciones"]
+margin_left = 645.0
+margin_top = 826.0
+margin_right = 945.0
+margin_bottom = 935.0
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 15 )
 
-[node name="Granada" type="Button" parent="Acciones"]
-margin_left = 619.0
-margin_top = 952.0
-margin_right = 966.0
-margin_bottom = 1017.0
-custom_fonts/font = SubResource( 1 )
-text = "Granada de plasma"
+[node name="Granada" type="TextureButton" parent="Acciones"]
+margin_left = 978.0
+margin_top = 826.0
+margin_right = 1278.0
+margin_bottom = 931.0
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 21 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 21 )
 
-[node name="Embestida" type="Button" parent="Acciones"]
-margin_left = 1041.0
-margin_top = 952.0
-margin_right = 1240.0
-margin_bottom = 1017.0
-custom_fonts/font = SubResource( 1 )
-text = "Embestida"
+[node name="Embestida" type="TextureButton" parent="Acciones"]
+margin_left = 978.0
+margin_top = 943.0
+margin_right = 1278.0
+margin_bottom = 1048.0
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 19 )
+texture_hover = ExtResource( 20 )
+texture_disabled = ExtResource( 19 )
 
-[node name="Vida" type="Button" parent="Acciones"]
-margin_left = 1034.0
-margin_top = 837.0
-margin_right = 1441.0
-margin_bottom = 902.0
-custom_fonts/font = SubResource( 1 )
-text = "Pedido de suministros"
+[node name="Vida" type="TextureButton" parent="Acciones"]
+margin_left = 645.0
+margin_top = 943.0
+margin_right = 945.0
+margin_bottom = 1048.0
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 22 )
+texture_hover = ExtResource( 23 )
+texture_disabled = ExtResource( 22 )
 
-[node name="Ultimate" type="Button" parent="Acciones"]
-margin_left = 1743.0
-margin_top = 889.0
-margin_right = 1830.0
-margin_bottom = 954.0
-custom_fonts/font = SubResource( 1 )
-text = "MAC"
-expand_icon = true
+[node name="Ultimate" type="TextureButton" parent="Acciones"]
+margin_left = 1639.0
+margin_top = 753.0
+margin_right = 1876.0
+margin_bottom = 990.0
+
+[node name="UltimateProgress" type="TextureProgress" parent="Acciones/Ultimate"]
+margin_right = 237.0
+margin_bottom = 237.0
+value = 100.0
+texture_under = ExtResource( 28 )
+texture_progress = ExtResource( 29 )
+fill_mode = 8
+radial_initial_angle = 180.0
+nine_patch_stretch = true
+
+[node name="TextUltimate" type="TextureRect" parent="Acciones/Ultimate"]
+margin_left = 6.0
+margin_top = 250.0
+margin_right = 231.0
+margin_bottom = 301.0
+texture = ExtResource( 30 )
+expand = true
 
 [node name="Turno" type="Label" parent="Acciones"]
 margin_left = 784.0
@@ -134,28 +148,27 @@ custom_fonts/font = SubResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Acciones"]
 root_node = NodePath("../..")
-"anims/Daño" = ExtResource( 13 )
-"anims/DañoJefe" = ExtResource( 13 )
-anims/Ultimmate = SubResource( 6 )
+anims/DamageJefe = ExtResource( 27 )
+anims/DamageSalter = ExtResource( 13 )
+anims/Ultimate = ExtResource( 31 )
 
 [node name="Menu" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Salir" type="Button" parent="Menu"]
-margin_left = 1771.0
-margin_top = 978.0
-margin_right = 1878.0
-margin_bottom = 1056.0
+margin_left = 1375.0
+margin_top = 953.0
+margin_right = 1482.0
+margin_bottom = 1031.0
 custom_fonts/font = SubResource( 4 )
 text = "Salir"
 
 [node name="RegresarMenu" type="Button" parent="Menu"]
-margin_left = 1544.0
-margin_top = 978.0
-margin_right = 1758.0
-margin_bottom = 1056.0
+margin_left = 1328.0
+margin_top = 841.0
+margin_right = 1542.0
+margin_bottom = 919.0
 custom_fonts/font = SubResource( 4 )
 text = "Regresar"
 
@@ -164,10 +177,10 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Jefe" type="TextureRect" parent="Personajes"]
-margin_left = -5.0
-margin_top = 490.0
-margin_right = 585.0
-margin_bottom = 1074.0
+margin_left = 58.0
+margin_top = 637.0
+margin_right = 509.0
+margin_bottom = 1083.0
 texture = ExtResource( 3 )
 expand = true
 flip_h = true
@@ -206,31 +219,27 @@ margin_bottom = 33.0
 custom_fonts/font = SubResource( 3 )
 text = "100 %"
 
-[node name="Salter" type="TextureRect" parent="Personajes"]
-margin_left = 1437.0
-margin_top = 8.0
-margin_right = 1927.0
-margin_bottom = 493.0
-texture = ExtResource( 2 )
-expand = true
-flip_h = true
+[node name="Jeanne" parent="Personajes" instance=ExtResource( 2 )]
+position = Vector2( 1506, -12 )
 
-[node name="VidaSalter" type="TextureProgress" parent="Personajes/Salter"]
-margin_left = -285.0
-margin_top = 501.0
-margin_right = 460.0
-margin_bottom = 544.0
+[node name="VidaSalter" type="TextureProgress" parent="Personajes"]
+margin_left = 988.0
+margin_top = 35.0
+margin_right = 1733.0
+margin_bottom = 78.0
 texture_under = ExtResource( 4 )
 texture_progress = ExtResource( 5 )
 nine_patch_stretch = true
 
-[node name="lblVidaSalter" type="Label" parent="Personajes/Salter"]
-margin_left = -369.0
-margin_top = 511.0
-margin_right = -312.0
-margin_bottom = 547.0
+[node name="lblVidaSalter" type="Label" parent="Personajes/VidaSalter"]
+margin_left = -84.0
+margin_top = 10.0
+margin_right = -27.0
+margin_bottom = 46.0
 custom_fonts/font = SubResource( 2 )
 text = "100%"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 
 [connection signal="pressed" from="Acciones/Subfusil" to="Acciones" method="_on_Subfusil_pressed"]
 [connection signal="pressed" from="Acciones/Granada" to="Acciones" method="_on_Granada_pressed"]

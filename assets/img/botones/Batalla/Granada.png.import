@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ultimate Full.png-cd701ec55646f5d1a6b0d6ca0959c2f3.stex"
+path="res://.import/Granada.png-8b39b598f26a29d5aa3ce49e3763c4a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/barras/Ultimate Full.png"
-dest_files=[ "res://.import/Ultimate Full.png-cd701ec55646f5d1a6b0d6ca0959c2f3.stex" ]
+source_file="res://assets/img/botones/Batalla/Granada.png"
+dest_files=[ "res://.import/Granada.png-8b39b598f26a29d5aa3ce49e3763c4a0.stex" ]
 
 [params]
 

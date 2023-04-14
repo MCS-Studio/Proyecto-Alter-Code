@@ -41,11 +41,9 @@ func _physics_process(delta):
 		
 	move_and_slide(movimiento)
 	animaciones.play(animacion)
-
-
-
-
-
+#	var posicion = Vector2()
+#	print(movimiento)
+	
 
 
 
