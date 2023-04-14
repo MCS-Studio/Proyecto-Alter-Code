@@ -6,6 +6,7 @@ var POy = 0.00
 #Variables de volumen
 var VolMaster = 0.00
 var VolMusic = 0.00
+var VolSFX = 0.00
 #Variables
 var evadir = 1.00
 

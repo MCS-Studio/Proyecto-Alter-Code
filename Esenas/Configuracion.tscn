@@ -146,7 +146,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Configuracion" type="TextureRect" parent="."]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -172,6 +171,7 @@ texture_disabled = ExtResource( 13 )
 expand = true
 
 [node name="ControlesCtrl" type="Control" parent="Configuracion/Controles"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -188,7 +188,7 @@ position = Vector2( 98.0001, 162.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Abajo"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Abajo" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
@@ -196,7 +196,7 @@ position = Vector2( 98, 92.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Arriba"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Izquierda" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
@@ -204,7 +204,7 @@ position = Vector2( 29, 162.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Izquierda"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Derecha" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
@@ -212,7 +212,7 @@ position = Vector2( 167, 162.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Derecha"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Interactuar" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
@@ -227,7 +227,7 @@ text = "Interactuar"
 position = Vector2( 91.0001, 163 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 4 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="AbrirMenu" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
@@ -296,7 +296,6 @@ texture_disabled = ExtResource( 23 )
 expand = true
 
 [node name="ConfVolume" type="Control" parent="Configuracion/Audio"]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -342,6 +341,31 @@ value = 100.0
 rounded = true
 
 [node name="PerVolume" type="Label" parent="Configuracion/Audio/ConfVolume/VolMusic"]
+margin_left = 674.0
+margin_top = 17.0
+margin_right = 736.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 11 )
+text = "100 %"
+
+[node name="VolSFX" type="Label" parent="Configuracion/Audio/ConfVolume"]
+margin_left = 468.0
+margin_top = -34.0
+margin_right = 781.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 10 )
+text = "SFX"
+align = 2
+
+[node name="SFX" type="HScrollBar" parent="Configuracion/Audio/ConfVolume/VolSFX"]
+margin_left = 331.0
+margin_top = 21.0
+margin_right = 670.0
+margin_bottom = 49.0
+value = 100.0
+rounded = true
+
+[node name="PerVolume" type="Label" parent="Configuracion/Audio/ConfVolume/VolSFX"]
 margin_left = 674.0
 margin_top = 17.0
 margin_right = 736.0
@@ -478,14 +502,12 @@ texture = ExtResource( 3 )
 expand = true
 
 [node name="BtnMapa" type="TextureButton" parent="."]
-visible = false
 margin_left = 558.0
 margin_top = 163.5
 margin_right = 784.0
 margin_bottom = 221.5
 
 [node name="BtnConfig" type="TextureButton" parent="."]
-visible = false
 margin_left = 314.0
 margin_top = 164.0
 margin_right = 540.0
@@ -500,6 +522,7 @@ anims/Fade_In = ExtResource( 4 )
 [connection signal="pressed" from="Configuracion/Audio" to="Configuracion" method="_on_Audio_pressed"]
 [connection signal="scrolling" from="Configuracion/Audio/ConfVolume/VolMaster/Master" to="Configuracion" method="_on_Master_scrolling"]
 [connection signal="scrolling" from="Configuracion/Audio/ConfVolume/VolMusic/Music" to="Configuracion" method="_on_Music_scrolling"]
+[connection signal="scrolling" from="Configuracion/Audio/ConfVolume/VolSFX/SFX" to="Configuracion" method="_on_SFX_scrolling"]
 [connection signal="pressed" from="Configuracion/Creditos" to="Configuracion" method="_on_Creditos_pressed"]
 [connection signal="pressed" from="Configuracion/SalirConfiig" to="Configuracion" method="_on_SalirConfiig_pressed"]
 [connection signal="pressed" from="Creditoss/Reresar" to="Configuracion" method="_on_Reresar_pressed"]

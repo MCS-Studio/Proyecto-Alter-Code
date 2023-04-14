@@ -58,7 +58,7 @@
 			<destination>{f3b1c8a2-8884-4c46-8a0c-6d5e5d615b65}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{a96660da-52e9-4f88-93be-5b2895acd44e}</destination>
+			<destination>{922cb7f0-0f0e-4090-afbd-4d5045acb8e3}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{324a2a65-4737-4fa1-aeea-e70385dfa443}" />
@@ -251,7 +251,6 @@
 		<property name="timelockedOffset">
 			<value>6.1723373257348939</value>
 		</property>
-		<property name="name" />
 		<relationship name="fadeOutCurve">
 			<destination>{9f3c6f13-a578-477e-8680-de1d3727ead2}</destination>
 		</relationship>
