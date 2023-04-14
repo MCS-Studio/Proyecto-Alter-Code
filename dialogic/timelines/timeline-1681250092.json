@@ -1,0 +1,277 @@
+{
+	"events": [
+		{
+			"animation": "slide_in_left.gd",
+			"animation_length": 1,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "slide_in_right.gd",
+			"animation_length": 1,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": true,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"condition": "",
+			"definition": "1681253126-133",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Quien eres? y que haces por aqui?"
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "Alerta",
+			"text": "No tengo idea de porque estoy aqui. Pero soy el maistro."
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Persuadir",
+			"text": "Ya veo. Pero  baja el arma, no quisiera matarte... aun."
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "No quiero problemas. Pero donde estoy?"
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Aunque hay algunos cambios, estas en el bosque del este.\nPuesdes llamarme Alter."
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Ya veo. Gacias."
+		},
+		{
+			"definition": "1681253126-133",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Hola"
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "De nuevo aqui. vete"
+		},
+		{
+			"condition": "",
+			"definition": "1681251786-970",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Ohhh, veo que encontraste un objeto\nalgo interesante, esa es una llave\nde una cabaña de una amiga."
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ya veo, una llave."
+		},
+		{
+			"condition": "",
+			"definition": "1681250074-648",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Persuadir",
+			"text": "Pero con ese otro objeto podrias abrir\ntambien su almacen."
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Eso me parece mas util"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1681252973-233",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Despues de todo me ganaste."
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "Alerta",
+			"text": "No fue facil."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1681251786-970",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"condition": "",
+			"definition": "1681250074-648",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Persuadir",
+			"text": "Tienes un objeto por ahi, parece una palanca"
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "De que me sirve esa cosa"
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Persuadir",
+			"text": "Por ahora de nada, pero quien sabe de que te servira en el futuro."
+		},
+		{
+			"condition": "",
+			"definition": "1681252973-233",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Despues de todo me ganaste."
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "Alerta",
+			"text": "No fue facil."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_001",
+			"portrait": "Alerta",
+			"text": "Adios."
+		},
+		{
+			"animation": "slide_out_left.gd",
+			"animation_length": 1,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681250003.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"character": "character-1681250039.json",
+			"event_id": "dialogic_001",
+			"portrait": "Persuadir",
+			"text": "Se va a morir"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1681250092.json",
+		"name": "Conversasion"
+	}
+}

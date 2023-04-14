@@ -13,197 +13,197 @@ polygon = PoolVector2Array( 0.0336914, 11.9998, 1.01685, 5.99707, -3.98303, 6.01
 extents = Vector2( 56.8125, 115.158 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 224, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 448, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 672, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=6]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 896, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=7]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 1120, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=8]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 1344, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=9]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 1568, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=10]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 1792, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=11]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2016, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=12]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2240, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=13]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2464, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2688, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=15]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2912, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=16]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 3136, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=17]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 3360, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=18]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 3584, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=19]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 3808, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=20]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4032, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=21]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4256, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=22]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4480, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=23]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4704, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=24]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4928, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=25]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 5152, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=26]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 5376, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=27]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 5600, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=28]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 5824, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=29]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6048, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=30]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6272, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=31]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6496, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=32]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6720, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=33]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6944, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=34]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 7168, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=35]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 7392, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=36]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 7616, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=37]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 7840, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=38]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 8064, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=39]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 8288, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=40]
-flags = 4
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 8512, 0, 224, 288 )
 
@@ -230,7 +230,7 @@ polygon = PoolVector2Array( 1643, 824, 1632, 878, 1632, 878, 1643, 869, 1643, 82
 [node name="mapa" type="Node2D"]
 
 [node name="Jugador" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1554, 2740 )
+position = Vector2( 1574, 4680 )
 rotation = 0.0028171
 z_index = 1
 script = ExtResource( 5 )
@@ -252,7 +252,7 @@ position = Vector2( 32, -10 )
 z_index = 1
 
 [node name="area deteccion" type="CollisionShape2D" parent="Mapa/cesped/Pelican/deteccion pelican"]
-position = Vector2( 1569.81, 4685.16 )
+position = Vector2( 1578, 4697 )
 z_index = 1
 shape = SubResource( 46 )
 
@@ -314,7 +314,7 @@ position = Vector2( -54, 673 )
 show_behind_parent = true
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 35
+frame = 3
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
