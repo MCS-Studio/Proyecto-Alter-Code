@@ -1,12 +1,149 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://assets/img/config/Config.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Configuracion.gd" type="Script" id=2]
 [ext_resource path="res://assets/img/config/Mapa.png" type="Texture" id=3]
-[ext_resource path="res://escenas/Minimapa.tscn" type="PackedScene" id=4]
+[ext_resource path="res://animaciones/Fade_In.tres" type="Animation" id=4]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_85.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_29.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_57.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_76.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_60.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_77.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_35.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_59.png" type="Texture" id=12]
+[ext_resource path="res://assets/img/botones/Configuracion/images/LblBotones_02.png" type="Texture" id=13]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_91.png" type="Texture" id=14]
+[ext_resource path="res://assets/img/botones/Configuracion/images/LblBotones_01.png" type="Texture" id=15]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Creditos Press.png" type="Texture" id=16]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Activado.png" type="Texture" id=17]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Video.png" type="Texture" id=18]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_58.png" type="Texture" id=19]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_04.png" type="Texture" id=20]
+[ext_resource path="res://assets/img/botones/Configuracion/images/salir.png" type="Texture" id=21]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_21.png" type="Texture" id=22]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Sonido press.png" type="Texture" id=23]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Sonido.png" type="Texture" id=24]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Sonido hover.png" type="Texture" id=25]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_39.png" type="Texture" id=26]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_73.png" type="Texture" id=27]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_95.png" type="Texture" id=28]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Salir press.png" type="Texture" id=29]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Creditos.png" type="Texture" id=30]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Enter Press.png" type="Texture" id=31]
+[ext_resource path="res://assets/img/botones/Configuracion/images/LblBotones_03.png" type="Texture" id=32]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Creditos hover.png" type="Texture" id=33]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Salir hover.png" type="Texture" id=34]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/ESC Press.png" type="Texture" id=35]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Desactivado.png" type="Texture" id=36]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Video press.png" type="Texture" id=37]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_01.png" type="Texture" id=38]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_02.png" type="Texture" id=39]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/ESC.png" type="Texture" id=40]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Video hover.png" type="Texture" id=41]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_20.png" type="Texture" id=42]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_17.png" type="Texture" id=43]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Enter.png" type="Texture" id=44]
+[ext_resource path="res://assets/img/botones/Configuracion/Controles/Keyboard-Letters-and-Symbols_03.png" type="Texture" id=45]
+[ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=46]
+[ext_resource path="res://scripts/ConfigInGame.gd" type="Script" id=47]
+[ext_resource path="res://assets/img/Copy.png" type="Texture" id=48]
+[ext_resource path="res://assets/img/logo-logo.png" type="Texture" id=49]
+[ext_resource path="res://assets/img/botones/Configuracion/images/Desconocido.png" type="Texture" id=50]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 46 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 39 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Abajo",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 7 ), ExtResource( 26 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "Arriba",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 9 ), ExtResource( 42 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Derecha",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 45 ), ExtResource( 12 ), ExtResource( 43 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "Izquierda",
+"speed": 1.0
+} ]
+
+[sub_resource type="DynamicFont" id=3]
+size = 45
+font_data = ExtResource( 46 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 10 ), ExtResource( 44 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="DynamicFont" id=5]
+size = 45
+font_data = ExtResource( 46 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 40 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="DynamicFont" id=7]
+size = 45
+font_data = ExtResource( 46 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="DynamicFont" id=9]
+size = 50
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 46 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 50
+font_data = ExtResource( 46 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+font_data = ExtResource( 46 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 70
+font_data = ExtResource( 46 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 120
+font_data = ExtResource( 46 )
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource( 2 )
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 0.631373 )
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="Configuracion" type="TextureRect" parent="."]
 visible = false
@@ -20,11 +157,306 @@ margin_right = 646.0
 margin_bottom = 376.5
 texture = ExtResource( 1 )
 expand = true
+script = ExtResource( 47 )
 
-[node name="BtnConfig" type="TextureButton" parent="Configuracion"]
-margin_left = 244.0
-margin_right = 470.0
-margin_bottom = 58.0
+[node name="Controles" type="TextureButton" parent="Configuracion"]
+margin_left = 45.0
+margin_top = 111.5
+margin_right = 415.0
+margin_bottom = 204.5
+disabled = true
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 32 )
+texture_disabled = ExtResource( 13 )
+expand = true
+
+[node name="ControlesCtrl" type="Control" parent="Configuracion/Controles"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Movimiento" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
+margin_left = 496.0
+margin_top = 14.5
+margin_right = 683.0
+margin_bottom = 68.5
+custom_fonts/font = SubResource( 1 )
+text = "Movimiento"
+
+[node name="Arriba" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
+position = Vector2( 98.0001, 162.5 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 2 )
+animation = "Abajo"
+playing = true
+
+[node name="Abajo" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
+position = Vector2( 98, 92.5 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 2 )
+animation = "Arriba"
+playing = true
+
+[node name="Izquierda" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
+position = Vector2( 29, 162.5 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 2 )
+animation = "Izquierda"
+playing = true
+
+[node name="Derecha" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
+position = Vector2( 167, 162.5 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 2 )
+animation = "Derecha"
+playing = true
+
+[node name="Interactuar" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
+margin_left = 716.0
+margin_top = 14.0
+margin_right = 912.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 3 )
+text = "Interactuar"
+
+[node name="Accion" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Interactuar"]
+position = Vector2( 91.0001, 163 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 4 )
+frame = 2
+playing = true
+
+[node name="AbrirMenu" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
+margin_left = 950.0
+margin_top = 14.0
+margin_right = 1166.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 5 )
+text = "Abrir el menú"
+
+[node name="menu" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/AbrirMenu"]
+position = Vector2( 98, 163 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 6 )
+playing = true
+
+[node name="Mapa" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
+margin_left = 1014.0
+margin_top = 252.0
+margin_right = 1102.0
+margin_bottom = 306.0
+custom_fonts/font = SubResource( 7 )
+text = "Mapa"
+
+[node name="Mapa" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Mapa"]
+position = Vector2( 36, 97 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 8 )
+playing = true
+
+[node name="Video" type="TextureButton" parent="Configuracion"]
+margin_left = 44.0
+margin_top = 216.5
+margin_right = 414.0
+margin_bottom = 309.5
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 37 )
+texture_hover = ExtResource( 41 )
+texture_disabled = ExtResource( 37 )
+expand = true
+
+[node name="CheckButton" type="CheckButton" parent="Configuracion/Video"]
+visible = false
+margin_left = 519.0
+margin_top = -85.0
+margin_right = 1165.0
+margin_bottom = -6.0
+size_flags_horizontal = 2
+custom_fonts/font = SubResource( 9 )
+custom_icons/off = ExtResource( 36 )
+custom_icons/on = ExtResource( 17 )
+text = "Pantalla completa"
+clip_text = true
+
+[node name="Audio" type="TextureButton" parent="Configuracion"]
+margin_left = 40.0
+margin_top = 322.5
+margin_right = 410.0
+margin_bottom = 415.5
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 25 )
+texture_disabled = ExtResource( 23 )
+expand = true
+
+[node name="ConfVolume" type="Control" parent="Configuracion/Audio"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VolMaster" type="Label" parent="Configuracion/Audio/ConfVolume"]
+margin_left = 468.0
+margin_top = -203.0
+margin_right = 781.0
+margin_bottom = -144.0
+custom_fonts/font = SubResource( 10 )
+text = "Volumen maestro"
+
+[node name="Master" type="HScrollBar" parent="Configuracion/Audio/ConfVolume/VolMaster"]
+margin_left = 331.0
+margin_top = 21.0
+margin_right = 670.0
+margin_bottom = 49.0
+value = 100.0
+rounded = true
+
+[node name="PerVolume" type="Label" parent="Configuracion/Audio/ConfVolume/VolMaster"]
+margin_left = 674.0
+margin_top = 17.0
+margin_right = 736.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 11 )
+text = "100 %"
+
+[node name="VolMusic" type="Label" parent="Configuracion/Audio/ConfVolume"]
+margin_left = 468.0
+margin_top = -115.0
+margin_right = 781.0
+margin_bottom = -56.0
+custom_fonts/font = SubResource( 10 )
+text = "Musica"
+align = 2
+
+[node name="Music" type="HScrollBar" parent="Configuracion/Audio/ConfVolume/VolMusic"]
+margin_left = 331.0
+margin_top = 21.0
+margin_right = 670.0
+margin_bottom = 49.0
+value = 100.0
+rounded = true
+
+[node name="PerVolume" type="Label" parent="Configuracion/Audio/ConfVolume/VolMusic"]
+margin_left = 674.0
+margin_top = 17.0
+margin_right = 736.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 11 )
+text = "100 %"
+
+[node name="Creditos" type="TextureButton" parent="Configuracion"]
+margin_left = 39.0
+margin_top = 633.5
+margin_right = 283.0
+margin_bottom = 700.5
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 33 )
+texture_disabled = ExtResource( 16 )
+expand = true
+
+[node name="SalirConfiig" type="TextureButton" parent="Configuracion"]
+margin_left = 286.0
+margin_top = 635.0
+margin_right = 417.0
+margin_bottom = 702.0
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 29 )
+texture_hover = ExtResource( 34 )
+expand = true
+
+[node name="Creditoss" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Logo" type="Sprite" parent="Creditoss"]
+position = Vector2( 329.792, 374.729 )
+scale = Vector2( 4.80417, 4.80417 )
+texture = ExtResource( 49 )
+
+[node name="Label" type="Label" parent="Creditoss"]
+margin_left = 23.0
+margin_top = 685.0
+margin_right = 657.0
+margin_bottom = 854.0
+custom_fonts/font = SubResource( 12 )
+text = "Juego desarrollado por MCS Dev"
+align = 1
+autowrap = true
+
+[node name="Copy" type="Sprite" parent="Creditoss"]
+position = Vector2( 6, 1050 )
+scale = Vector2( 1.45098, 1.54171 )
+texture = ExtResource( 48 )
+centered = false
+
+[node name="Dis" type="TextureRect" parent="Creditoss"]
+margin_left = 621.667
+margin_top = 96.0
+margin_right = 749.667
+margin_bottom = 224.0
+texture = ExtResource( 50 )
+expand = true
+
+[node name="Dis" type="Label" parent="Creditoss/Dis"]
+margin_left = 140.0
+margin_top = -14.0
+margin_right = 422.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 13 )
+text = "Diseño"
+
+[node name="Sonido" type="TextureRect" parent="Creditoss"]
+margin_left = 1119.33
+margin_top = 405.333
+margin_right = 1247.33
+margin_bottom = 533.333
+texture = ExtResource( 50 )
+expand = true
+
+[node name="Sonido" type="Label" parent="Creditoss/Sonido"]
+margin_left = 141.0
+margin_top = -13.3333
+margin_right = 422.0
+margin_bottom = 128.667
+custom_fonts/font = SubResource( 13 )
+text = "Sonido"
+
+[node name="Arte" type="TextureRect" parent="Creditoss"]
+margin_left = 621.667
+margin_top = 405.333
+margin_right = 749.667
+margin_bottom = 533.333
+texture = ExtResource( 50 )
+expand = true
+
+[node name="Arte" type="Label" parent="Creditoss/Arte"]
+margin_left = 140.0
+margin_top = -13.3333
+margin_right = 333.0
+margin_bottom = 128.667
+custom_fonts/font = SubResource( 13 )
+text = "Arte"
+
+[node name="Programacion" type="TextureRect" parent="Creditoss"]
+margin_left = 1119.33
+margin_top = 96.0
+margin_right = 1247.33
+margin_bottom = 224.0
+texture = ExtResource( 50 )
+expand = true
+
+[node name="Programacion" type="Label" parent="Creditoss/Programacion"]
+margin_left = 141.0
+margin_top = -13.3333
+margin_right = 745.0
+margin_bottom = 128.667
+custom_fonts/font = SubResource( 13 )
+text = "Programacion"
+
+[node name="Reresar" type="TextureButton" parent="Creditoss"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="Mapa" type="TextureRect" parent="."]
 visible = false
@@ -39,20 +471,31 @@ margin_bottom = 376.5
 texture = ExtResource( 3 )
 expand = true
 
-[node name="Control" parent="Mapa" instance=ExtResource( 4 )]
-margin_right = -1292.0
+[node name="BtnMapa" type="TextureButton" parent="."]
+visible = false
+margin_left = 558.0
+margin_top = 163.5
+margin_right = 784.0
+margin_bottom = 221.5
 
-[node name="Viewport" parent="Mapa/Control/MarginContainer/TextureRect/ViewportContainer" index="0"]
-render_target_update_mode = 0
+[node name="BtnConfig" type="TextureButton" parent="."]
+visible = false
+margin_left = 314.0
+margin_top = 164.0
+margin_right = 540.0
+margin_bottom = 222.0
 
-[node name="AnimatedSprite" parent="Mapa/Control/MarginContainer/TextureRect/ViewportContainer/Viewport/mapa/Mapa/Fuente" index="0"]
-frame = 2
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Fade_In = ExtResource( 4 )
 
-[node name="BtnMapa" type="TextureButton" parent="Mapa"]
-margin_top = 0.5
-margin_right = 226.0
-margin_bottom = 58.5
-
-[editable path="Mapa/Control"]
-[editable path="Mapa/Control/MarginContainer/TextureRect/ViewportContainer/Viewport/mapa"]
-[editable path="Mapa/Control/MarginContainer/TextureRect/ViewportContainer/Viewport/mapa/Mapa/cesped"]
+[connection signal="pressed" from="Configuracion/Controles" to="Configuracion" method="_on_Controles_pressed"]
+[connection signal="pressed" from="Configuracion/Video" to="Configuracion" method="_on_Video_pressed"]
+[connection signal="pressed" from="Configuracion/Video/CheckButton" to="Configuracion" method="_on_CheckButton_pressed"]
+[connection signal="pressed" from="Configuracion/Audio" to="Configuracion" method="_on_Audio_pressed"]
+[connection signal="scrolling" from="Configuracion/Audio/ConfVolume/VolMaster/Master" to="Configuracion" method="_on_Master_scrolling"]
+[connection signal="scrolling" from="Configuracion/Audio/ConfVolume/VolMusic/Music" to="Configuracion" method="_on_Music_scrolling"]
+[connection signal="pressed" from="Configuracion/Creditos" to="Configuracion" method="_on_Creditos_pressed"]
+[connection signal="pressed" from="Configuracion/SalirConfiig" to="Configuracion" method="_on_SalirConfiig_pressed"]
+[connection signal="pressed" from="Creditoss/Reresar" to="Configuracion" method="_on_Reresar_pressed"]
+[connection signal="pressed" from="BtnMapa" to="." method="_on_BtnMapa_pressed"]
+[connection signal="pressed" from="BtnConfig" to="." method="_on_BtnConfig_pressed"]

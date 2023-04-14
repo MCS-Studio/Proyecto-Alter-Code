@@ -1,12 +1,9 @@
 extends Node2D
-#signal poX(value)
-#signal poY(value)
-#var pX 
-#var pY
-func _process(delta):
+
+func _ready():
+	print("Pos X: " , $Jugador.position.x, "Pos Y: " , $Jugador.position.y)
 	Globales.POx = $Jugador.position.x
 	Globales.POy = $Jugador.position.y
-#	emit_signal("poX",pX)
-#	emit_signal("poY",pY)
-#	print(Globales.POx," : ",Globales.POy)
+
+func _process(delta):
 	pass
