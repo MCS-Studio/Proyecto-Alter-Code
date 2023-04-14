@@ -7,9 +7,6 @@ var EscFlag = false
 func _ready():
 	ControlsFmod.playEvent("Title")
 
-func _ready():
-	ControlsFmod.playEvent("Title")
-
 #Reinicia la animacion de inicio(Para debug)
 func _on_reiniciar_pressed():
 	ControlsFmod.playSFXOnce("Button")

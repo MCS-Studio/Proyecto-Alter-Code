@@ -204,6 +204,7 @@ func SubfusilJefe():
 	#Globales.VidaJefe = Globales.VidaJefe - ((Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00))) * Globales.evadir ) 
 	Globales.Turno = Globales.Turno + 1
 	$AnimationPlayer.play("DamageSalter")
+	ControlsFmod.playSFXOnce("AtaquesJefe/Subfusil")
 
 func SuministrosJefe():
 	Globales.VidaJefe = Globales.VidaJefe + (Globales.VidaMaximaJefe * 0.10)
@@ -219,6 +220,7 @@ func GranadaJefe():
 		activacionBurn = true
 		timer_on = true
 		$AnimationPlayer.play("DamageSalter")
+		ControlsFmod.playSFXOnce("AtaquesJefe/PlasmaGrenade")
 
 func EmbestidaJefe():
 	if Globales.EstaminaJefe >= 20:
@@ -226,11 +228,13 @@ func EmbestidaJefe():
 		Globales.Turno += 1
 		activacion = true
 		$AnimationPlayer.play("DamageSalter")
+		ControlsFmod.playSFXOnce("AtaquesJefe/Embestida")
 	
 func ultimate():
 	multiplicadorDamage = ComparacionDeTipo(6,2)
 	Globales.VidaSalter = Globales.VidaSalter - (multiplicadorDamage * (Globales.EspecialJefe * ((Globales.VelocidadJefe - (Globales.VelocidadSalter/3)) *0.5)))
 	$AnimationPlayer.play("DamageSalter")
+	ControlsFmod.playSFXOnce("AtaquesJefe/MAC")
 	#Funciones de daño se Salter
 
 func Excalibur():
