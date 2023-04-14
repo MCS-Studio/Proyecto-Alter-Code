@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/String Quartet.mp3-6f0a4f7e61d7adab2c33d3a686ea06dc.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/BattleTheme/String Quartet.mp3"
+dest_files=[ "res://.import/String Quartet.mp3-6f0a4f7e61d7adab2c33d3a686ea06dc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

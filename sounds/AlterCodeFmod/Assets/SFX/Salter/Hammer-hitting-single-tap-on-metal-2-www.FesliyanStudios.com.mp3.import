@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hammer-hitting-single-tap-on-metal-2-www.FesliyanStudios.com.mp3-5e904587966c15dd45d0f37340d03220.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Salter/Hammer-hitting-single-tap-on-metal-2-www.FesliyanStudios.com.mp3"
+dest_files=[ "res://.import/Hammer-hitting-single-tap-on-metal-2-www.FesliyanStudios.com.mp3-5e904587966c15dd45d0f37340d03220.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

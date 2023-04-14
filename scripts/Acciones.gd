@@ -154,22 +154,27 @@ func quemadura():
 			activacionEnemy = false
 
 func _on_Granada_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	GranadaJefe()
 	SalterGod()
 
 func _on_Embestida_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	EmbestidaJefe()
 	SalterGod()
 
 func _on_Subfusil_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	SubfusilJefe()
 	SalterGod()
 
 func _on_Vida_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	SuministrosJefe()
 	SalterGod()
 
 func _on_Ultimate_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	ultimate()
 	SalterGod()
 
@@ -197,6 +202,7 @@ func SubfusilJefe():
 	Globales.Turno = Globales.Turno + 1
 	$AnimationPlayer.play("DañoJefe")
 	$AnimationPlayer.play("Daño")
+	ControlsFmod.playSFXOnce("AtaquesJefe/Subfusil")
 
 func SuministrosJefe():
 	Globales.VidaJefe = Globales.VidaJefe + (Globales.VidaMaximaJefe * 0.10)
@@ -204,28 +210,32 @@ func SuministrosJefe():
 	Globales.EstaminaJefe = Globales.EstaminaJefe + (Globales.EstaminaMaximaJefe * 0.10)
 	Globales.EstaminaJefe = EvaluarEstamina(Globales.EstaminaJefe, Globales.EstaminaMaximaJefe)
 	Globales.Turno = Globales.Turno + 1
+	ControlsFmod.playSFXOnce("AtaquesJefe/Suministros")
 
 func GranadaJefe():
 	if Globales.EstaminaJefe >= 10:
 		Globales.Turno += 1
 		activacionBurn = true
 		timer_on = true
+		ControlsFmod.playSFXOnce("AtaquesJefe/PlasmaGrenade")
 
 func EmbestidaJefe():
 	if Globales.EstaminaJefe >= 20:
 		turnoActivacion = Globales.Turno
 		Globales.Turno += 1
 		activacion = true
+		ControlsFmod.playSFXOnce("AtaquesJefe/Embestida")
 	
 func ultimate():
 	multiplicadorDamage = ComparacionDeTipo(6,2)
 	Globales.VidaSalter = Globales.VidaSalter - (multiplicadorDamage * (Globales.EspecialJefe * ((Globales.VelocidadJefe - (Globales.VelocidadSalter/3)) *0.5)))
-	
+	ControlsFmod.playSFXOnce("AtaquesJefe/MAC")
 	#Funciones de daño se Salter
 
 func Excalibur():
 	multiplicadorDamage = ComparacionDeTipo(2,6)
 	Globales.VidaJefe = Globales.VidaJefe - (multiplicadorDamage * (Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/(100.00-(Globales.VelocidadSalter/10))))))
+	ControlsFmod.playSFXOnce("AtaquesSalter/Excalibur")
 	
 	test = aleatorio()
 	if test == 1:
@@ -238,6 +248,7 @@ func avalon():
 	Globales.VidaSalter = Globales.VidaSalter + (Globales.VidaMaximaSalter * 0.10)
 	Globales.VidaSalter = EvaluarVida(Globales.VidaSalter, Globales.VidaMaximaSalter)
 	print("avalon")
+	ControlsFmod.playSFXOnce("AtaquesSalter/Avalon")
 
 func Barrera_del_viento_del_rey():
 	multiplicadorDamage = ComparacionDeTipo(3,6)
@@ -246,11 +257,14 @@ func Barrera_del_viento_del_rey():
 		Globales.EstaminaJefe = 0
 	else:
 		Globales.EstaminaJefe -= 20
+	ControlsFmod.playSFXOnce("AtaquesSalter/BarreraDelViento")
 
 func Corte_lateral_Buster():
 	multiplicadorDamage = ComparacionDeTipo(1,6)
 	test = (randi() % 6 + 1)
 	Globales.VidaJefe = Globales.VidaJefe - (multiplicadorDamage * (test * (Globales.AtaqueSalter - ((Globales.DefensaJefe * 2) * (Globales.AtaqueSalter/100.00)))))
+	ControlsFmod.setLocalParameter("Buster", "CuantosGolpes", test)
+	ControlsFmod.playEvent("Buster")
 
 func HPlow():
 	if Globales.VidaSalter == (20 * (Globales.VidaMaximaSalter)):

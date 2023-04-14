@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{bfd94d60-d212-4207-8141-ec523cdc8ab4}">
 		<property name="assetPath">
-			<value>BattleTheme/Pizzcato Strings.mp3</value>
+			<value>Music/BattleTheme/Pizzcato Strings.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

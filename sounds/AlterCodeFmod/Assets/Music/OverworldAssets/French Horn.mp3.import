@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/French Horn.mp3-55b2333faca85cbc977389c83c9113e9.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/OverworldAssets/French Horn.mp3"
+dest_files=[ "res://.import/French Horn.mp3-55b2333faca85cbc977389c83c9113e9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

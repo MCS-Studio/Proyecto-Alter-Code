@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Marimba Bajo.mp3-e869bb11832a3265d780fdb14dea0fba.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/OverworldAssets/Marimba Bajo.mp3"
+dest_files=[ "res://.import/Marimba Bajo.mp3-e869bb11832a3265d780fdb14dea0fba.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

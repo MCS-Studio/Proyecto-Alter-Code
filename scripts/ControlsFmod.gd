@@ -4,7 +4,7 @@ var Battle
 var Title
 var Overworld
 var Item
-
+var Buster
 
 func _ready():
 	#Prepara al escuchador de fmod
@@ -27,6 +27,8 @@ func selectInstance(name):
 			return Overworld
 		"ItemCollected":
 			return Item
+		"Buster":
+			return Buster
 
 
 func playMusicOnce(name):
@@ -50,7 +52,7 @@ func playSFXParametersOnce(name, parameters):
 func playEvent(name):
 	#Como hay veces que no se cargan las instancias,
 	#Pondré un verificador para comprobar si estan vacias para crearlas
-	if Battle == 0 and Title == 0 and Overworld == 0:
+	if areInstancesMissing():
 		print("No se encontraron las instancias de los eventos; se crearán de nuevo.")
 		reloadInstances()
 	#Reproduce un evento de una instancia ya creada
@@ -66,9 +68,13 @@ func playEvent(name):
 		print("Algo salio mal, creo")
 
 func stopEvent(name):
-	#Para los eventos segun el nombre.
-	#Talvez el tipo de parada tambien la ponga como parametro de la func
-	Fmod.stop_event(selectInstance(name), Fmod.FMOD_STUDIO_STOP_ALLOWFADEOUT)
+	if areInstancesMissing():
+		print("No se encontraron las instancias de los eventos; se crearán de nuevo.")
+		reloadInstances()
+	else:
+		#Para los eventos segun el nombre.
+		#Talvez el tipo de parada tambien la ponga como parametro de la func
+		Fmod.stop_event(selectInstance(name), Fmod.FMOD_STUDIO_STOP_ALLOWFADEOUT)
 			
 func setGlobalParameter(parameter, value):
 	#Establece parametros globales
@@ -121,6 +127,10 @@ func reloadInstances():
 	Overworld = Fmod.create_event_instance("event:/Musica/Overworld")
 	print(Overworld)
 	Item = Fmod.create_event_instance("event:/SFX/ItemCollected")
+	Buster = Fmod.create_event_instance("event:/SFX/AtaquesSalter/CorteLateralBuster")
+	
+func areInstancesMissing():
+	return (Battle == 0 or Title == 0 or Overworld == 0 or Item == 0 or Buster == 0)
 
 func setMasterVolume(value):
 	#El valor del volumen:

@@ -4,6 +4,8 @@ onready var tree = get_tree()
 var WinFlag = false
 var EscFlag = false
 
+func _ready():
+	ControlsFmod.playEvent("Title")
 
 #Reinicia la animacion de inicio(Para debug)
 func _on_reiniciar_pressed():
@@ -14,6 +16,7 @@ func _on_reiniciar_pressed():
 #Inicia el juego
 func _on_Iniciar_pressed():
 	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.stopEvent("Title")
 	$Fade.visible = true
 	$AnimacionSalir.play("Cargar")
 #	tree.change_scene("res://Esenas/Batalla/Batalla.tscn")
@@ -27,20 +30,24 @@ func _on_Salir_pressed():
 
 #Ejecuta una esccena secreta
 func _on_Secreto_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	tree.change_scene("res://Esenas/Waifus/Waifus.tscn")
 
 func _on_Config_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	OcultarMenu()
 
 func _on_Salirpop_pressed():
 	tree.quit()
 
 func _on_Cancelarpop_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	get_node("ColorRect").hide()
 	get_node("ConfirmacionSalida").hide()
 	get_node("MenuInicial").visible = true
 
 func _on_SalirConfig_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	MostrarMenu()
 
 func _input(event):
@@ -85,6 +92,7 @@ func HabilitarBotones():
 	get_node("ColorRect").hide()
 
 func _on_CheckButton_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	if WinFlag !=  true:
 		OS.window_fullscreen = true
 		WinFlag = true
@@ -93,16 +101,19 @@ func _on_CheckButton_pressed():
 		WinFlag = false
 
 func _on_Creditos_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	get_node("ColorRect").hide()
 	get_node("MenuConfig").hide()
 	get_node("Creditos").visible = true
 
 func _on_Reresar_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	get_node("Creditos").visible = false
 	get_node("MenuConfig").visible = true
 	get_node("ColorRect").visible = true
 
 func _on_SalirConfiig_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	MostrarMenu()
 
 func _on_AnimacionSalir_animation_finished(anim_name):

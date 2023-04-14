@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Basoon.mp3-fcd3df72dae14bcbceed71c3b9ff4e6b.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/OverworldAssets/Basoon.mp3"
+dest_files=[ "res://.import/Basoon.mp3-fcd3df72dae14bcbceed71c3b9ff4e6b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

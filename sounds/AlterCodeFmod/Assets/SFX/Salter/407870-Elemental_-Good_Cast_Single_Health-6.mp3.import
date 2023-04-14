@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/407870-Elemental_-Good_Cast_Single_Health-6.mp3-847b524518b0cc7414a910d523f1b476.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Salter/407870-Elemental_-Good_Cast_Single_Health-6.mp3"
+dest_files=[ "res://.import/407870-Elemental_-Good_Cast_Single_Health-6.mp3-847b524518b0cc7414a910d523f1b476.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

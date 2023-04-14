@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{fcbba16f-f67e-45cb-9716-9d217dce2da2}">
 		<property name="assetPath">
-			<value>OverworldAssets/Arpegio Marimba.mp3</value>
+			<value>Music/OverworldAssets/Arpegio Marimba.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

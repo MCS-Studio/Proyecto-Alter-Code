@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TaikoDrum.mp3-2791bdc08244cffc925ccc0673e1785e.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/OverworldAssets/TaikoDrum.mp3"
+dest_files=[ "res://.import/TaikoDrum.mp3-2791bdc08244cffc925ccc0673e1785e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Magic Spell Whoosh 1 - SFX Producer.mp3-f6b51c6d7eaa3a8bda69f50aaa844b42.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Salter/ES_Magic Spell Whoosh 1 - SFX Producer.mp3"
+dest_files=[ "res://.import/ES_Magic Spell Whoosh 1 - SFX Producer.mp3-f6b51c6d7eaa3a8bda69f50aaa844b42.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

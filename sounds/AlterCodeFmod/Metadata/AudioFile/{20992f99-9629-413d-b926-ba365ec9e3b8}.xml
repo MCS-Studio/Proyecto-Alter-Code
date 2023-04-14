@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{20992f99-9629-413d-b926-ba365ec9e3b8}">
 		<property name="assetPath">
-			<value>OverworldAssets/Pipa.mp3</value>
+			<value>Music/OverworldAssets/Pipa.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

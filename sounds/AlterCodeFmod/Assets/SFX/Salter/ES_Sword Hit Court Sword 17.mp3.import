@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Sword Hit Court Sword 17.mp3-5fcab0b81b5c274da585fb1d433c6bcb.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Salter/ES_Sword Hit Court Sword 17.mp3"
+dest_files=[ "res://.import/ES_Sword Hit Court Sword 17.mp3-5fcab0b81b5c274da585fb1d433c6bcb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

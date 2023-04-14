@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/half-life-health-charger-sound-By-tuna.voicemod.net.mp3-3a967f83763ed82d3dd3baf7da6d3a07.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/JefeMaestro/half-life-health-charger-sound-By-tuna.voicemod.net.mp3"
+dest_files=[ "res://.import/half-life-health-charger-sound-By-tuna.voicemod.net.mp3-3a967f83763ed82d3dd3baf7da6d3a07.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

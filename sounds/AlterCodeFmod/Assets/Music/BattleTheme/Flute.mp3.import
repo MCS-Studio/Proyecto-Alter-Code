@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Flute.mp3-5ac3e867d0c19ce21e303302625714bf.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/BattleTheme/Flute.mp3"
+dest_files=[ "res://.import/Flute.mp3-5ac3e867d0c19ce21e303302625714bf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

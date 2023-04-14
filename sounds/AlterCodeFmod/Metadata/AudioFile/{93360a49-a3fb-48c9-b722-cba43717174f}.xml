@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{93360a49-a3fb-48c9-b722-cba43717174f}">
+		<property name="assetPath">
+			<value>SFX/Salter/ES_Sword Hit Court Sword 17.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.2204081632653061</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e60d1c17-db37-4e09-a016-172ac9cfa2ef}</destination>
+		</relationship>
+	</object>
+</objects>

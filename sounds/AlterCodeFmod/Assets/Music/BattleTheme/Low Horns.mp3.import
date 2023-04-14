@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Low Horns.mp3-1d81fe56fefdd57faf01d2b47996b628.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/BattleTheme/Low Horns.mp3"
+dest_files=[ "res://.import/Low Horns.mp3-1d81fe56fefdd57faf01d2b47996b628.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

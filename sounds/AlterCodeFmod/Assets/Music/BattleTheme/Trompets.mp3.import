@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Trompets.mp3-c8baff59c8e8340472d0060c3018e62d.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/BattleTheme/Trompets.mp3"
+dest_files=[ "res://.import/Trompets.mp3-c8baff59c8e8340472d0060c3018e62d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

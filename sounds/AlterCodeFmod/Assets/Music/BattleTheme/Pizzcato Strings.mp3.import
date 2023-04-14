@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pizzcato Strings.mp3-59044e9d09df3abdeeaad7823fbe0187.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/BattleTheme/Pizzcato Strings.mp3"
+dest_files=[ "res://.import/Pizzcato Strings.mp3-59044e9d09df3abdeeaad7823fbe0187.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Snare.mp3-7f48324fb046bc6de065573a2391c34b.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/BattleTheme/Snare.mp3"
+dest_files=[ "res://.import/Snare.mp3-7f48324fb046bc6de065573a2391c34b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
