@@ -11,6 +11,13 @@ var evadir = 1.00
 
 var max_loadtime = 100000
 
+#Mapa
+var Areas
+# 0 = no hay nada
+# 1 = pelican
+# 2 = ruinas
+# 3 = combate
+
 #Estadisticas Jefe
 
 var VidaJefe = 1500.00

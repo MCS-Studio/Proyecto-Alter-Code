@@ -163,7 +163,7 @@ z_index = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 1
 current = true
-zoom = Vector2( 0.35, 0.35 )
+zoom = Vector2( 0.45, 0.45 )
 
 [node name="cabeza" type="CollisionShape2D" parent="."]
 position = Vector2( -1, -13 )

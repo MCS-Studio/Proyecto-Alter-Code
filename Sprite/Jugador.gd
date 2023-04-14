@@ -44,7 +44,35 @@ func _physics_process(delta):
 #	var posicion = Vector2()
 #	print(movimiento)
 	
+func _on_AreaRuinas_body_entered(body):
+	print("ENTRASTE AREA RUINA")
+	Globales.Areas = 2
+	print(Globales.Areas)
+	pass # Replace with function body.
+func _on_AreaRuinas_body_exited(body):
+	print("SALISTE AREA RUINA")
+	Globales.Areas = 0
+	print(Globales.Areas)
+	pass # Replace with function body.
 
+func _on_AreaCombate_body_entered(body):
+	print("ENTRASTE AREA COMBATE")
+	Globales.Areas = 3
+	print(Globales.Areas)
+	pass # Replace with function body.
+func _on_AreaCombate_body_exited(body):
+	print("SALISTE AREA COMBATE")
+	Globales.Areas = 0
+	print(Globales.Areas)
+	pass # Replace with function body.
 
-
-
+func _on_deteccion_pelican_body_entered(body):
+	print("ENTRASTE AREA PELICAN")
+	Globales.Areas = 1
+	print(Globales.Areas)
+	pass # Replace with function body.
+func _on_deteccion_pelican_body_exited(body):
+	print("SALISTE AREA PELICAN")
+	Globales.Areas = 0
+	print(Globales.Areas)
+	pass # Replace with function body.
