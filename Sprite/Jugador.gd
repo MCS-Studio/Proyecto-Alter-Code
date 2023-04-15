@@ -7,12 +7,17 @@ var animacion=""
 onready var animaciones=$AnimatedSprite
 onready var mira= $RayCast2D
 
+func _ready():
+	ControlsFmod.playEvent("Grass")
+	ControlsFmod.pauseEvent("Grass")
+
 func _physics_process(delta):
 	comprobarMapa()
 
 func comprobarMapa():
 	if $"../UI".get_node("Mapa").visible or $"../UI".get_node("Configuracion").visible == true:
 		velocidad = 0
+		ControlsFmod.pauseEvent("Grass")
 	else:
 		var movimiento = Vector2()
 		velocidad = 100
@@ -20,29 +25,37 @@ func comprobarMapa():
 			movimiento.y-= velocidad
 			mira.set_cast_to(Vector2(0,-50))
 			animacion="Movi_Arriba"
+			ControlsFmod.resumeEvent("Grass")
 		elif mira.get_cast_to() == Vector2 (0,-50):
 			animacion="Quieto_arriba"
+			ControlsFmod.pauseEvent("Grass")
 			
 		if Input.is_action_pressed("ui_down"):
 			movimiento.y += velocidad
 			mira.set_cast_to(Vector2(0,50))
 			animacion="Movi_Abajo"
+			ControlsFmod.resumeEvent("Grass")
 		elif mira.get_cast_to()== Vector2 (0,50):
 			animacion="Quieto_abajo"
+			ControlsFmod.pauseEvent("Grass")
 			
 		if Input.is_action_pressed("ui_left"):
 			movimiento.x-=velocidad
 			mira.set_cast_to(Vector2(-50,0))
 			animacion="Movi_izq"
+			ControlsFmod.resumeEvent("Grass")
 		elif mira.get_cast_to()== Vector2 (-50,0):
 			animacion="Quieto_Izq"
+			ControlsFmod.pauseEvent("Grass")
 			
 		if Input.is_action_pressed("ui_right"):
 			movimiento.x+=velocidad
 			mira.set_cast_to(Vector2(50,0))
 			animacion="Movi_der"
+			ControlsFmod.resumeEvent("Grass")
 		elif mira.get_cast_to()== Vector2 (50,0):
 			animacion="Quieto_der"
+			ControlsFmod.pauseEvent("Grass")
 			
 		move_and_slide(movimiento)
 		animaciones.play(animacion)

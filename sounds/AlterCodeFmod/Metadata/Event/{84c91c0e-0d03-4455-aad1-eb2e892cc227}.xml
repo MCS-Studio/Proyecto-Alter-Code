@@ -108,6 +108,9 @@
 		<property name="timelockedOffset">
 			<value>0.66000000000000014</value>
 		</property>
+		<property name="pitch">
+			<value>-2</value>
+		</property>
 		<relationship name="triggerConditions">
 			<destination>{375712d5-29b9-4144-b3a8-6bbb4eccbfc1}</destination>
 		</relationship>
@@ -117,10 +120,10 @@
 	</object>
 	<object class="EventMixerGroup" id="{d8b76b1a-da81-415b-a63f-042403940f3c}">
 		<property name="volume">
-			<value>-10.5</value>
+			<value>-14</value>
 		</property>
 		<property name="name">
-			<value>Audio 2</value>
+			<value>Walking</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{93c6dbd4-1fae-4905-98ba-9b91b6ce6388}</destination>
@@ -151,7 +154,7 @@
 			<value>-13</value>
 		</property>
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Running</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{afa14df2-adc4-444f-b914-fce0d5dddfe3}</destination>

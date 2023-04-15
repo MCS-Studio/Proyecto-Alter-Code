@@ -62,11 +62,13 @@ func _on_BtnMapa_pressed():
 	$Mapa.visible = true
 	flagMapa = true
 	flagConfig = false
+	ControlsFmod.playSFXOnce("Button")
 
 func _on_BtnConfig_pressed():
 	$Configuracion.visible = true
 	$Mapa.visible = false
 	flagConfig = true
 	flagMapa = false
+	ControlsFmod.playSFXOnce("Button")
 
 

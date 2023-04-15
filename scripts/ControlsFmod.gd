@@ -5,6 +5,7 @@ var Title
 var Overworld
 var Item
 var Buster
+var Grass
 
 func _ready():
 	#Prepara al escuchador de fmod
@@ -29,6 +30,8 @@ func selectInstance(name):
 			return Item
 		"Buster":
 			return Buster
+		"Grass":
+			return Grass
 
 
 func playMusicOnce(name):
@@ -62,7 +65,7 @@ func playEvent(name):
 	
 	#Esta es otra validación que ya ni se si de verdad sirve o no
 	if not is_instance_valid(selectInstance(name)):
-		print("es valido")
+		#print("es valido")
 		Fmod.start_event(selectInstance(name))
 	else:
 		print("Algo salio mal, creo")
@@ -128,6 +131,7 @@ func reloadInstances():
 	print(Overworld)
 	Item = Fmod.create_event_instance("event:/SFX/ItemCollected")
 	Buster = Fmod.create_event_instance("event:/SFX/AtaquesSalter/CorteLateralBuster")
+	Grass = Fmod.create_event_instance("event:/SFX/GrassSFX")
 	
 func areInstancesMissing():
 	return (Battle == 0 or Title == 0 or Overworld == 0 or Item == 0 or Buster == 0)

@@ -37,6 +37,7 @@ func _on_Cerrar_pressed():
 	$".".visible = false
 	$"../Fade".visible = false
 	Globales.Cerrar = true
+	ControlsFmod.playSFXOnce("Button")
 
 func _on_Creditos_pressed():
 	$"../AnimationPlayer".play("Fade_In")
@@ -48,6 +49,7 @@ func _on_SalirConfiig_pressed():
 	$".".visible = false
 	$"../AnimationPlayer".play("Fade_In")
 	$"../ConfirmacionSalida".visible = true
+	ControlsFmod.playSFXOnce("Button")
 
 func _on_Salirpop_pressed():
 	get_tree().quit()
@@ -55,6 +57,7 @@ func _on_Salirpop_pressed():
 func _on_Cancelarpop_pressed():
 	$"../ConfirmacionSalida".visible = false
 	$".".visible = true
+	ControlsFmod.playSFXOnce("Button")
 
 func _on_CheckButton_pressed():
 	if WinFlag !=  true:
@@ -63,6 +66,7 @@ func _on_CheckButton_pressed():
 	else:
 		OS.window_fullscreen = false
 		WinFlag = false
+	ControlsFmod.playSFXOnce("Button")
 
 func _on_Master_scrolling():
 	evaluarVolumen()
@@ -79,7 +83,7 @@ func evaluarVolumen():
 	Globales.VolMusic = $Audio/ConfVolume/VolMusic/Music.value
 	$Audio/ConfVolume/VolMusic/PerVolume.text = str(Globales.VolMusic) + str(" %")
 	Globales.VolSFX = $Audio/ConfVolume/VolSFX/SFX.value
-	$Audio/ConfVolume/VolMusic/PerVolume.text = str(Globales.VolMusic) + str(" %")
+	$Audio/ConfVolume/VolSFX/PerVolume.text = str(Globales.VolSFX) + str(" %")
 	#Como los valores del Fmod toman valores del 0 al 1, los divido entre 100
 	ControlsFmod.setMasterVolume((Globales.VolMaster / 100)) 
 	ControlsFmod.setMusicVolume((Globales.VolMusic / 100))
@@ -88,3 +92,4 @@ func evaluarVolumen():
 func _on_Reresar_pressed():
 	$"../Creditoss".visible = false
 	$".".visible = true
+	ControlsFmod.playSFXOnce("Button")
