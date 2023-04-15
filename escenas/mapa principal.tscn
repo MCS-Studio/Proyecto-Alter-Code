@@ -216,6 +216,7 @@ occluder = SubResource( 1 )
 position = Vector2( -32, 9 )
 
 [node name="deteccion pelican" type="Area2D" parent="Mapa/cesped/Pelican" index="0"]
+visible = false
 position = Vector2( 32, -10 )
 z_index = 1
 
@@ -227,6 +228,7 @@ shape = SubResource( 46 )
 z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/cesped/ruinas zeri/AreaRuinas"]
+visible = false
 position = Vector2( 1557, 2380 )
 shape = SubResource( 47 )
 
@@ -234,6 +236,7 @@ shape = SubResource( 47 )
 z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/cesped/ruinas zeri/AreaCombate"]
+visible = false
 position = Vector2( 1533.48, 1526.66 )
 scale = Vector2( 10.1046, 9.9685 )
 shape = SubResource( 48 )
@@ -314,7 +317,7 @@ position = Vector2( -54, 673 )
 show_behind_parent = true
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 8
+frame = 14
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
