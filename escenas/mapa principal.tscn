@@ -20,197 +20,158 @@ extents = Vector2( 771.75, 492 )
 extents = Vector2( 49.93, 31.3328 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 224, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 448, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 672, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=6]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 896, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=7]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 1120, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=8]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 1344, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=9]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 1568, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=10]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 1792, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=11]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 2016, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=12]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 2240, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=13]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 2464, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 2688, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=15]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 2912, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=16]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 3136, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=17]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 3360, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=18]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 3584, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=19]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 3808, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=20]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 4032, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=21]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 4256, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=22]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 4480, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=23]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 4704, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=24]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 4928, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=25]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 5152, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=26]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 5376, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=27]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 5600, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=28]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 5824, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=29]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 6048, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=30]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 6272, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=31]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 6496, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=32]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 6720, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=33]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 6944, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=34]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 7168, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=35]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 7392, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=36]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 7616, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=37]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 7840, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=38]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 8064, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=39]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 8288, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=40]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 8512, 0, 224, 288 )
 
@@ -256,18 +217,21 @@ position = Vector2( -32, 9 )
 
 [node name="deteccion pelican" type="Area2D" parent="Mapa/cesped/Pelican" index="0"]
 position = Vector2( 32, -10 )
+z_index = 1
 
 [node name="area pelican" type="CollisionShape2D" parent="Mapa/cesped/Pelican/deteccion pelican"]
 position = Vector2( 1564, 4191.38 )
 shape = SubResource( 46 )
 
 [node name="AreaRuinas" type="Area2D" parent="Mapa/cesped/ruinas zeri" index="8"]
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/cesped/ruinas zeri/AreaRuinas"]
 position = Vector2( 1557, 2380 )
 shape = SubResource( 47 )
 
 [node name="AreaCombate" type="Area2D" parent="Mapa/cesped/ruinas zeri" index="9"]
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/cesped/ruinas zeri/AreaCombate"]
 position = Vector2( 1533.48, 1526.66 )
@@ -283,47 +247,65 @@ z_index = 2
 [node name="murallas" parent="Mapa/cesped/muralla" index="2"]
 z_index = 2
 
-[node name="bosque camino -11" parent="Mapa/cesped/bosque camino muralla" index="0"]
+[node name="bosque camino muralla" parent="Mapa/cesped" index="5"]
+z_index = 3
+
+[node name="bosque camino -11" parent="Mapa/cesped/bosque camino muralla" index="1"]
 z_index = 2
 
-[node name="bosque camino -10" parent="Mapa/cesped/bosque camino muralla" index="1"]
+[node name="bosque camino -10" parent="Mapa/cesped/bosque camino muralla" index="2"]
 z_index = 2
 
-[node name="bosque camino -9" parent="Mapa/cesped/bosque camino muralla" index="2"]
+[node name="bosque camino -9" parent="Mapa/cesped/bosque camino muralla" index="3"]
 z_index = 2
 
-[node name="bosque camino -8" parent="Mapa/cesped/bosque camino muralla" index="3"]
+[node name="bosque camino -8" parent="Mapa/cesped/bosque camino muralla" index="5"]
 z_index = 2
 
-[node name="bosque camino -7" parent="Mapa/cesped/bosque camino muralla" index="4"]
+[node name="bosque camino -7" parent="Mapa/cesped/bosque camino muralla" index="7"]
 z_index = 2
 
-[node name="bosque camino -6" parent="Mapa/cesped/bosque camino muralla" index="5"]
+[node name="bosque camino -6" parent="Mapa/cesped/bosque camino muralla" index="9"]
 z_index = 2
 
-[node name="bosqeu camino -5" parent="Mapa/cesped/bosque camino muralla" index="6"]
+[node name="bosqeu camino -5" parent="Mapa/cesped/bosque camino muralla" index="11"]
 z_index = 2
 
-[node name="bosque camino -4" parent="Mapa/cesped/bosque camino muralla" index="7"]
+[node name="bosque camino -4" parent="Mapa/cesped/bosque camino muralla" index="13"]
 z_index = 2
 
-[node name="bosque camino -3" parent="Mapa/cesped/bosque camino muralla" index="8"]
+[node name="bosque camino -3" parent="Mapa/cesped/bosque camino muralla" index="15"]
 z_index = 2
 
-[node name="bosque camino -2" parent="Mapa/cesped/bosque camino muralla" index="9"]
+[node name="bosque camino -2" parent="Mapa/cesped/bosque camino muralla" index="17"]
 z_index = 2
 
-[node name="bosque camino -1" parent="Mapa/cesped/bosque camino muralla" index="10"]
+[node name="bosque camino -1" parent="Mapa/cesped/bosque camino muralla" index="19"]
 z_index = 2
 
-[node name="bosque camino 1" parent="Mapa/cesped/bosque camino muralla" index="11"]
+[node name="bosque camino 1" parent="Mapa/cesped/bosque camino muralla" index="20"]
 z_index = 2
 
-[node name="bosque camino 2" parent="Mapa/cesped/bosque camino muralla" index="12"]
+[node name="bosque camino 2" parent="Mapa/cesped/bosque camino muralla" index="21"]
 z_index = 2
 
-[node name="bosque camino 3" parent="Mapa/cesped/bosque camino muralla" index="13"]
+[node name="bosque camino 3" parent="Mapa/cesped/bosque camino muralla" index="22"]
 z_index = 2
+
+[node name="bosque zeri" parent="Mapa/cesped" index="6"]
+z_index = 5
+
+[node name="bosque camino ruinas" parent="Mapa/cesped" index="7"]
+z_index = 5
+
+[node name="bosque ruina" parent="Mapa/cesped" index="8"]
+z_index = 5
+
+[node name="Bosque pelican" parent="Mapa/cesped" index="9"]
+z_index = 5
+
+[node name="bosque seco pelican" parent="Mapa/cesped" index="10"]
+z_index = 5
 
 [node name="Fuente" type="Node2D" parent="Mapa"]
 position = Vector2( -54, 673 )
@@ -332,7 +314,7 @@ position = Vector2( -54, 673 )
 show_behind_parent = true
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 9
+frame = 8
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
@@ -454,10 +436,10 @@ polygon = PoolVector2Array( 1567, 4604, 1567, 4710, 1579, 4734, 1582, 4764, 1588
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
 
-[connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_entered"]
 [connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_entered"]
-[connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_exited"]
+[connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_entered"]
 [connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_exited"]
+[connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_exited"]
 [connection signal="body_entered" from="Mapa/cesped/ruinas zeri/AreaRuinas" to="Jugador" method="_on_AreaRuinas_body_entered"]
 [connection signal="body_exited" from="Mapa/cesped/ruinas zeri/AreaRuinas" to="Jugador" method="_on_AreaRuinas_body_exited"]
 [connection signal="body_entered" from="Mapa/cesped/ruinas zeri/AreaCombate" to="Jugador" method="_on_AreaCombate_body_entered"]
