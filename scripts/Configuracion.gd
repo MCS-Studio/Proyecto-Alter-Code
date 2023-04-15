@@ -15,6 +15,14 @@ func _input(event):
 			$BtnConfig.visible =  true
 			flagMapa = true
 			flagConfig = false
+			if Globales.Areas == 0:
+				$Mapa/Nohay.visible = true
+			if Globales.Areas == 1:
+				$Mapa/Pelican.visible = true
+			if Globales.Areas == 2:
+				$Mapa/Ruinas.visible = true
+			if Globales.Areas == 3:
+				$Mapa/Combate.visible = true
 	else:
 		if Input.is_action_pressed("Mapa"):
 			$Fade.visible = false
@@ -22,6 +30,14 @@ func _input(event):
 			$BtnMapa.visible = false
 			$BtnConfig.visible =  false
 			flagMapa = false
+			if Globales.Areas == 0:
+				$Mapa/Nohay.visible = false
+			if Globales.Areas == 1:
+				$Mapa/Pelican.visible = false
+			if Globales.Areas == 2:
+				$Mapa/Ruinas.visible = false
+			if Globales.Areas == 3:
+				$Mapa/Combate.visible = false
 	#Boton para abir configuracion
 	if flagConfig == false:
 		if Input.is_action_pressed("Escape"):

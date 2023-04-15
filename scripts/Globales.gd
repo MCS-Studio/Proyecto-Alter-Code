@@ -1,5 +1,8 @@
 extends Node
 
+#Variable Menu3
+var Cerrar
+
 #Variables MAPA
 var POx = 0.00
 var POy = 0.00

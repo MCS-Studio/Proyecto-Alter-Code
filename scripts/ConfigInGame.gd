@@ -33,6 +33,11 @@ func _on_Audio_pressed():
 	$Audio/ConfVolume.visible = true
 	ControlsFmod.playSFXOnce("Button")
 
+func _on_Cerrar_pressed():
+	$".".visible = false
+	$"../Fade".visible = false
+	Globales.Cerrar = true
+
 func _on_Creditos_pressed():
 	$"../AnimationPlayer".play("Fade_In")
 	$".".visible = false
@@ -40,9 +45,16 @@ func _on_Creditos_pressed():
 	ControlsFmod.playSFXOnce("Button")
 
 func _on_SalirConfiig_pressed():
-	
-	pass # Replace with function body.
+	$".".visible = false
+	$"../AnimationPlayer".play("Fade_In")
+	$"../ConfirmacionSalida".visible = true
 
+func _on_Salirpop_pressed():
+	get_tree().quit()
+
+func _on_Cancelarpop_pressed():
+	$"../ConfirmacionSalida".visible = false
+	$".".visible = true
 
 func _on_CheckButton_pressed():
 	if WinFlag !=  true:
@@ -76,7 +88,3 @@ func evaluarVolumen():
 func _on_Reresar_pressed():
 	$"../Creditoss".visible = false
 	$".".visible = true
-	
-
-
-

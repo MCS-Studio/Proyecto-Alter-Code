@@ -14,10 +14,10 @@ polygon = PoolVector2Array( 0.0336914, 11.9998, 1.01685, 5.99707, -3.98303, 6.01
 extents = Vector2( 833, 713.375 )
 
 [sub_resource type="RectangleShape2D" id=47]
-extents = Vector2( 771.75, 528 )
+extents = Vector2( 771.75, 492 )
 
 [sub_resource type="RectangleShape2D" id=48]
-extents = Vector2( 49.93, 29.6276 )
+extents = Vector2( 49.93, 31.3328 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -237,7 +237,7 @@ polygon = PoolVector2Array( 1643, 824, 1632, 878, 1632, 878, 1643, 869, 1643, 82
 [node name="mapa" type="Node2D"]
 
 [node name="Jugador" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1574, 4680 )
+position = Vector2( 1569, 4745 )
 rotation = 0.0028171
 z_index = 1
 script = ExtResource( 5 )
@@ -264,13 +264,13 @@ shape = SubResource( 46 )
 [node name="AreaRuinas" type="Area2D" parent="Mapa/cesped/ruinas zeri" index="8"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/cesped/ruinas zeri/AreaRuinas"]
-position = Vector2( 1557, 2344 )
+position = Vector2( 1557, 2380 )
 shape = SubResource( 47 )
 
 [node name="AreaCombate" type="Area2D" parent="Mapa/cesped/ruinas zeri" index="9"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/cesped/ruinas zeri/AreaCombate"]
-position = Vector2( 1533.48, 1509.66 )
+position = Vector2( 1533.48, 1526.66 )
 scale = Vector2( 10.1046, 9.9685 )
 shape = SubResource( 48 )
 
@@ -332,7 +332,7 @@ position = Vector2( -54, 673 )
 show_behind_parent = true
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 2
+frame = 9
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
@@ -454,35 +454,13 @@ polygon = PoolVector2Array( 1567, 4604, 1567, 4710, 1579, 4734, 1582, 4764, 1588
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
 
-[node name="Arriba" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="0"]
-frame = 3
-
-[node name="Abajo" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="1"]
-frame = 3
-
-[node name="Izquierda" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="2"]
-frame = 3
-
-[node name="Derecha" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="3"]
-frame = 3
-
-[node name="Accion" parent="UI/Configuracion/Controles/ControlesCtrl/Interactuar" index="0"]
-frame = 1
-
-[node name="menu" parent="UI/Configuracion/Controles/ControlesCtrl/AbrirMenu" index="0"]
-frame = 1
-
-[node name="Mapa" parent="UI/Configuracion/Controles/ControlesCtrl/Mapa" index="0"]
-frame = 1
-
-[connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_entered"]
 [connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_entered"]
-[connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_exited"]
+[connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_entered"]
 [connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_exited"]
+[connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_exited"]
 [connection signal="body_entered" from="Mapa/cesped/ruinas zeri/AreaRuinas" to="Jugador" method="_on_AreaRuinas_body_entered"]
 [connection signal="body_exited" from="Mapa/cesped/ruinas zeri/AreaRuinas" to="Jugador" method="_on_AreaRuinas_body_exited"]
 [connection signal="body_entered" from="Mapa/cesped/ruinas zeri/AreaCombate" to="Jugador" method="_on_AreaCombate_body_entered"]
 [connection signal="body_exited" from="Mapa/cesped/ruinas zeri/AreaCombate" to="Jugador" method="_on_AreaCombate_body_exited"]
 
 [editable path="Mapa/cesped"]
-[editable path="UI"]
