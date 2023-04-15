@@ -6,6 +6,7 @@ var EscFlag = false
 
 func _ready():
 	ControlsFmod.playEvent("Title")
+	Globales.Inicio = true
 
 func _process(delta):
 	comprobarMenu()
@@ -23,6 +24,7 @@ func _on_Iniciar_pressed():
 	get_node("MenuInicial").hide()
 	$Fade.visible = true
 	$AnimacionSalir.play("Cargar")
+	Globales.Inicio = false
 
 #Salir de el juego
 func _on_Salir_pressed():

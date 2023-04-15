@@ -2,6 +2,7 @@ extends Node
 
 #Variable Menu3
 var Cerrar
+var Inicio
 
 #Variables MAPA
 var POx = 0.00

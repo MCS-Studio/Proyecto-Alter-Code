@@ -15,6 +15,8 @@ func _input(event):
 			$BtnConfig.visible =  true
 			flagMapa = true
 			flagConfig = false
+			if Globales.Inicio:
+				$Mapa/Nohay.visible = true
 			if Globales.Areas == 0:
 				$Mapa/Nohay.visible = true
 			if Globales.Areas == 1:
@@ -30,6 +32,8 @@ func _input(event):
 			$BtnMapa.visible = false
 			$BtnConfig.visible =  false
 			flagMapa = false
+			if Globales.Inicio == false:
+				$Mapa/Nohay.visible = false
 			if Globales.Areas == 0:
 				$Mapa/Nohay.visible = false
 			if Globales.Areas == 1:
@@ -60,6 +64,16 @@ func _input(event):
 func _on_BtnMapa_pressed():
 	$Configuracion.visible = false
 	$Mapa.visible = true
+	if Globales.Inicio == false:
+		$Mapa/Nohay.visible = false
+	if Globales.Areas == 0:
+		$Mapa/Nohay.visible = true
+	if Globales.Areas == 1:
+		$Mapa/Pelican.visible = true
+	if Globales.Areas == 2:
+		$Mapa/Ruinas.visible = true
+	if Globales.Areas == 3:
+		$Mapa/Combate.visible = true
 	flagMapa = true
 	flagConfig = false
 	ControlsFmod.playSFXOnce("Button")

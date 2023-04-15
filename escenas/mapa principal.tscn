@@ -20,158 +20,197 @@ extents = Vector2( 771.75, 492 )
 extents = Vector2( 49.93, 31.3328 )
 
 [sub_resource type="AtlasTexture" id=2]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=3]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 224, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=4]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 448, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=5]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 672, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=6]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 896, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=7]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 1120, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=8]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 1344, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=9]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 1568, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=10]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 1792, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=11]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2016, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=12]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2240, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=13]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2464, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=14]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2688, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=15]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 2912, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=16]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 3136, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=17]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 3360, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=18]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 3584, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=19]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 3808, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=20]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4032, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=21]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4256, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=22]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4480, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=23]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4704, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=24]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 4928, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=25]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 5152, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=26]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 5376, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=27]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 5600, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=28]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 5824, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=29]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6048, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=30]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6272, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=31]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6496, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=32]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6720, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=33]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 6944, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=34]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 7168, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=35]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 7392, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=36]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 7616, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=37]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 7840, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=38]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 8064, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=39]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 8288, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=40]
+flags = 7
 atlas = ExtResource( 4 )
 region = Rect2( 8512, 0, 224, 288 )
 
@@ -317,7 +356,7 @@ position = Vector2( -54, 673 )
 show_behind_parent = true
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 14
+frame = 29
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
@@ -439,10 +478,10 @@ polygon = PoolVector2Array( 1567, 4604, 1567, 4710, 1579, 4734, 1582, 4764, 1588
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
 
-[connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_entered"]
 [connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_entered"]
-[connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_exited"]
+[connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_entered"]
 [connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_exited"]
+[connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_exited"]
 [connection signal="body_entered" from="Mapa/cesped/ruinas zeri/AreaRuinas" to="Jugador" method="_on_AreaRuinas_body_entered"]
 [connection signal="body_exited" from="Mapa/cesped/ruinas zeri/AreaRuinas" to="Jugador" method="_on_AreaRuinas_body_exited"]
 [connection signal="body_entered" from="Mapa/cesped/ruinas zeri/AreaCombate" to="Jugador" method="_on_AreaCombate_body_entered"]
