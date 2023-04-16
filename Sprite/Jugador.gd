@@ -110,31 +110,29 @@ func _on_AreaPelican_area_entered(area):
 	pass # Replace with function body.
 
 
-func _on_AreaPelican_area_exited(area):
+
+func _on_AreaRuinas_area_entered(area):
 	print("SALISTE AREA PELICAN")
 	Globales.Areas = 0
 	print(Globales.Areas)
-	pass # Replace with function body.
-
-
-func _on_AreaRuinas_area_entered(area):
 	print("ENTRASTE AREA RUINA")
 	Globales.Areas = 2
 	print(Globales.Areas)
+	
 	pass # Replace with function body.
 
 
-func _on_AreaRuinas_area_exited(area):
-	print("SALISTE AREA RUINA")
-	Globales.Areas = 0
-	print(Globales.Areas)
-	pass # Replace with function body.
+
 
 
 func _on_AreaBatalla_area_entered(area):
+	print("SALISTE AREA RUINA")
+	Globales.Areas = 0
+	print(Globales.Areas)
 	print("ENTRASTE AREA COMBATE")
 	Globales.Areas = 3
 	print(Globales.Areas)
+	
 	pass # Replace with function body.
 
 
