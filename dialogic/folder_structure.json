@@ -6,7 +6,9 @@
 		"Characters": {
 			"files": [
 				"character-1681250003.json",
-				"character-1681250039.json"
+				"character-1681250039.json",
+				"character-1681250003.json.import",
+				"character-1681250039.json.import"
 			],
 			"folders": {
 
@@ -46,7 +48,8 @@
 		},
 		"Timelines": {
 			"files": [
-				"timeline-1681250092.json"
+				"timeline-1681250092.json",
+				"timeline-1681250092.json.import"
 			],
 			"folders": {
 
