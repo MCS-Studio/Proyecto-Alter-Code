@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ed1a9c9e-d973-4023-a98a-0ffc6d48e9e1}">
+		<property name="assetPath">
+			<value>Music/BattleTheme/Horn Frances.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.5199999999999996</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e60d1c17-db37-4e09-a016-172ac9cfa2ef}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -4,16 +4,10 @@
 	],
 	"variables": [
 		{
-			"id": "1681253126-133",
-			"name": "Encuentro",
+			"id": "1681251786-970",
+			"name": "objeto1",
 			"type": 0,
-			"value": "true"
-		},
-		{
-			"id": "1681252973-233",
-			"name": "combate",
-			"type": 0,
-			"value": "1"
+			"value": "0"
 		},
 		{
 			"id": "1681250074-648",
@@ -22,10 +16,16 @@
 			"value": "0"
 		},
 		{
-			"id": "1681251786-970",
-			"name": "objeto1",
+			"id": "1681252973-233",
+			"name": "combate",
 			"type": 0,
-			"value": "0"
+			"value": "1"
+		},
+		{
+			"id": "1681253126-133",
+			"name": "Encuentro",
+			"type": 0,
+			"value": "true"
 		}
 	]
 }

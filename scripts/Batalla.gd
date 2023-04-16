@@ -20,13 +20,13 @@ func _process(delta):
 	get_node("Personajes/VidaSalter").value = Globales.VidaSalter
 	get_node("Personajes/VidaSalter/lblVidaSalter").text = str(Globales.VidaSalter) + str(" HP")
 	#Label Turno
-	get_node("Acciones/Turno").text = str("Turno: " ) + str(Globales.Turno)
+	get_node("Acciones/Turno").text = str("Ronda: " ) + str(Globales.Turno)
 	var HealthRemaining = round((Globales.VidaJefe / Globales.VidaMaximaJefe) * 100) 
 	ControlsFmod.setGlobalParameter("Health", HealthRemaining)
 
 func _on_RegresarMenu_pressed():
 	ControlsFmod.stopEvent("Battle")
-	get_tree().change_scene("res://Esenas/MenuP1.tscn")
+	get_tree().change_scene("res://escenas/Menus/Menu.tscn")
 
 func _on_Salir_pressed():
 	get_tree().quit()
