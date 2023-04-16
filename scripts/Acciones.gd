@@ -26,20 +26,26 @@ func _process(delta):
 func _ready():
 	$Ultimate/UltimateProgress.value = PorcentajeUltimate
 func evaluarUltimate():
-	if(Globales.Turno % 5 == 0):
-		print("El número es múltiplo de 5")
+	if(Globales.Charge >= 8):
 		$Ultimate.disabled = false
 	else:
 		$Ultimate.disabled = true
-	PorcentajeUltimate += 20
+	PorcentajeUltimate += 10
 	$Ultimate/UltimateProgress.value = PorcentajeUltimate
+#	if(Globales.Turno % 5 == 0):
+#		print("El número es múltiplo de 5")
+#		$Ultimate.disabled = false
+#	else:
+#		$Ultimate.disabled = true
+#	PorcentajeUltimate += 20
+#	$Ultimate/UltimateProgress.value = PorcentajeUltimate
 	
 		
 
 func evasion():
 	if activacion ==  true:
 		Globales.evadir = 0
-		if Globales.Turno == turnoActivacion + 3:
+		if Globales.Turno == turnoActivacion + 4:
 			Globales.evadir = 1
 			activacion = false 
 			print("ya no evado")	
@@ -156,11 +162,14 @@ func quemadura():
 		suma += 1
 		if suma == 100 or suma == 200 or suma == 300 :
 			if activacionBurn == true:
-				Globales.VidaSalter = Globales.VidaSalter - 100.00
+				if (Globales.VidaSalter - 150) <= 150 :
+					Globales.VidaSalter = 1
+				else:
+					Globales.VidaSalter = Globales.VidaSalter - 150.00
 				$AnimationPlayer.play("DamageSalter")
 			if activacionEnemy == true:
 				
-				Globales.VidaJefe -= 20.00
+				Globales.VidaJefe -= 100.00
 		if suma == 301:
 			timer_on = false
 			time = 0
@@ -219,12 +228,13 @@ func EvaluarVida(var vida, var vidaMaxima):
 #Funciones de ataque
 func SubfusilJefe():
 	print(Globales.VidaJefe)
-#	if Globales.EstaminaJefe >= 15:
-	multiplicadorDamage = ComparacionDeTipo(1,2)
-	Globales.VidaSalter = Globales.VidaSalter - (multiplicadorDamage * (Globales.Ataquejefe - (Globales.DefensaSalter * (Globales.Ataquejefe/100.00))))
-	Globales.EstaminaJefe = Globales.EstaminaJefe - 10
+	if Globales.EstaminaJefe >= 15:
+		multiplicadorDamage = ComparacionDeTipo(1,2)
+		Globales.VidaSalter = Globales.VidaSalter - (multiplicadorDamage * (Globales.Ataquejefe - (Globales.DefensaSalter * (Globales.Ataquejefe/200.00))))
+	Globales.EstaminaJefe = Globales.EstaminaJefe - 15
 	#Globales.VidaJefe = Globales.VidaJefe - ((Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00))) * Globales.evadir ) 
 	Globales.Turno = Globales.Turno + 1
+	Globales.Charge += 1
 	$AnimationPlayer.play("DamageSalter")
 	ControlsFmod.playSFXOnce("AtaquesJefe/Subfusil")
 
@@ -234,37 +244,42 @@ func SuministrosJefe():
 	Globales.EstaminaJefe = Globales.EstaminaJefe + (Globales.EstaminaMaximaJefe * 0.10)
 	Globales.EstaminaJefe = EvaluarEstamina(Globales.EstaminaJefe, Globales.EstaminaMaximaJefe)
 	Globales.Turno = Globales.Turno + 1
+	Globales.Charge += 1
 	ControlsFmod.playSFXOnce("AtaquesJefe/Suministros")
 
 func GranadaJefe():
 	print(Globales.VidaJefe)
-	if Globales.EstaminaJefe >= 10:
-		Globales.Turno += 1
+	if Globales.EstaminaJefe >= 30:
 		activacionBurn = true
 		timer_on = true
 		$AnimationPlayer.play("DamageSalter")
 		ControlsFmod.playSFXOnce("AtaquesJefe/PlasmaGrenade")
-
+	Globales.EstaminaJefe = Globales.EstaminaJefe - 30
+	Globales.Charge += 1
+	Globales.Turno += 1
+	
 func EmbestidaJefe():
 	print(Globales.VidaJefe)
 	if Globales.EstaminaJefe >= 20:
 		turnoActivacion = Globales.Turno
-		Globales.Turno += 1
 		activacion = true
 		$AnimationPlayer.play("DamageSalter")
 		ControlsFmod.playSFXOnce("AtaquesJefe/Embestida")
+	Globales.Turno += 1
+	Globales.Charge += 1
 	
 func ultimate():
 	multiplicadorDamage = ComparacionDeTipo(6,2)
-	Globales.VidaSalter = Globales.VidaSalter - (multiplicadorDamage * (Globales.EspecialJefe * ((Globales.VelocidadJefe - (Globales.VelocidadSalter/3)) *0.5)))
+	Globales.VidaSalter = Globales.VidaSalter - (multiplicadorDamage * (Globales.EspecialJefe * ((Globales.VelocidadJefe - (Globales.VelocidadSalter/3)) *1)))
 	Globales.Turno += 1
+	Globales.Charge = 0
 	$AnimationPlayer.play("DamageSalter")
 	ControlsFmod.playSFXOnce("AtaquesJefe/MAC")
 	#Funciones de daño se Salter
 
 func Excalibur():
 	multiplicadorDamage = ComparacionDeTipo(2,6)
-	Globales.VidaJefe = Globales.VidaJefe - (multiplicadorDamage * (Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/(100.00-(Globales.VelocidadSalter/10))))))
+	Globales.VidaJefe = Globales.VidaJefe - (Globales.evadir * (multiplicadorDamage * (Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/(1000.00-(Globales.VelocidadSalter/10)))))))
 	ControlsFmod.playSFXOnce("AtaquesSalter/ExcaliburFaster")
 	print("Excalibur")
 	print("vida jefe: ", Globales.VidaJefe)
@@ -285,20 +300,20 @@ func avalon():
 
 func Barrera_del_viento_del_rey():
 	multiplicadorDamage = ComparacionDeTipo(3,6)
-	Globales.VidaJefe = Globales.VidaJefe - (multiplicadorDamage * (Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00))))
+	Globales.VidaJefe = Globales.VidaJefe - (Globales.evadir * (multiplicadorDamage * (Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/1000.00)))))
 	print("Barrera de viento")
 	print("vida jefe: ", Globales.VidaJefe)
 	print("-------")
-#	if (Globales.EstaminaJefe - 20) <= 0:
-#		Globales.EstaminaJefe = 0
-#	else:
-#		Globales.EstaminaJefe -= 20
+	if (Globales.EstaminaJefe - 20) <= 0:
+		Globales.EstaminaJefe = 0
+	else:
+		Globales.EstaminaJefe -= 20
 	ControlsFmod.playSFXOnce("AtaquesSalter/BarreraDelViento")
 
 func Corte_lateral_Buster():
 	multiplicadorDamage = ComparacionDeTipo(1,6)
-#	test = (randi() % 6 + 1)
-	Globales.VidaJefe = Globales.VidaJefe - (multiplicadorDamage * (Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00))))
+	test = (randi() % 6 + 1)
+	Globales.VidaJefe = Globales.VidaJefe - (Globales.evadir * (multiplicadorDamage * (test * (Globales.AtaqueSalter/7 ))))
 #	ControlsFmod.setLocalParameter("Buster", "CuantosGolpes", test)
 	ControlsFmod.playEvent("Buster")
 	print("Corte Buster")
@@ -306,7 +321,7 @@ func Corte_lateral_Buster():
 	print("-------")
 
 func HPlow():
-	if Globales.VidaSalter == (20 * (Globales.VidaMaximaSalter)):
+	if Globales.VidaSalter <= (0.20 * (Globales.VidaMaximaSalter)):
 		accion = 4
 
 func SalterGod():
