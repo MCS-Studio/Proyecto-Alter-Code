@@ -135,11 +135,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=23]
-radius = 8.0
+[sub_resource type="CapsuleShape2D" id=23]
 
-[sub_resource type="RectangleShape2D" id=24]
-extents = Vector2( 10, 19 )
+[sub_resource type="CapsuleShape2D" id=24]
+height = 21.6613
 
 [node name="Jugador" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -165,12 +164,13 @@ z_index = 1
 current = true
 zoom = Vector2( 0.45, 0.45 )
 
-[node name="cabeza" type="CollisionShape2D" parent="."]
-position = Vector2( -1, -13 )
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2( 0.388021, 0.415995 )
 z_index = 1
 shape = SubResource( 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -3 )
-z_index = 1
+scale = Vector2( 0.165736, 0.288037 )
 shape = SubResource( 24 )

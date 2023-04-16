@@ -19,11 +19,19 @@
 			<value>2</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>True</value>
 			<value>False</value>
+			<value>True</value>
 		</property>
 		<property name="initialValue">
-			<value>1</value>
+			<value>0</value>
+		</property>
+		<relationship name="automators">
+			<destination>{03dca01c-4aa2-49b5-9af5-2ce9e2ea124f}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{03dca01c-4aa2-49b5-9af5-2ce9e2ea124f}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
 		</property>
 	</object>
 </objects>

@@ -10,7 +10,7 @@ func _on_Controles_pressed():
 	$Video/CheckButton.visible = false
 	$Controles/ControlesCtrl.visible = true
 	$Audio/ConfVolume.visible = false
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 
 
 func _on_Video_pressed():
@@ -21,7 +21,7 @@ func _on_Video_pressed():
 	$Controles/ControlesCtrl.visible = false
 	$Video/CheckButton.visible = true
 	$Audio/ConfVolume.visible = false
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 
 func _on_Audio_pressed():
 	$Audio.disabled = true
@@ -31,25 +31,25 @@ func _on_Audio_pressed():
 	$Video/CheckButton.visible = false
 	$Controles/ControlesCtrl.visible = false
 	$Audio/ConfVolume.visible = true
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 
 func _on_Cerrar_pressed():
 	$".".visible = false
 	$"../Fade".visible = false
 	Globales.Cerrar = true
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 
 func _on_Creditos_pressed():
 	$"../AnimationPlayer".play("Fade_In")
 	$".".visible = false
 	$"../Creditoss".visible = true
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 
 func _on_SalirConfiig_pressed():
 	$".".visible = false
 	$"../AnimationPlayer".play("Fade_In")
 	$"../ConfirmacionSalida".visible = true
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 
 func _on_Salirpop_pressed():
 	get_tree().quit()
@@ -57,7 +57,7 @@ func _on_Salirpop_pressed():
 func _on_Cancelarpop_pressed():
 	$"../ConfirmacionSalida".visible = false
 	$".".visible = true
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 
 func _on_CheckButton_pressed():
 	if WinFlag !=  true:
@@ -66,7 +66,7 @@ func _on_CheckButton_pressed():
 	else:
 		OS.window_fullscreen = false
 		WinFlag = false
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 
 func _on_Master_scrolling():
 	evaluarVolumen()
@@ -92,4 +92,4 @@ func evaluarVolumen():
 func _on_Reresar_pressed():
 	$"../Creditoss".visible = false
 	$".".visible = true
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
