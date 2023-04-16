@@ -20,7 +20,7 @@ func _export_begin(features: PoolStringArray, is_debug: bool, path: String, flag
 			while file_name != "":
 				if not directory.current_is_dir():
 					var file_lower = file_name.to_lower()
-					if '.json' in file_lower or '.cfg' in file_lower:
+					if '.dljson' in file_lower or '.cfg' in file_lower:
 						var file_path = paths[dir] + "/" + file_name
 						if file.open(file_path, File.READ) == OK:
 							add_file(file_path, file.get_buffer(file.get_len()), false)

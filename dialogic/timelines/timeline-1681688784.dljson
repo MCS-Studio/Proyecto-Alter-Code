@@ -1,0 +1,21 @@
+{
+	"events": [
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "pito"
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "doble pito"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1681688784.dljson",
+		"name": "Test"
+	}
+}

@@ -68,7 +68,7 @@ static func start(timeline: String = '', default_timeline: String ='', dialog_sc
 	## 2. Case: A specific timeline should be started
 	
 	# check if it's a file name
-	if timeline.ends_with('.json'):
+	if timeline.ends_with('.dljson'):
 		for t in DialogicUtil.get_timeline_list():
 			if t['file'] == timeline:
 				dialog_node.timeline = t['file']

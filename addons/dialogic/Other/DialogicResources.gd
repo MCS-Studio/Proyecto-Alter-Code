@@ -82,10 +82,10 @@ static func get_working_directories() -> Dictionary:
 static func get_config_files_paths() -> Dictionary:
 	return {
 		'SETTINGS_FILE': RESOURCES_DIR + "/settings.cfg",
-		'DEFAULT_DEFINITIONS_FILE': RESOURCES_DIR + "/definitions.json",
-		'FOLDER_STRUCTURE_FILE': RESOURCES_DIR + "/folder_structure.json",
-		'DEFINITIONS_DEFAULT_SAVE': WORKING_DIR + "/definitions_default_save.json",
-		'STATE_DEFAULT_SAVE': WORKING_DIR + "/state_default_save.json"
+		'DEFAULT_DEFINITIONS_FILE': RESOURCES_DIR + "/definitions.dljson",
+		'FOLDER_STRUCTURE_FILE': RESOURCES_DIR + "/folder_structure.dljson",
+		'DEFINITIONS_DEFAULT_SAVE': WORKING_DIR + "/definitions_default_save.dljson",
+		'STATE_DEFAULT_SAVE': WORKING_DIR + "/state_default_save.dljson"
 	}
 
 
@@ -349,10 +349,10 @@ static func add_save_folder(save_name: String) -> void:
 	directory.make_dir(save_name)
 	
 	var file := File.new()
-	if file.open(WORKING_DIR+"/"+save_name+"/definitions.json", File.WRITE) == OK:
+	if file.open(WORKING_DIR+"/"+save_name+"/definitions.dljson", File.WRITE) == OK:
 		file.store_string('')
 		file.close()
-	if file.open(WORKING_DIR+"/"+save_name+"/state.json", File.WRITE) == OK:
+	if file.open(WORKING_DIR+"/"+save_name+"/state.dljson", File.WRITE) == OK:
 		file.store_string('')
 		file.close()
 
@@ -384,7 +384,7 @@ static func save_state_info(save_name: String, state_info: Dictionary) -> void:
 	if not save_name in get_saves_folders():
 		add_save_folder(save_name)
 	
-	set_json(WORKING_DIR+"/"+save_name+"/state.json", state_info)
+	set_json(WORKING_DIR+"/"+save_name+"/state.dljson", state_info)
 
 # return the state_info from the state.json file in the save folder "save_name"
 static func get_saved_state_info(save_name: String) -> Dictionary:
@@ -394,7 +394,7 @@ static func get_saved_state_info(save_name: String) -> Dictionary:
 	if not save_name in get_saves_folders():
 		return {}
 	
-	return load_json(WORKING_DIR+"/"+save_name+"/state.json", {})
+	return load_json(WORKING_DIR+"/"+save_name+"/state.dljson", {})
 
 # saves the given definitions into the definitions.json file in the save folder "save name"
 static func save_definitions(save_name: String, definitions_info: Dictionary) -> void:
@@ -405,7 +405,7 @@ static func save_definitions(save_name: String, definitions_info: Dictionary) ->
 	if not save_name in get_saves_folders():
 		add_save_folder(save_name)
 	
-	set_json(WORKING_DIR+"/"+save_name+"/definitions.json", definitions_info)
+	set_json(WORKING_DIR+"/"+save_name+"/definitions.dljson", definitions_info)
 
 # return the definition info from the definiiotn.json in the save folder "save name"
 static func get_saved_definitions(save_name: String = '') -> Dictionary:
@@ -416,7 +416,7 @@ static func get_saved_definitions(save_name: String = '') -> Dictionary:
 		print("[D] Wasn't able to find save '"+save_name+"'. Loaded the default definitions.")
 		return get_default_definitions()
 	
-	return load_json(WORKING_DIR+"/"+save_name+"/definitions.json", {})
+	return load_json(WORKING_DIR+"/"+save_name+"/definitions.dljson", {})
 
 
 

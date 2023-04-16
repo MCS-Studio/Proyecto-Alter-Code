@@ -107,7 +107,7 @@ func clear_character_editor():
 
 # creates new character data
 func create_character():
-	var character_file = 'character-' + str(OS.get_unix_time()) + '.json'
+	var character_file = 'character-' + str(OS.get_unix_time()) + '.dljson'
 	var character = {
 		'color': '#ffffff',
 		'id': character_file,

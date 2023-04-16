@@ -1,11 +1,11 @@
 {
-	"color": "#ff492c69",
+	"color": "#ff962e2e",
 	"description": "",
 	"display_name": "",
 	"display_name_bool": false,
-	"id": "character-1681250039.json",
+	"id": "character-1681688247.dljson",
 	"mirror_portraits": false,
-	"name": "Alter",
+	"name": "Test",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -13,11 +13,7 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://Img/pngwing.com.png"
-		},
-		{
-			"name": "Persuadir",
-			"path": "res://Img/pngegg.png"
+			"path": ""
 		}
 	],
 	"scale": 100,

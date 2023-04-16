@@ -959,7 +959,7 @@ func move_block_to_index(block_index, index):
 
 
 func create_timeline():
-	timeline_file = 'timeline-' + str(OS.get_unix_time()) + '.json'
+	timeline_file = 'timeline-' + str(OS.get_unix_time()) + '.dljson'
 	var timeline = {
 		"events": [],
 		"metadata":{
