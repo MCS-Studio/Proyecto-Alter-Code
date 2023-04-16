@@ -1,11 +1,26 @@
 extends Node
 
+#Musica
 var Battle
 var Title
 var Overworld
+
+#SFX
+var button
 var Item
-var Buster
 var Grass
+#Ataques Jefe
+var Embestida
+var MAC
+var PlasmaGrenade
+var Subfusil
+var Suministros
+#Ataques Salter
+var Avalon
+var Buster
+var BarreraViento
+var Excalibur
+var ExcaliburMorgan
 
 func _ready():
 	#Prepara al escuchador de fmod
@@ -20,18 +35,42 @@ func _ready():
 	
 func selectInstance(name):
 	match (name):
+		#Musica
 		"Battle":
 			return Battle
 		"Title":
 			return Title
 		"Overworld":
 			return Overworld
+		#SFX
+		"Button":
+			return button
 		"ItemCollected":
 			return Item
-		"Buster":
-			return Buster
 		"Grass":
 			return Grass
+		#Ataques jefe
+		"Embestida":
+			return Embestida
+		"MAC":
+			return MAC
+		"PlasmaGrenade":
+			return PlasmaGrenade
+		"Subfusil":
+			return Subfusil
+		"Suministros":
+			return Suministros
+		#Ataques Salter
+		"Avalon":
+			return Avalon
+		"BarreraViento":
+			return BarreraViento
+		"Buster":
+			return Buster
+		"Excalibur":
+			return Excalibur
+		"ExcaliburMorgan":
+			return ExcaliburMorgan
 
 
 func playMusicOnce(name):
@@ -120,14 +159,6 @@ func releaseEvent(name):
 	#Quita las instancias de la memoria, creo
 	Fmod.release_event(selectInstance(name))
 		
-func reloadInstances():
-	#Recarga las instancias del principio
-	Battle = Fmod.create_event_instance("event:/Musica/Battle")
-	Title = Fmod.create_event_instance("event:/Musica/TitleTheme")
-	Overworld = Fmod.create_event_instance("event:/Musica/Overworld")
-	Item = Fmod.create_event_instance("event:/SFX/ItemCollected")
-	Buster = Fmod.create_event_instance("event:/SFX/AtaquesSalter/CorteLateralBuster")
-	Grass = Fmod.create_event_instance("event:/SFX/GrassSFX")
 	
 func areInstancesMissing():
 	return (Battle == 0 or Title == 0 or Overworld == 0 or Item == 0 or Buster == 0)
@@ -150,5 +181,30 @@ func setSFXVolume(value):
 	#Se mide igual que el master
 	Fmod.set_bus_volume("bus:/SFX", value)
 
+func reloadInstances():
+	#Recarga las instancias del principio
+	#Musica
+	Battle = Fmod.create_event_instance("event:/Musica/Battle")
+	Title = Fmod.create_event_instance("event:/Musica/TitleTheme")
+	Overworld = Fmod.create_event_instance("event:/Musica/Overworld")
+	#SFX
+	button = Fmod.create_event_instance("event:/SFX/Button")
+	Item = Fmod.create_event_instance("event:/SFX/ItemCollected")
+	Grass = Fmod.create_event_instance("event:/SFX/GrassSFX")
+	#AtaquesJefe
+	Embestida = Fmod.create_event_instance("event:/SFX/AtaquesJefe/Embestida")
+	MAC = Fmod.create_event_instance("event:/SFX/AtaquesJefe/MAC")
+	PlasmaGrenade = Fmod.create_event_instance("event:/SFX/AtaquesJefe/PlasmaGrenade")
+	Subfusil = Fmod.create_event_instance("event:/SFX/AtaquesJefe/Subfusil")
+	Suministros = Fmod.create_event_instance("event:/SFX/AtaquesJefe/Suministros")
+	
+	#AtaquesSalter
+	Avalon = Fmod.create_event_instance("event:/SFX/AtaquesSalter/Avalon")
+	BarreraViento = Fmod.create_event_instance("event:/SFX/AtaquesSalter/BarreraDeViento")
+	Buster = Fmod.create_event_instance("event:/SFX/AtaquesSalter/CorteLateralBuster")
+	Excalibur = Fmod.create_event_instance("event:/SFX/AtaquesSalter/ExcaliburFaster")
+	Excalibur = Fmod.create_event_instance("event:/SFX/AtaquesSalter/ExcaliburMorgan")
+	
+	
 func help():
 	print("Para ayuda adicional, te falto la suerte porque no hay xd")

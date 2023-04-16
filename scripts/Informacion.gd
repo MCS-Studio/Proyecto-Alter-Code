@@ -13,5 +13,6 @@ func verifyHealth():
 		$Victoria.visible = true
 
 func _on_Regresar_pressed():
-	get_tree().change_scene("res://escenas/Mapa/mapa principal.tscn")
+	ControlsFmod.playEvent("Button")
 	ControlsFmod.stopEvent("Battle")
+	get_tree().change_scene("res://escenas/Mapa/mapa principal.tscn")

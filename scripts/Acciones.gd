@@ -186,35 +186,35 @@ func quemadura():
 #FUNCIONES DE ATAQUE DEL JEFE
 
 func _on_Subfusil_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	SubfusilJefe()
 	SalterGod()
 	evaluarUltimate()
 	findePartida()
 
 func _on_Granada_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	GranadaJefe()
 	SalterGod()
 	evaluarUltimate()
 	findePartida()
 
 func _on_Embestida_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	EmbestidaJefe()
 	SalterGod()
 	evaluarUltimate()
 	findePartida()
 
 func _on_Vida_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	SuministrosJefe()
 	SalterGod()
 	evaluarUltimate()
 	findePartida()
 
 func _on_Ultimate_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 #	if(Globales.VidaJefe <= Globales.VidaMaximaJefe * 0.8):
 	ultimate()
 	SalterGod()
@@ -247,7 +247,7 @@ func SubfusilJefe():
 	Globales.Turno = Globales.Turno + 1
 	Globales.Charge += 1
 	$AnimationPlayer.play("DamageSalter")
-	ControlsFmod.playSFXOnce("AtaquesJefe/Subfusil")
+	ControlsFmod.playEvent("Subfusil")
 
 func SuministrosJefe():
 	Globales.VidaJefe = Globales.VidaJefe + (Globales.VidaMaximaJefe * 0.10)
@@ -256,7 +256,7 @@ func SuministrosJefe():
 	Globales.EstaminaJefe = EvaluarEstamina(Globales.EstaminaJefe, Globales.EstaminaMaximaJefe)
 	Globales.Turno = Globales.Turno + 1
 	Globales.Charge += 1
-	ControlsFmod.playSFXOnce("AtaquesJefe/Suministros")
+	ControlsFmod.playEvent("Suministros")
 
 func GranadaJefe():
 	print(Globales.VidaJefe)
@@ -264,7 +264,7 @@ func GranadaJefe():
 		activacionBurn = true
 		timer_on = true
 		$AnimationPlayer.play("DamageSalter")
-		ControlsFmod.playSFXOnce("AtaquesJefe/PlasmaGrenade")
+		ControlsFmod.playEvent("PlasmaGrenade")
 	Globales.EstaminaJefe = Globales.EstaminaJefe - 30
 	Globales.Charge += 1
 	Globales.Turno += 1
@@ -275,7 +275,7 @@ func EmbestidaJefe():
 		turnoActivacion = Globales.Turno
 		activacion = true
 		$AnimationPlayer.play("DamageSalter")
-		ControlsFmod.playSFXOnce("AtaquesJefe/Embestida")
+		ControlsFmod.playEvent("Embestida")
 	Globales.Turno += 1
 	Globales.Charge += 1
 	
@@ -285,13 +285,13 @@ func ultimate():
 	Globales.Turno += 1
 	Globales.Charge = 0
 	$AnimationPlayer.play("DamageSalter")
-	ControlsFmod.playSFXOnce("AtaquesJefe/MAC")
+	ControlsFmod.playEvent("MAC")
 	#Funciones de daño se Salter
 
 func Excalibur():
 	multiplicadorDamage = ComparacionDeTipo(2,6)
 	Globales.VidaJefe = Globales.VidaJefe - (Globales.evadir * (multiplicadorDamage * (Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/(1000.00-(Globales.VelocidadSalter/10)))))))
-	ControlsFmod.playSFXOnce("AtaquesSalter/ExcaliburFaster")
+	ControlsFmod.playEvent("Excalibur")
 	print("Excalibur")
 	print("vida jefe: ", Globales.VidaJefe)
 	print("-------")
@@ -307,7 +307,7 @@ func avalon():
 	print("avalon CURA")
 	print("vida jefe: ", Globales.VidaJefe)
 	print("-------")
-	ControlsFmod.playSFXOnce("AtaquesSalter/Avalon")
+	ControlsFmod.playEvent("Avalon")
 
 func Barrera_del_viento_del_rey():
 	multiplicadorDamage = ComparacionDeTipo(3,6)
@@ -319,13 +319,13 @@ func Barrera_del_viento_del_rey():
 		Globales.EstaminaJefe = 0
 	else:
 		Globales.EstaminaJefe -= 20
-	ControlsFmod.playSFXOnce("AtaquesSalter/BarreraDelViento")
+	ControlsFmod.playEvent("BarreraViento")
 
 func Corte_lateral_Buster():
 	multiplicadorDamage = ComparacionDeTipo(1,6)
 	test = (randi() % 6 + 1)
 	Globales.VidaJefe = Globales.VidaJefe - (Globales.evadir * (multiplicadorDamage * (test * (Globales.AtaqueSalter/7 ))))
-#	ControlsFmod.setLocalParameter("Buster", "CuantosGolpes", test)
+	ControlsFmod.setLocalParameter("Buster", "CuantosGolpes", test)
 	ControlsFmod.playEvent("Buster")
 	print("Corte Buster")
 	print("vida jefe: ", Globales.VidaJefe)
@@ -370,8 +370,9 @@ func evaluarGameOver():
 		if Globales.VidaSalter <= 0:
 			print("Salter ded")
 			$"../AnimationPlayer".play("Victoria")
+			ControlsFmod.setLocalParameter("Battle", "hasWon", 1)
 		elif Globales.VidaJefe <= 0:
 			print("MC dead")
 			$"../AnimationPlayer".play("Muerto")
-		yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(1.0), "timeout")
 		get_tree().change_scene("res://escenas/Menus/Informacion.tscn")

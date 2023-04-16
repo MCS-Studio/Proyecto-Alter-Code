@@ -13,13 +13,13 @@ func _process(delta):
 
 #Reinicia la animacion de inicio(Para debug)
 func _on_reiniciar_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	ControlsFmod.stopEvent("Title")
 	tree.change_scene("res://escenas/Menus/Inicio.tscn")
 
 #Inicia el juego
 func _on_Iniciar_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	ControlsFmod.stopEvent("Title")
 	get_node("MenuInicial").hide()
 	$Fade.visible = true
@@ -27,31 +27,31 @@ func _on_Iniciar_pressed():
 
 #Salir de el juego
 func _on_Salir_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	$Fade.visible = true
 	get_node("ConfirmacionSalida").visible = true
 	get_node("MenuInicial").hide()
 
 #Ejecuta una esccena secreta
 func _on_Secreto_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	tree.change_scene("res://escenas/Waifus/Waifus.tscn")
 
 func _on_Config_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	OcultarMenu()
 
 func _on_Salirpop_pressed():
 	tree.quit()
 
 func _on_Cancelarpop_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	$Fade.hide()
 	get_node("ConfirmacionSalida").hide()
 	get_node("MenuInicial").visible = true
 
 func _on_SalirConfig_pressed():
-	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.playEvent("Button")
 	MostrarMenu()
 
 func OcultarMenu():
