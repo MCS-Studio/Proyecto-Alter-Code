@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://escenas/Personajes/Jeanne.tscn" type="PackedScene" id=2]
@@ -32,6 +32,8 @@
 [ext_resource path="res://assets/img/barras/Ultimate.png" type="Texture" id=30]
 [ext_resource path="res://animaciones/Ultimate.tres" type="Animation" id=31]
 [ext_resource path="res://escenas/Batalla/GUI PRINCIPAL (2).png" type="Texture" id=32]
+[ext_resource path="res://animaciones/Muerto.tres" type="Animation" id=33]
+[ext_resource path="res://animaciones/Victoria.tres" type="Animation" id=34]
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
@@ -52,6 +54,33 @@ size = 30
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Personajes/Jefe:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Combate" type="Control"]
 anchor_right = 1.0
@@ -250,6 +279,11 @@ custom_fonts/font = SubResource( 2 )
 text = "100%"
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Muerto = ExtResource( 33 )
+anims/RESET = SubResource( 6 )
+anims/Victoria = ExtResource( 34 )
 
 [connection signal="pressed" from="Acciones/Subfusil" to="Acciones" method="_on_Subfusil_pressed"]
 [connection signal="pressed" from="Acciones/Granada" to="Acciones" method="_on_Granada_pressed"]

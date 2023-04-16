@@ -26,7 +26,7 @@ func _process(delta):
 
 func _on_RegresarMenu_pressed():
 	ControlsFmod.stopEvent("Battle")
-	get_tree().change_scene("res://Esenas/MenuP1.tscn")
+	get_tree().change_scene("res://escenas/Menus/Menu.tscn")
 
 func _on_Salir_pressed():
 	get_tree().quit()

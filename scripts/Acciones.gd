@@ -23,6 +23,7 @@ func _process(delta):
 	quemadura()
 	evasion()
 	ultimateJefe()
+	evaluarGameOver()
 func _ready():
 	$Ultimate/UltimateProgress.value = PorcentajeUltimate
 func evaluarUltimate():
@@ -351,3 +352,16 @@ func ultimateJefe():
 	if $Ultimate/UltimateProgress.value == 100:
 		$AnimationPlayer.play("Ultimate")
 	pass
+	
+func evaluarGameOver():
+	if Globales.VidaSalter > 0 and Globales.VidaJefe > 0:
+		pass
+	else:
+		if Globales.VidaSalter <= 0:
+			print("Salter ded")
+			$"../AnimationPlayer".play("Victoria")
+		elif Globales.VidaJefe <= 0:
+			print("MC dead")
+			$"../AnimationPlayer".play("Muerto")
+		yield(get_tree().create_timer(1), "timeout")
+		get_tree().change_scene("res://escenas/Menus/Informacion.tscn")
