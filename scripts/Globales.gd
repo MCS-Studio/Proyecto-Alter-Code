@@ -25,7 +25,7 @@ var Areas
 
 #Estadisticas Jefe
 
-var VidaJefe = 1500.00
+var VidaJefe = 2000.00
 var DefensaJefe = 75.00
 var Ataquejefe = 500.00
 var EspecialJefe = 32.00
@@ -34,13 +34,13 @@ var VelocidadJefe = 75.00
 var EstaminaJefe = 300.00
 #Valores maximos
 
-var VidaMaximaJefe = 1500.00
+var VidaMaximaJefe =2000.00
 var EstaminaMaximaJefe = 300.00
 #Estadisticas Salter
 
 var VidaSalter = 3000.00
 var DefensaSalter = 50.00
-var AtaqueSalter = 70.00
+var AtaqueSalter = 430.00
 var EspecialSalter = 40.00
 var DefEspSalter = 70.00
 var VelocidadSalter = 70.00

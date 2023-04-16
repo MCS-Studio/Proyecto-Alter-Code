@@ -120,11 +120,11 @@ margin_left = 1639.0
 margin_top = 753.0
 margin_right = 1876.0
 margin_bottom = 990.0
+disabled = true
 
 [node name="UltimateProgress" type="TextureProgress" parent="Acciones/Ultimate"]
 margin_right = 237.0
 margin_bottom = 237.0
-value = 100.0
 texture_under = ExtResource( 28 )
 texture_progress = ExtResource( 29 )
 fill_mode = 8
