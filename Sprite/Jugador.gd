@@ -11,8 +11,10 @@ func _ready():
 	ControlsFmod.playEvent("Grass")
 	ControlsFmod.pauseEvent("Grass")
 
+
 func _physics_process(delta):
 	comprobarMapa()
+
 
 func comprobarMapa():
 	if $"../UI".get_node("Mapa").visible or $"../UI".get_node("Configuracion").visible == true:
@@ -61,35 +63,83 @@ func comprobarMapa():
 		animaciones.play(animacion)
 
 
-func _on_AreaRuinas_body_entered(body):
+#func _on_AreaPelican_body_entered(body):
+#	print("ENTRASTE AREA PELICAN")
+#	Globales.Areas = 1
+#	print(Globales.Areas)
+#	pass # Replace with function body.
+#
+#
+#func _on_AreaPelican_body_exited(body):
+#	print("SALISTE AREA PELICAN")
+#	Globales.Areas = 0
+#	print(Globales.Areas)
+#	pass # Replace with function body.
+
+#func _on_AreaRuinas_body_entered(body):
+#	print("ENTRASTE AREA RUINA")
+#	Globales.Areas = 2
+#	print(Globales.Areas)
+#	pass # Replace with function body.
+#
+#
+#func _on_AreaRuinas_body_exited(body):
+#	print("SALISTE AREA RUINA")
+#	Globales.Areas = 0
+#	print(Globales.Areas)
+#	pass # Replace with function body.
+
+#func _on_AreaBatalla_body_entered(body):
+#	print("ENTRASTE AREA COMBATE")
+#	Globales.Areas = 3
+#	print(Globales.Areas)
+#	pass # Replace with function body.
+#
+#
+#func _on_AreaBatalla_body_exited(body):
+#	print("SALISTE AREA COMBATE")
+#	Globales.Areas = 0
+#	print(Globales.Areas)
+#	pass # Replace with function body.
+
+
+func _on_AreaPelican_area_entered(area):
+	print("ENTRASTE AREA PELICAN")
+	Globales.Areas = 1
+	print(Globales.Areas)
+	pass # Replace with function body.
+
+
+func _on_AreaPelican_area_exited(area):
+	print("SALISTE AREA PELICAN")
+	Globales.Areas = 0
+	print(Globales.Areas)
+	pass # Replace with function body.
+
+
+func _on_AreaRuinas_area_entered(area):
 	print("ENTRASTE AREA RUINA")
 	Globales.Areas = 2
 	print(Globales.Areas)
 	pass # Replace with function body.
-func _on_AreaRuinas_body_exited(body):
+
+
+func _on_AreaRuinas_area_exited(area):
 	print("SALISTE AREA RUINA")
 	Globales.Areas = 0
 	print(Globales.Areas)
 	pass # Replace with function body.
 
-func _on_AreaCombate_body_entered(body):
+
+func _on_AreaBatalla_area_entered(area):
 	print("ENTRASTE AREA COMBATE")
 	Globales.Areas = 3
 	print(Globales.Areas)
 	pass # Replace with function body.
-func _on_AreaCombate_body_exited(body):
-	print("SALISTE AREA COMBATE")
-	Globales.Areas = 0
-	print(Globales.Areas)
-	pass # Replace with function body.
 
-func _on_deteccion_pelican_body_entered(body):
-	print("ENTRASTE AREA PELICAN")
-	Globales.Areas = 1
-	print(Globales.Areas)
-	pass # Replace with function body.
-func _on_deteccion_pelican_body_exited(body):
-	print("SALISTE AREA PELICAN")
+
+func _on_AreaBatalla_area_exited(area):
+	print("SALISTE AREA COMBATE")
 	Globales.Areas = 0
 	print(Globales.Areas)
 	pass # Replace with function body.

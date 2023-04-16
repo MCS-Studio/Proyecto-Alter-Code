@@ -1,218 +1,212 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
-[ext_resource path="res://Texture/png/light.png" type="Texture" id=1]
-[ext_resource path="res://Texture/png/altar 224x288 - standing on grass.png" type="Texture" id=2]
-[ext_resource path="res://mapas/cesped.tmx" type="PackedScene" id=3]
-[ext_resource path="res://Sprite/Jugador.tscn" type="PackedScene" id=4]
-[ext_resource path="res://escenas/Configuracion/Configuracion.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Sprite/Jugador.gd" type="Script" id=6]
+[ext_resource path="res://mapas/cesped.tmx" type="PackedScene" id=1]
+[ext_resource path="res://Sprite/Jugador.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Texture/png/light.png" type="Texture" id=3]
+[ext_resource path="res://Texture/png/altar 224x288 - standing on grass.png" type="Texture" id=4]
+[ext_resource path="res://Sprite/Jugador.gd" type="Script" id=5]
+[ext_resource path="res://escenas/Configuracion/Configuracion.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/mapa principal.gd" type="Script" id=7]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0.0336914, 11.9998, 1.01685, 5.99707, -3.98303, 6.01111, -2.96619, 12.0082 )
 
 [sub_resource type="RectangleShape2D" id=46]
-extents = Vector2( 833, 713.375 )
-
-[sub_resource type="RectangleShape2D" id=47]
-extents = Vector2( 771.75, 492 )
-
-[sub_resource type="RectangleShape2D" id=48]
-extents = Vector2( 49.93, 31.3328 )
+extents = Vector2( 56.8125, 115.158 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 224, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 448, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 672, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 896, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 1120, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 1344, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 1568, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 1792, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 2016, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 2240, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 2464, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 2688, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 2912, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 3136, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 3360, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 3584, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 3808, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 4032, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 4256, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 4480, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 4704, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 4928, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 5152, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 5376, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 5600, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 5824, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 6048, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 6272, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 6496, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 6720, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 6944, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 7168, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 7392, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 7616, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 7840, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=38]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 8064, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=39]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 8288, 0, 224, 288 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 8512, 0, 224, 288 )
 
 [sub_resource type="SpriteFrames" id=41]
@@ -235,14 +229,25 @@ polygon = PoolVector2Array( 1622, 969, 1632, 978, 1643, 967, 1643, 923, 1632, 93
 [sub_resource type="OccluderPolygon2D" id=45]
 polygon = PoolVector2Array( 1643, 824, 1632, 878, 1632, 878, 1643, 869, 1643, 824, 1633, 814 )
 
+[sub_resource type="RectangleShape2D" id=50]
+extents = Vector2( 503, 705 )
+
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 553, 434 )
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 422.75, 201 )
+
 [node name="mapa" type="Node2D"]
 script = ExtResource( 7 )
 
-[node name="Jugador" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1569, 4745 )
+[node name="Jugador" parent="." instance=ExtResource( 2 )]
+light_mask = 9
+position = Vector2( 1567, 4784 )
 rotation = 0.0028171
-z_index = 1
-script = ExtResource( 6 )
+z_index = 2
+collision_layer = 9
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -251,44 +256,15 @@ __meta__ = {
 position = Vector2( 1.00293, 0.997559 )
 occluder = SubResource( 1 )
 
-[node name="Button" type="Button" parent="Jugador"]
-margin_left = -34.0
-margin_top = -111.0
-margin_right = 30.0
-margin_bottom = -51.0
-
 [node name="Mapa" type="Node2D" parent="."]
 
-[node name="cesped" parent="Mapa" instance=ExtResource( 3 )]
+[node name="cesped" parent="Mapa" instance=ExtResource( 1 )]
 position = Vector2( -32, 9 )
 
-[node name="deteccion pelican" type="Area2D" parent="Mapa/cesped/Pelican" index="0"]
-visible = false
-position = Vector2( 32, -10 )
-z_index = 1
+[node name="decoracion pelican" parent="Mapa/cesped" index="1"]
+z_index = 4
 
-[node name="area pelican" type="CollisionShape2D" parent="Mapa/cesped/Pelican/deteccion pelican"]
-position = Vector2( 1564, 4191.38 )
-shape = SubResource( 46 )
-
-[node name="AreaRuinas" type="Area2D" parent="Mapa/cesped/ruinas zeri" index="8"]
-z_index = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/cesped/ruinas zeri/AreaRuinas"]
-visible = false
-position = Vector2( 1557, 2380 )
-shape = SubResource( 47 )
-
-[node name="AreaCombate" type="Area2D" parent="Mapa/cesped/ruinas zeri" index="9"]
-z_index = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/cesped/ruinas zeri/AreaCombate"]
-visible = false
-position = Vector2( 1533.48, 1526.66 )
-scale = Vector2( 10.1046, 9.9685 )
-shape = SubResource( 48 )
-
-[node name="muralla" parent="Mapa/cesped" index="4"]
+[node name="muralla" parent="Mapa/cesped" index="3"]
 position = Vector2( 64, -3425 )
 
 [node name="muralla alta" parent="Mapa/cesped/muralla" index="1"]
@@ -300,62 +276,55 @@ z_index = 2
 [node name="bosque camino muralla" parent="Mapa/cesped" index="5"]
 z_index = 3
 
-[node name="bosque camino -11" parent="Mapa/cesped/bosque camino muralla" index="1"]
-z_index = 2
-
-[node name="bosque camino -10" parent="Mapa/cesped/bosque camino muralla" index="2"]
-z_index = 2
-
-[node name="bosque camino -9" parent="Mapa/cesped/bosque camino muralla" index="3"]
-z_index = 2
-
-[node name="bosque camino -8" parent="Mapa/cesped/bosque camino muralla" index="5"]
-z_index = 2
-
-[node name="bosque camino -7" parent="Mapa/cesped/bosque camino muralla" index="7"]
-z_index = 2
-
-[node name="bosque camino -6" parent="Mapa/cesped/bosque camino muralla" index="9"]
-z_index = 2
-
-[node name="bosqeu camino -5" parent="Mapa/cesped/bosque camino muralla" index="11"]
-z_index = 2
-
-[node name="bosque camino -4" parent="Mapa/cesped/bosque camino muralla" index="13"]
-z_index = 2
-
-[node name="bosque camino -3" parent="Mapa/cesped/bosque camino muralla" index="15"]
-z_index = 2
-
-[node name="bosque camino -2" parent="Mapa/cesped/bosque camino muralla" index="17"]
-z_index = 2
-
-[node name="bosque camino -1" parent="Mapa/cesped/bosque camino muralla" index="19"]
-z_index = 2
-
-[node name="bosque camino 1" parent="Mapa/cesped/bosque camino muralla" index="20"]
-z_index = 2
-
-[node name="bosque camino 2" parent="Mapa/cesped/bosque camino muralla" index="21"]
-z_index = 2
-
-[node name="bosque camino 3" parent="Mapa/cesped/bosque camino muralla" index="22"]
-z_index = 2
-
 [node name="bosque zeri" parent="Mapa/cesped" index="6"]
-z_index = 5
+z_index = 3
 
 [node name="bosque camino ruinas" parent="Mapa/cesped" index="7"]
-z_index = 5
+z_index = 3
 
 [node name="bosque ruina" parent="Mapa/cesped" index="8"]
-z_index = 5
+z_index = 3
 
-[node name="Bosque pelican" parent="Mapa/cesped" index="9"]
-z_index = 5
+[node name="deteccion pelican" type="Area2D" parent="Mapa/cesped/Pelican" index="0"]
+visible = false
+position = Vector2( 32, -10 )
+z_index = 1
 
-[node name="bosque seco pelican" parent="Mapa/cesped" index="10"]
-z_index = 5
+[node name="area deteccion" type="CollisionShape2D" parent="Mapa/cesped/Pelican/deteccion pelican"]
+visible = false
+position = Vector2( 1569.81, 4685.16 )
+z_index = 1
+shape = SubResource( 46 )
+
+[node name="piso" parent="Mapa/cesped/Pelican" index="1"]
+z_index = 1
+
+[node name="pelican techo" parent="Mapa/cesped/Pelican" index="2"]
+z_index = 4
+
+[node name="Pelican" parent="Mapa/cesped/Pelican" index="3"]
+z_index = 4
+
+[node name="Bosque pelican" parent="Mapa/cesped" index="10"]
+z_index = 3
+
+[node name="bosque seco pelican" parent="Mapa/cesped" index="11"]
+z_index = 4
+
+[node name="techos" parent="Mapa/cesped" index="13"]
+z_index = 7
+
+[node name="techos decoracion -1" parent="Mapa/cesped/techos" index="0"]
+z_index = 2
+
+[node name="techo -1" parent="Mapa/cesped/techos" index="1"]
+z_index = 2
+
+[node name="techos" parent="Mapa/cesped/techos" index="2"]
+z_index = 2
+
+[node name="techos decoracion" parent="Mapa/cesped/techos" index="3"]
+z_index = 2
 
 [node name="Fuente" type="Node2D" parent="Mapa"]
 position = Vector2( -54, 673 )
@@ -364,7 +333,7 @@ position = Vector2( -54, 673 )
 show_behind_parent = true
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 25
+frame = 21
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
@@ -379,6 +348,27 @@ occluder = SubResource( 44 )
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="Mapa/Fuente"]
 occluder = SubResource( 45 )
 
+[node name="AreaPelican" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="ZonaPelican" type="CollisionShape2D" parent="AreaPelican"]
+position = Vector2( 1581, 4230 )
+shape = SubResource( 50 )
+
+[node name="AreaRuinas" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="ZonaRuinas" type="CollisionShape2D" parent="AreaRuinas"]
+position = Vector2( 1489, 2295 )
+shape = SubResource( 48 )
+
+[node name="AreaBatalla" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="ZonaBatalla" type="CollisionShape2D" parent="AreaBatalla"]
+position = Vector2( 1487.25, 1599 )
+shape = SubResource( 49 )
+
 [node name="Luces" type="Node2D" parent="."]
 visible = false
 position = Vector2( -8, 8 )
@@ -388,7 +378,7 @@ rotation = -2.48907
 position = Vector2( -1585.52, 61.9741 )
 rotation = -2.0542
 scale = Vector2( 0.341343, 0.398662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 color = Color( 0.952941, 0.839216, 0.396078, 1 )
 energy = 0.7
 shadow_enabled = true
@@ -397,7 +387,7 @@ shadow_enabled = true
 position = Vector2( -1409.97, -155.991 )
 rotation = -2.0542
 scale = Vector2( 0.341343, 0.398662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 offset = Vector2( -57.072, -696.962 )
 color = Color( 0.894118, 0.658824, 0.921569, 1 )
 energy = 0.7
@@ -408,7 +398,7 @@ show_behind_parent = true
 position = Vector2( -1796.66, 243.608 )
 rotation = -2.0542
 scale = Vector2( 0.341343, 0.398662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 color = Color( 0.447059, 0.0235294, 0.486275, 1 )
 shadow_enabled = true
 
@@ -416,7 +406,7 @@ shadow_enabled = true
 position = Vector2( -2099.13, 346.36 )
 rotation = -2.0542
 scale = Vector2( 0.341343, 0.398662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 color = Color( 0.952941, 0.839216, 0.396078, 1 )
 energy = 0.7
 shadow_enabled = true
@@ -425,7 +415,7 @@ shadow_enabled = true
 position = Vector2( -2044.26, 421.683 )
 rotation = -2.0542
 scale = Vector2( 0.341343, 0.398662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 color = Color( 0.952941, 0.839216, 0.396078, 1 )
 energy = 0.7
 shadow_enabled = true
@@ -434,7 +424,7 @@ shadow_enabled = true
 position = Vector2( -2060.18, 34.3926 )
 rotation = -2.0542
 scale = Vector2( 0.341343, 0.398662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 color = Color( 0.952941, 0.839216, 0.396078, 1 )
 energy = 0.7
 shadow_enabled = true
@@ -443,7 +433,7 @@ shadow_enabled = true
 position = Vector2( -1931.41, -69.2451 )
 rotation = -2.0542
 scale = Vector2( 0.341343, 0.398662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 color = Color( 0.952941, 0.839216, 0.396078, 1 )
 energy = 0.7
 shadow_enabled = true
@@ -452,7 +442,7 @@ shadow_enabled = true
 position = Vector2( -1362.84, 203.408 )
 rotation = -2.0542
 scale = Vector2( 0.341343, 0.398662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 offset = Vector2( -57.072, -696.962 )
 color = Color( 0.894118, 0.658824, 0.921569, 1 )
 energy = 0.7
@@ -462,7 +452,7 @@ shadow_enabled = true
 position = Vector2( -1730.46, 461.323 )
 rotation = -2.0542
 scale = Vector2( 0.341343, 0.398662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 color = Color( 0.952941, 0.839216, 0.396078, 1 )
 energy = 0.7
 shadow_enabled = true
@@ -472,28 +462,306 @@ position = Vector2( 64, -3425 )
 
 [node name="muralla izquierda" type="CollisionPolygon2D" parent="collisiones muralla"]
 position = Vector2( -31, 9 )
-polygon = PoolVector2Array( 0, 3678, 0, 3684, 447, 3684, 448, 3697, 450, 3699, 451, 3716, 541, 3716, 542, 3699, 544, 3697, 544, 3684, 960, 3684, 961, 3697, 963, 3699, 963, 3715, 1054, 3715, 1054, 3699, 1056, 3697, 1056, 3684, 1440, 3684, 1440, 3697, 1442, 3699, 1442, 3716, 1533, 3716, 1534, 3699, 1536, 3697, 1535, 3646, 1534, 3649, 1439, 3648, 1440, 3678, 1056, 3678, 1055, 3650, 960, 3650, 960, 3678, 544, 3678, 543, 3648, 448, 3649, 448, 3678 )
+polygon = PoolVector2Array( 0, 3678, 0, 3684, 447, 3684, 448, 3697, 450, 3699, 451, 3716, 541, 3716, 542, 3699, 544, 3697, 544, 3684, 960, 3684, 961, 3697, 963, 3699, 963, 3715, 1054, 3715, 1054, 3699, 1056, 3697, 1056, 3694, 1439, 3695, 1440, 3697, 1442, 3699, 1443, 3729, 1533, 3732, 1534, 3699, 1536, 3697, 1535, 3646, 1534, 3649, 1439, 3648, 1440, 3678, 1056, 3678, 1055, 3650, 960, 3650, 960, 3678, 544, 3678, 543, 3648, 448, 3649, 448, 3678 )
 
 [node name="muralla derecha" type="CollisionPolygon2D" parent="collisiones muralla"]
 position = Vector2( -33, 10 )
-polygon = PoolVector2Array( 1664, 3648, 1664, 3698, 1667, 3699, 1667, 3716, 1757, 3716, 1758, 3699, 1760, 3697, 1760, 3685, 2240, 3684, 2240, 3697, 2242, 3698, 2243, 3709, 2334, 3709, 2334, 3698, 2336, 3697, 2336, 3684, 2688, 3684, 2688, 3697, 2690, 3699, 2690, 3708, 2782, 3708, 2782, 3699, 2784, 3697, 2784, 3684, 3200, 3684, 3200, 3678, 2784, 3678, 2784, 3648, 2688, 3648, 2688, 3678, 2336, 3678, 2336, 3650, 2240, 3648, 2240, 3677, 1760, 3678, 1760, 3648 )
+polygon = PoolVector2Array( 1664, 3648, 1664, 3698, 1667, 3699, 1667, 3729, 1758, 3729, 1758, 3699, 1760, 3697, 1760, 3685, 2240, 3684, 2240, 3697, 2242, 3698, 2243, 3709, 2334, 3709, 2334, 3698, 2336, 3697, 2336, 3684, 2688, 3684, 2688, 3697, 2690, 3699, 2690, 3708, 2782, 3708, 2782, 3699, 2784, 3697, 2784, 3684, 3200, 3684, 3200, 3678, 2784, 3678, 2784, 3648, 2688, 3648, 2688, 3678, 2336, 3678, 2336, 3650, 2240, 3648, 2240, 3677, 1760, 3678, 1760, 3648 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="colision pelican" type="StaticBody2D" parent="."]
 
-[node name="colision pelica" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="colision pelica" type="CollisionPolygon2D" parent="colision pelican"]
 position = Vector2( -32, 8 )
 polygon = PoolVector2Array( 1567, 4604, 1567, 4710, 1579, 4734, 1582, 4764, 1588, 4783, 1589, 4796, 1593, 4801, 1599, 4801, 1605, 4800, 1611, 4799, 1611, 4791, 1611, 4782, 1612, 4776, 1615, 4766, 1618, 4762, 1620, 4733, 1631, 4712, 1633, 4703, 1633, 4609, 1646, 4611, 1646, 4701, 1637, 4722, 1630, 4738, 1626, 4764, 1619, 4775, 1617, 4786, 1612, 4801, 1604, 4803, 1591, 4803, 1586, 4794, 1584, 4779, 1576, 4764, 1566, 4730, 1561, 4717, 1560, 4703, 1559, 4604 )
 
-[node name="UI" parent="." instance=ExtResource( 5 )]
+[node name="colision  bosque abajo" type="StaticBody2D" parent="."]
+z_index = 4
 
-[connection signal="pressed" from="Jugador/Button" to="." method="_on_Button_pressed"]
-[connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_entered"]
+[node name="colision derecha bosque" type="CollisionPolygon2D" parent="colision  bosque abajo"]
+polygon = PoolVector2Array( 1338, 4716, 1343, 4715, 1345, 4715, 1347, 4713, 1349, 4712, 1351, 4713, 1353, 4712, 1356, 4712, 1358, 4714, 1360, 4715, 1362, 4715, 1364, 4716, 1366, 4717, 1368, 4719, 1369, 4721, 1368, 4723, 1367, 4724, 1368, 4725, 1369, 4726, 1370, 4726, 1372, 4726, 1374, 4727, 1375, 4728, 1376, 4728, 1377, 4730, 1379, 4731, 1379, 4732, 1379, 4734, 1380, 4736, 1379, 4737, 1379, 4740, 1380, 4740, 1381, 4741, 1382, 4741, 1385, 4742, 1388, 4744, 1390, 4745, 1391, 4745, 1391, 4746, 1392, 4747, 1392, 4749, 1393, 4749, 1394, 4750, 1394, 4752, 1394, 4754, 1395, 4756, 1397, 4757, 1399, 4758, 1400, 4760, 1401, 4761, 1402, 4764, 1403, 4768, 1401, 4770, 1402, 4774, 1405, 4777, 1407, 4782, 1407, 4786, 1406, 4788, 1409, 4790, 1411, 4794, 1421, 4792, 1423, 4794, 1427, 4792, 1430, 4792, 1434, 4792, 1440, 4795, 1443, 4797, 1446, 4797, 1449, 4800, 1452, 4804, 1454, 4809, 1459, 4814, 1463, 4818, 1465, 4823, 1470, 4827, 1471, 4828, 1471, 4831, 1473, 4831, 1473, 4833, 1473, 4835, 1472, 4837, 1472, 4839, 1473, 4841, 1476, 4843, 1478, 4845, 1480, 4846, 1483, 4846, 1483, 4843, 1482, 4842, 1482, 4840, 1483, 4838, 1484, 4837, 1484, 4836, 1486, 4835, 1487, 4834, 1489, 4832, 1491, 4832, 1492, 4831, 1493, 4830, 1492, 4827, 1493, 4826, 1496, 4823, 1499, 4822, 1501, 4822, 1503, 4821, 1505, 4821, 1507, 4821, 1510, 4821, 1513, 4823, 1515, 4824, 1517, 4825, 1521, 4837, 1532, 4841, 1539, 4843, 1549, 4836, 1556, 4824, 1560, 4823, 1565, 4821, 1567, 4819, 1570, 4821, 1576, 4833, 1586, 4844, 1592, 4848, 1597, 4845, 1603, 4842, 1608, 4826, 1611, 4820, 1617, 4815, 1623, 4805, 1644, 4793, 1657, 4804, 1664, 4807, 1669, 4803, 1674, 4798, 1675, 4792, 1678, 4789, 1682, 4782, 1684, 4781, 1686, 4778, 1687, 4774, 1690, 4770, 1690, 4766, 1692, 4763, 1695, 4759, 1695, 4756, 1694, 4754, 1694, 4751, 1695, 4749, 1699, 4745, 1702, 4743, 1705, 4739, 1706, 4738, 1706, 4736, 1708, 4733, 1712, 4732, 1714, 4727, 1718, 4722, 1722, 4718, 1726, 4714, 1729, 4710, 1738, 4699, 1748, 4684, 1755.06, 4674.37, 1760, 4671, 1765.61, 4671.38, 1784, 4678, 1790, 4680, 1793, 4681, 1785, 4672, 1788, 4648, 1785, 4632, 1776, 4628, 1769, 4628, 1760, 4631, 1752, 4626, 1747, 4627, 1748, 4621, 1746, 4609, 1745, 4589, 1726, 4571, 1717, 4572, 1710, 4555, 1704, 4551, 1698, 4549, 1688, 4546, 1678, 4544, 1670, 4541, 1662, 4532, 1657, 4526, 1645, 4525, 1640, 4521, 1641, 4510, 1649, 4470, 1666, 4431, 1706, 4407, 1707, 4401, 1706, 4395, 1703, 4388, 1701, 4384, 1698, 4386, 1692, 4395, 1682, 4395, 1675, 4391, 1670, 4385, 1669, 4376, 1671, 4372, 1662, 4387, 1656, 4394, 1647, 4398, 1634, 4397, 1623, 4392, 1615, 4400, 1605, 4398, 1597, 4388, 1590, 4369, 1586, 4367, 1581, 4364, 1577, 4360, 1574, 4355, 1572, 4349, 1570, 4343, 1569, 4337, 1571, 4333, 1574, 4330, 1576, 4327, 1572, 4324, 1574, 4319, 1576, 4316, 1579, 4313, 1579, 4307, 1576, 4303, 1575, 4300, 1575, 4297, 1573, 4295, 1572, 4293, 1571, 4288, 1571, 4282, 1573, 4281, 1576, 4279, 1575, 4275, 1575, 4269, 1578, 4266, 1581, 4263, 1580, 4258, 1581, 4253, 1580, 4250, 1577, 4247, 1574, 4243, 1567, 4259, 1563, 4273, 1556, 4275, 1540, 4272, 1511, 4265, 1491, 4252, 1483, 4244, 1483, 4236, 1479, 4229, 1476, 4221, 1476, 4215, 1472, 4212, 1474, 4206, 1476, 4203, 1479, 4200, 1477, 4195, 1479, 4190, 1481, 4187, 1482, 4180, 1479, 4172, 1477, 4166, 1474, 4159, 1477, 4152, 1480, 4151, 1479, 4147, 1478, 4142, 1481, 4140, 1484, 4134, 1483, 4126, 1485, 4119, 1490, 4119, 1492, 4113, 1494, 4107, 1499, 4102, 1502, 4102, 1505, 4102, 1507, 4100, 1505, 4096, 1508, 4090, 1515, 4087, 1519, 4086, 1518, 4081, 1523, 4077, 1528, 4078, 1530, 4074, 1534, 4074, 1540, 4076, 1544, 4079, 1549, 4079, 1553, 4082, 1556, 4088, 1558, 4092, 1562, 4095, 1567, 4098, 1569, 4098, 1573, 4100, 1578, 4098, 1576, 4094, 1580, 4092, 1584, 4091, 1589, 4089, 1594, 4088, 1599, 4089, 1601, 4092, 1604, 4092, 1610, 4096, 1614, 4101, 1617, 4107, 1622, 4113, 1627, 4118, 1632, 4125, 1634, 4131, 1634, 4136, 1637, 4142, 1642, 4143, 1642, 4139, 1643, 4133, 1646, 4130, 1653, 4127, 1654, 4124, 1654, 4119, 1663, 4117, 1668, 4114, 1675, 4116, 1680, 4119, 1683, 4119, 1687, 4124, 1689, 4128, 1691, 4133, 1694, 4136, 1698, 4137, 1700, 4141, 1701, 4145, 1705, 4148, 1708, 4150, 1709, 4153, 1710, 4154, 1710, 4158, 1710, 4162, 1711, 4165, 1713, 4169, 1714, 4171, 1718, 4171, 1723, 4171, 1728, 4171, 1731, 4173, 1734, 4175, 1734, 4177, 1727, 4177, 1722, 4175, 1720, 4174, 1716, 4175, 1717, 4179, 1719, 4184, 1720, 4188, 1722, 4193, 1724, 4197, 1724, 4201, 1722, 4206, 1721, 4211, 1721, 4217, 1720, 4220, 1721, 4222, 1720, 4224, 1717, 4225, 1713, 4227, 1711, 4227, 1712, 4231, 1713, 4234, 1715, 4238, 1717, 4238, 1720, 4244, 1721, 4246, 1724, 4249, 1727, 4252, 1729, 4254, 1729, 4259, 1731, 4265, 1733, 4269, 1737, 4266, 1739, 4261, 1743, 4256, 1747, 4254, 1750, 4248, 1756, 4245, 1765, 4243, 1771, 4243, 1777, 4248, 1781, 4249, 1785, 4255, 1788, 4260, 1793, 4265, 1796, 4268, 1801, 4273, 1803, 4279, 1806, 4284, 1806, 4291, 1809, 4296, 1814, 4295, 1820, 4292, 1821, 4287, 1829, 4278, 1833, 4277, 1834, 4271, 1841, 4266, 1847, 4266, 1853, 4263, 1859, 4261, 1859, 4253, 1863, 4250, 1865, 4246, 1865, 4239, 1869, 4234, 1869, 4230, 1869, 4224, 1870, 4221, 1874, 4221, 1875, 4215, 1873, 4212, 1872, 4207, 1876, 4203, 1878, 4199, 1881, 4196, 1883, 4193, 1885, 4191, 1882, 4190, 1879, 4189, 1878, 4193, 1875, 4199, 1871, 4196, 1864, 4193, 1863, 4189, 1866, 4187, 1868, 4184, 1864, 4181, 1860, 4175, 1857, 4170, 1856, 4165, 1859, 4159, 1857, 4150, 1855, 4142, 1861, 4137, 1861, 4130, 1863, 4126, 1865, 4122, 1866, 4117, 1865, 4110, 1861, 4105, 1859, 4097, 1858, 4092, 1863, 4087, 1863, 4084, 1863, 4079, 1864, 4076, 1866, 4074, 1868, 4072, 1868, 4067, 1867, 4063, 1862, 4044, 1853, 4040, 1846, 4039, 1842, 4041, 1838, 4040, 1833, 4040, 1821, 4037, 1811, 4034, 1806, 4034, 1807, 4030, 1812, 4026, 1816, 4021, 1825, 4022, 1830, 4025, 1830, 4019, 1832, 4016, 1832, 4013, 1836, 4011, 1839, 4008, 1838, 4003, 1838, 3998, 1833, 3980, 1823, 3974, 1816, 3977, 1812, 3978, 1813, 3966, 1810, 3964, 1803, 3961, 1808, 3950, 1811, 3944, 1817, 3941, 1819, 3937, 1820, 3929, 1820, 3914, 1809, 3906, 1806, 3900, 1806, 3892, 1806, 3887, 1807, 3879, 1808, 3873, 1811, 3865, 1816, 3859, 1818, 3852, 1823, 3848, 1828, 3846, 1830, 3839, 1832, 3835, 1839, 3831, 1842, 3826, 1845, 3820, 1851, 3819, 1857, 3818, 1865, 3816, 1859, 3807, 1862, 3800, 1865, 3799, 1864, 3792, 1865, 3787, 1869, 3779, 1869, 3771, 1873, 3767, 1876, 3761, 1878, 3754, 1885, 3750, 1889, 3750, 1891, 3746, 1891, 3741, 1896, 3737, 1902, 3734, 1904, 3727, 1907, 3725, 1912, 3725, 1916, 3721, 1922, 3721, 1925, 3725, 1931, 3728, 1938, 3730, 1939, 3735, 1942, 3741, 1947, 3745, 1951, 3746, 1953, 3745, 1956, 3749, 1960, 3747, 1960, 3743, 1964, 3738, 1972, 3737, 1977, 3734, 1981, 3736, 1985, 3740, 1989, 3740, 1990, 3735, 1993, 3731, 1991, 3724, 1995, 3718, 1995, 3714, 1995, 3708, 1988, 3702, 1976, 3698, 1969, 3693, 1959, 3685, 1955, 3675, 1953, 3668, 1955, 3659, 1959, 3656, 1956, 3649, 1957, 3644, 1960, 3638, 1960, 3631, 1957, 3623, 1955, 3613, 1958, 3607, 1960, 3604, 1960, 3596, 1962, 3592, 1964, 3583, 1967, 3572, 1956, 3575, 1952, 3578, 1952, 3586, 1951, 3595, 1949, 3597, 1951, 3603, 1950, 3607, 1948, 3608, 1951, 3613, 1949, 3616, 1947, 3620, 1947, 3622, 1939, 3623, 1944, 3631, 1940, 3638, 1947, 3639, 1949, 3644, 1949, 3650, 1944, 3656, 1943, 3661, 1948, 3670, 1949, 3680, 1949, 3685, 1945, 3684, 1935, 3678, 1926, 3681, 1922, 3685, 1918, 3687, 1912, 3687, 1908, 3684, 1901, 3687, 1893, 3697, 1883, 3698, 1874, 3695, 1871, 3682, 1868, 3674, 1864, 3671, 1856, 3671, 1845, 3668, 1835, 3657, 1838, 3650, 1841, 3643, 1846, 3638, 1854, 3636, 1860, 3639, 1868, 3640, 1870, 3633, 1868, 3625, 1864, 3621, 1862, 3616, 1864, 3608, 1867, 3603, 1867, 3597, 1865, 3592, 1865, 3587, 1862, 3582, 1856, 3577, 1850, 3577, 1846, 3582, 1850, 3586, 1856, 3592, 1857, 3599, 1849, 3601, 1843, 3600, 1834, 3601, 1822, 3601, 1817, 3605, 1809, 3608, 1801, 3602, 1797, 3596, 1797, 3585, 1799, 3580, 1800, 3576, 1801, 3561, 1801, 3552, 1798, 3546, 1789, 3547, 1779, 3548, 1778, 3553, 1774, 3554, 1769, 3554, 1767, 3550, 1761, 3549, 1756, 3551, 1751, 3550, 1744, 3553, 1733, 3551, 1730, 3549, 1723, 3549, 1715, 3549, 1711, 3549, 1705, 3551, 1700, 3555, 1700, 3558, 1696, 3558, 1692, 3558, 1689, 3558, 1685, 3558, 1679, 3557, 1673, 3558, 1671, 3552, 1669, 3547, 1674, 3535, 1673, 3522, 1670, 3517, 1671, 3506, 1669, 3498, 1661, 3496, 1660, 3491, 1653, 3489, 1634, 3479, 1632, 3473, 1634, 3468, 1637, 3465, 1635, 3457, 1637, 3452, 1640, 3447, 1637, 3439, 1634, 3428, 1633, 3416, 1637, 3414, 1638, 3404, 1643, 3397, 1644, 3377, 1634, 3379, 1625, 3378, 1619, 3376, 1616, 3371, 1619, 3361, 1619, 3348, 1625, 3348, 1631, 3348, 1635, 3345, 1637, 3322, 1633, 3313, 1634, 3303, 1636, 3299, 1637, 3294, 1641, 3289, 1641, 3281, 1638, 3275, 1636, 3268, 1635, 3259, 1638, 3255, 1636, 3246, 1640, 3241, 1642, 3235, 1643, 3226, 1648, 3218, 1652, 3211, 1658, 3206, 1662, 3204, 1665, 3197, 1668, 3191, 1670, 3185, 1667, 3176, 1666, 3169, 1667, 3164, 1672, 3159, 1670, 3152, 1671, 3145, 1675, 3142, 1675, 3135, 1678, 3127, 1681, 3121, 1684, 3114, 1687, 3110, 1688, 3091, 1689, 3085, 1687, 3080, 1680, 3076, 1676, 3064, 1683, 3062, 1689, 3061, 1695, 3057, 1698, 3052, 1701, 3048, 1700, 3039, 1702, 3034, 1703, 3028, 1701, 3020, 1697, 3013, 1697, 3005, 1705, 2984, 1707, 2981, 1702, 2975, 1707, 2948, 1703, 2945, 1699, 2939, 1692, 2939, 1689, 2930, 1685, 2919, 1684, 2914, 1680, 2909, 1672, 2904, 1664, 2905, 1657, 2907, 1653, 2902, 1647, 2898, 1642, 2889, 1640, 2883, 1640, 2874, 1644, 2872, 1647, 2869, 1648, 2864, 1647, 2859, 1646, 2855, 1642, 2850, 1638, 2843, 1643, 2840, 1638, 2832, 1633, 2826, 1631, 2817, 1632, 2809, 1634, 2801, 1634, 2793, 1638, 2789, 1638, 2780, 1638, 2771, 1634, 2756, 1634, 2747, 1639, 2742, 1639, 2735, 1642, 2728, 1644, 2724, 1644, 2717, 1647, 2710, 1652, 2698, 1662, 2693, 1666, 2691, 1667, 2684, 1673, 2678, 1675, 2677, 1675, 2656, 1676, 2646, 1669, 2641, 1660, 2638, 1655, 2637, 1651, 2637, 1649, 2633, 1669, 2624, 1993, 2801, 2042, 3448, 2039, 3899, 1993, 4368, 1927, 4797, 1640, 4919, 1410, 4882, 1325, 4813, 1326, 4746 )
+
+[node name="colision izquierda bosque" type="CollisionPolygon2D" parent="colision  bosque abajo"]
+polygon = PoolVector2Array( 1339, 4715, 1343, 4701, 1343, 4689, 1339, 4680, 1333, 4667, 1330, 4658, 1334, 4651, 1332, 4643, 1330, 4636, 1333, 4636, 1338, 4633, 1342, 4626, 1342, 4617, 1344, 4609, 1343, 4598, 1339, 4592, 1333, 4579, 1330, 4567, 1327, 4556, 1321, 4549, 1315, 4544, 1313, 4536, 1321, 4537, 1324, 4528, 1322, 4519, 1328, 4513, 1325, 4499, 1323, 4494, 1325, 4479, 1328, 4468, 1337, 4466, 1350, 4451, 1362, 4445, 1362, 4425, 1353, 4414, 1345, 4395, 1340, 4385, 1334, 4376, 1332, 4368, 1336, 4361, 1340, 4357, 1349, 4351, 1356, 4340, 1372, 4324, 1376, 4277, 1378, 4262, 1376, 4247, 1372, 4234, 1382, 4232, 1391, 4231, 1386, 4213, 1378, 4202, 1382, 4197, 1381, 4190, 1380, 4183, 1377, 4170, 1348, 4168, 1329, 4170, 1301, 4167, 1238, 4169, 1225, 4168, 1218, 4163, 1211, 4155, 1206, 4149, 1205, 4141, 1198, 4112, 1196, 4087, 1189, 4071, 1176, 4055, 1156, 4053, 1147, 4060, 1134, 4065, 1120, 4061, 1120, 4044, 1132, 4036, 1143, 4012, 1143, 3984, 1135, 3970, 1127, 3955, 1121, 3943, 1121, 3930, 1126, 3923, 1133, 3910, 1143, 3910, 1152, 3911, 1163, 3912, 1199, 3901, 1210, 3892, 1210, 3873, 1200, 3858, 1200, 3848, 1197, 3834, 1196, 3820, 1205, 3810, 1211, 3797, 1208, 3777, 1205, 3758, 1198, 3743, 1197, 3730, 1201, 3716, 1212, 3711, 1241, 3693, 1241, 3677, 1238, 3661, 1237, 3653, 1232, 3629, 1239, 3621, 1248, 3620, 1263, 3618, 1281, 3635, 1289, 3650, 1326, 3661, 1344, 3654, 1359, 3655, 1372, 3653, 1382, 3650, 1388, 3644, 1395, 3649, 1401, 3651, 1390, 3603, 1403, 3594, 1416, 3587, 1427, 3587, 1439, 3585, 1447, 3583, 1457, 3581, 1463, 3587, 1473, 3587, 1486, 3591, 1494, 3587, 1496, 3551, 1529, 3531, 1560, 3509, 1560, 3475, 1555, 3459, 1549, 3443, 1534, 3427, 1509, 3410, 1499, 3414, 1490, 3404, 1487, 3382, 1486, 3359, 1497, 3348, 1500, 3334, 1495, 3317, 1493, 3303, 1507, 3300, 1522, 3299, 1531, 3299, 1540, 3299, 1558, 3297, 1560, 3285, 1565, 3284, 1562, 3263, 1556, 3258, 1550, 3241, 1563, 3228, 1562, 3202, 1560, 3192, 1573, 3192, 1586, 3192, 1597, 3192, 1603, 3147, 1618, 3137, 1626, 3126, 1628, 3102, 1614, 3072, 1604, 3047, 1603, 3020, 1617, 3010, 1626, 2997, 1624, 2962, 1613, 2941, 1597, 2918, 1576, 2899, 1555, 2891, 1555, 2860, 1541, 2830, 1532, 2808, 1521, 2791, 1513, 2770, 1503, 2756, 1492, 2746, 1477, 2738, 1455, 2746, 1453, 2760, 1440, 2765, 1439, 2746, 1427, 2731, 1410, 2717, 1391, 2715, 1376, 2724, 1370, 2719, 1371, 2700, 1370, 2681, 1370, 2666, 1377, 2652, 1372, 2634, 1370, 2615, 1359, 2608, 1346, 2615, 1338, 2628, 1275, 2858, 1146, 3345, 949, 3812, 1065, 4407, 1213, 4723 )
+
+[node name="colision objetos pelican" type="StaticBody2D" parent="."]
+position = Vector2( 1701, 4569 )
+rotation = 0.0028171
+
+[node name="madera" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( 0.0566406, 20, -0.917969, 29.0029, 0.0960693, 33.9995, -0.884155, 41.0024, -0.841919, 56.0029, 2.17224, 60.9946, 7.16931, 59.9805, 14.1692, 59.9604, 20.1692, 59.9438, 19.1411, 49.9463, 23.1213, 42.9351, 24.0931, 32.9321, 19.0651, 22.9468, 12.0481, 16.9663, 4.05103, 17.9888 )
+
+[node name="arbol seco" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -359.922, 28.0142, -345.919, 28.9746, -335.911, 31.9468, -324.92, 28.9155, -311.962, 13.8789, -306.984, 5.86475, -298.004, -1.16016, -284.007, -2.19971, -270.004, -1.23926, -254.999, 0.718262, -242.002, -0.318359, -240.027, -9.32373, -233.041, -14.3433, -236.078, -27.335, -248.092, -32.3013, -262.08, -28.2617, -275.063, -22.2251, -296.049, -17.166, -305.046, -16.1406, -317.046, -16.1069, -331.038, -13.0674, -340.015, -5.04199, -355.001, 0, -365.959, 15.0313 )
+
+[node name="monton de piedra" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -558.629, -577.428, -561.668, -591.42, -556.668, -591.434, -553.671, -592.443, -548.682, -596.457, -544.688, -598.468, -540.716, -608.479, -536.73, -613.49, -518.733, -614.541, -505.73, -613.578, -499.708, -605.595, -497.663, -589.6, -495.626, -576.606, -493.595, -565.612, -494.581, -560.609, -500.556, -551.592, -502.536, -544.587, -498.465, -519.598, -488.42, -503.626, -493.409, -499.612, -505.415, -501.578, -514.406, -498.553, -521.434, -508.533, -545.55, -549.465, -556.595, -565.434 )
+
+[node name="virgencita de guadalupe" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -456.945, -689.715, -485.944, -689.634, -487.908, -676.628, -480.891, -670.648, -461.888, -669.701, -454.911, -677.721 )
+
+[node name="ruina pared izquierda" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -429.609, -570.792, -422.573, -557.812, -413.559, -552.837, -397.556, -551.882, -390.573, -557.902, -394.615, -572.89, -366.618, -573.969, -361.548, -548.984, -341.548, -549.04, -332.646, -584.065, -331.663, -590.068, -332.677, -595.065, -359.677, -594.989, -384.68, -595.919, -398.688, -598.879, -403.742, -617.865, -404.854, -657.862, -405.936, -686.859, -398.936, -686.879, -390.936, -686.902, -390.984, -703.901, -392.004, -710.898, -391.024, -717.901, -369.024, -717.963, -353.024, -718.008, -333.021, -717.065, -295.004, -711.172, -289.001, -710.188, -275.974, -700.225, -269.968, -698.242, -274.979, -702.228, -276.99, -706.222, -280.999, -709.211, -283.013, -714.205, -287.016, -715.194, -291.024, -718.183, -300.03, -720.157, -307.035, -722.138, -347.029, -720.025, -391.032, -720.901, -414.052, -727.837, -415.012, -713.834, -416.871, -663.828, -415.733, -614.831, -415.677, -594.831, -416.635, -579.829, -426.629, -577.801 )
+
+[node name="ruina pared derecha baja" type="CollisionPolygon2D" parent="colision objetos pelican"]
+position = Vector2( 0.00317383, 1 )
+polygon = PoolVector2Array( -275.684, -597.226, -290.681, -596.183, -290.672, -593.183, -289.633, -579.186, -281.633, -579.209, -280.577, -559.212, -255.579, -560.282, -256.619, -574.279, -237.622, -575.333, -236.678, -595.335, -235.715, -608.338, -236.858, -659.335, -242.884, -668.318, -248.892, -671.301, -249.827, -648.299, -249.687, -598.299, -257.681, -596.276 )
+
+[node name="ruina pered derecha arriba" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -269.114, -750.245, -257.12, -752.278, -239.115, -750.329, -205.112, -749.425, -205.055, -729.425, -205.875, -665.423, -216.875, -665.392, -216.971, -699.391, -220.047, -726.383, -222.069, -734.377, -225.069, -734.369, -231.067, -733.352, -239.069, -734.329, -260.069, -734.27, -271.069, -734.239, -271.106, -747.239 )
+
+[node name="pilar centro ruina" type="CollisionPolygon2D" parent="colision objetos pelican"]
+position = Vector2( 3.99756, -1.01123 )
+polygon = PoolVector2Array( -303.853, -657.146, -303.816, -644.146, -325.819, -645.084, -325.852, -657.084 )
+
+[node name="pilar destruido" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -192.884, -668.459, -172.884, -668.515, -172.946, -690.515, -192.946, -690.459 )
+
+[node name="pilar caido" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -151.937, -687.575, -86.9375, -687.758, -86.929, -684.758, -81.9291, -684.772, -81.8728, -664.772, -85.8672, -662.76, -103.861, -660.71, -110.861, -660.69, -124.861, -660.651, -128.861, -660.639, -144.864, -661.594, -150.884, -668.577, -153.909, -677.569, -149.918, -680.58 )
+
+[node name="fogata" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -101.07, -734.718, -94.0754, -736.738, -89.0754, -736.752, -83.0784, -737.769, -73.0728, -735.797, -74.0981, -744.794, -77.1066, -747.786, -84.1122, -749.766, -93.1121, -749.741, -99.098, -744.724, -101.09, -741.718 )
+
+[node name="mesa" type="CollisionPolygon2D" parent="colision objetos pelican"]
+position = Vector2( 75.9578, -15.2139 )
+polygon = PoolVector2Array( -79.0702, -734.78, -79.0477, -726.78, -78.9885, -705.78, 7.0083, -707.022, 6.91248, -741.022, 6.86462, -758.022, -12.1353, -757.969, -28.1353, -757.924, -47.1351, -757.87, -63.1351, -757.825, -79.135, -757.78 )
+
+[node name="maderas" type="CollisionPolygon2D" parent="colision objetos pelican"]
+position = Vector2( 0, 18.8431 )
+scale = Vector2( 1, 1.02145 )
+polygon = PoolVector2Array( -2.41394, -856.997, 6.5636, -865.022, 19.5465, -871.058, 33.5549, -868.098, 44.5774, -860.129, 49.5858, -857.143, 49.6, -852.698, 48.631, -841.926, 39.6254, -843.859, 17.6254, -843.798, -1.3717, -842.767, -1.40259, -853.536 )
+
+[node name="campaña" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -151.563, -909.576, -150.346, -832.58, -24.3434, -831.935, -23.4955, -885.937, -24.5659, -910.934, -38.5659, -910.895, -143.566, -910.599 )
+
+[node name="pozo agua" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -286.309, -819.197, -273.303, -817.233, -253.303, -817.29, -236.309, -819.337, -229.343, -831.357, -231.388, -847.351, -234.41, -855.343, -255.407, -854.284, -260.385, -846.27, -265.385, -846.256, -270.393, -849.241, -278.388, -847.219, -285.376, -843.199, -286.365, -839.197, -286.354, -835.197, -286.334, -828.197 )
+
+[node name="pilar abajo ruina" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -225.531, -543.367, -204.529, -542.426, -204.579, -560.426, -225.579, -560.367 )
+
+[node name="piedra gris" type="CollisionPolygon2D" parent="colision objetos pelican"]
+polygon = PoolVector2Array( -163.622, -575.541, -137.622, -575.614, -138.67, -592.612, -162.67, -592.544 )
+
+[node name="piedra ruinas abajo" type="StaticBody2D" parent="."]
+
+[node name="piedra 1" type="CollisionPolygon2D" parent="piedra ruinas abajo"]
+polygon = PoolVector2Array( 1353, 3701, 1362, 3693, 1374, 3690, 1394, 3695, 1397, 3701, 1404, 3693, 1373, 3687, 1349, 3695 )
+
+[node name="piedra 2" type="CollisionPolygon2D" parent="piedra ruinas abajo"]
+polygon = PoolVector2Array( 1385, 3797, 1402, 3794, 1416, 3790, 1422, 3792, 1435, 3796, 1436, 3791, 1426, 3786, 1418, 3785, 1405, 3789, 1401, 3788, 1388, 3789, 1385, 3793, 1382, 3796 )
+
+[node name="piedra 3" type="CollisionPolygon2D" parent="piedra ruinas abajo"]
+polygon = PoolVector2Array( 1511, 3828, 1520, 3829, 1530, 3829, 1532, 3823, 1523, 3820, 1512, 3821, 1508, 3826 )
+
+[node name="piedra 4" type="CollisionPolygon2D" parent="piedra ruinas abajo"]
+polygon = PoolVector2Array( 1670, 4597, 1672, 4600, 1680, 4601, 1692, 4602, 1692, 4599, 1688, 4594, 1685, 4589, 1681, 4587, 1673, 4587, 1672, 4590, 1669, 4595 )
+
+[node name="piedra 5" type="CollisionPolygon2D" parent="piedra ruinas abajo"]
+polygon = PoolVector2Array( 1538, 4342, 1554, 4345, 1566, 4344, 1565, 4322, 1561, 4316, 1556, 4312, 1551, 4309, 1545, 4309, 1540, 4312, 1540, 4317, 1538, 4328 )
+
+[node name="piedra 6" type="CollisionPolygon2D" parent="piedra ruinas abajo"]
+polygon = PoolVector2Array( 1597, 4405, 1584, 4406, 1574, 4402, 1571, 4396, 1571, 4386, 1572, 4378, 1577, 4372, 1582, 4368, 1586, 4368, 1592, 4374, 1594, 4384, 1598, 4392, 1598, 4402 )
+
+[node name="piedra 7" type="CollisionPolygon2D" parent="piedra ruinas abajo"]
+polygon = PoolVector2Array( 1331, 3732, 1325, 3723, 1315, 3717, 1307, 3715, 1298, 3718, 1292, 3722, 1288, 3718, 1298, 3715, 1301, 3709, 1307, 3707, 1311, 3701, 1317, 3698, 1323, 3697, 1329, 3701, 1333, 3704, 1335, 3710, 1336, 3717, 1339, 3722, 1340, 3725 )
+
+[node name="ruina zeri paredes" type="StaticBody2D" parent="."]
+
+[node name="ruina zeri muralla derecha" type="CollisionPolygon2D" parent="ruina zeri paredes"]
+polygon = PoolVector2Array( 1529, 2618, 1481, 2618, 1452, 2631, 1441, 2630, 1422, 2629, 1409, 2620, 1377, 2619, 1302, 2634, 1220, 2634, 1117, 2625, 1043, 2641, 967, 2632, 968, 2593, 969, 2551, 965, 2461, 966, 2403, 966, 2378, 966, 2319, 966, 2233, 964, 2141, 966, 2089, 964, 1993, 962, 1942, 964, 1877, 973, 1860, 1002, 1868, 1036, 1868, 1064, 1868, 1093, 1868, 1098, 1701, 1096, 1532, 1096, 1472, 1096, 1405, 1096, 1377, 1140, 1379, 1170, 1386, 1117, 1417, 1110, 1428, 1108, 1502, 1108, 1601, 1107, 1865, 1113, 1865, 1113, 1916, 1066, 1916, 996, 1917, 979, 1917, 979, 1962, 978, 2023, 978, 2323, 978, 2375, 977, 2569, 976, 2601, 992, 2601, 992, 2622, 1040, 2624, 1050, 2624, 1052, 2610, 1059, 2601, 1093, 2600, 1155, 2600, 1230, 2600, 1251, 2600, 1252, 2609, 1251, 2623, 1303, 2623, 1344, 2608, 1345, 2600, 1418, 2600, 1531, 2598 )
+
+[node name="ruina zeri muralla izquierda" type="CollisionPolygon2D" parent="ruina zeri paredes"]
+position = Vector2( 9, 1 )
+polygon = PoolVector2Array( 1565, 2619, 1681, 2618, 1968, 2610, 1966, 2379, 1966, 1980, 1978, 1983, 1996, 1991, 1997, 1874, 1975, 1874, 1928, 1873, 1826, 1874, 1829, 1394, 1709, 1396, 1709, 1402, 1705, 1414, 1696, 1420, 1692, 1431, 1699, 1421, 1708, 1415, 1712, 1402, 1794, 1430, 1807, 1434, 1816, 1436, 1814, 1912, 1889, 1916, 1988, 1915, 1986, 1978, 1955, 1973, 1956, 2594, 1916, 2593, 1904, 2592, 1903, 2589, 1902, 2582, 1889, 2578, 1876, 2586, 1867, 2593, 1565, 2596 )
+
+[node name="ruinas zeri paredes interior" type="StaticBody2D" parent="."]
+
+[node name="pared 1" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1242, 2601, 1244, 2408, 1229, 2408, 1229, 2601 )
+
+[node name="pared 2" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1244, 2345, 1228, 2344, 1227, 2248, 1245, 2248 )
+
+[node name="pared 3" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( -2, 6 )
+polygon = PoolVector2Array( 1095, 2208, 1095, 2237, 1097, 2253, 1107, 2253, 1120, 2254, 1149, 2253, 1156, 2237, 1186, 2236, 1194, 2258, 1199, 2261, 1216, 2258, 1228, 2263, 1230, 2253, 1230, 2249, 1227, 2244, 1218, 2243, 1212, 2244, 1209, 2240, 1210, 2234, 1209, 2230, 1206, 2227, 1205, 2224, 1201, 2221, 1199, 2217, 1197, 2216, 1193, 2213, 1186, 2213, 1186, 2228, 1155, 2228, 1156, 2213, 1153.45, 2209.68, 1112, 2209 )
+
+[node name="pared 4" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1051, 2214, 1012, 2213, 1008, 2218, 992, 2220, 984, 2225, 979, 2235, 979, 2248, 979, 2287, 993, 2287, 998, 2295, 1013, 2295, 1026, 2295, 1039, 2295, 1053, 2295, 1054, 2282, 1055, 2275, 1066, 2275, 1068, 2262, 1061, 2253, 1059, 2245, 1052, 2243, 1051, 2228 )
+
+[node name="pared 5" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( 1640, 2745 )
+polygon = PoolVector2Array( -429.609, -570.792, -422.573, -557.812, -413.559, -552.837, -397.556, -551.882, -390.573, -557.902, -394.615, -572.89, -366.618, -573.969, -361.548, -548.984, -341.548, -549.04, -332.646, -584.065, -331.663, -590.068, -332.677, -595.065, -359.677, -594.989, -384.68, -595.919, -398.688, -598.879, -403.742, -617.865, -404.854, -657.862, -405.936, -686.859, -398.936, -686.879, -390.936, -686.902, -377, -688, -370, -667, -363, -658, -352, -657, -341, -659, -335, -671, -329, -672, -322, -677, -309, -666, -300, -661, -291, -662, -303, -677, -301, -694, -297, -702, -288, -701, -275.974, -700.225, -269.968, -698.242, -274.979, -702.228, -276.99, -706.222, -280.999, -709.211, -283.013, -714.205, -287.016, -715.194, -291.024, -718.183, -300.03, -720.157, -307.035, -722.138, -347.029, -720.025, -391.032, -720.901, -414.052, -727.837, -415.012, -713.834, -416.871, -663.828, -415.733, -614.831, -415.677, -594.831, -416.635, -579.829, -426.629, -577.801 )
+
+[node name="pared 6" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( 1639, 2743 )
+polygon = PoolVector2Array( -275.684, -597.226, -290.681, -596.183, -290.672, -593.183, -289.633, -579.186, -281.633, -579.209, -280.577, -559.212, -255.579, -560.282, -256.619, -574.279, -237.622, -575.333, -236.678, -595.335, -235.715, -608.338, -236.858, -659.335, -242.884, -668.318, -248.892, -671.301, -249.827, -648.299, -249.687, -598.299, -257.681, -596.276 )
+
+[node name="pared 7" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( 1639, 2752 )
+polygon = PoolVector2Array( -269.114, -750.245, -257.12, -752.278, -239.115, -750.329, -205.112, -749.425, -205.055, -729.425, -205.875, -665.423, -216.875, -665.392, -216.971, -699.391, -220.047, -726.383, -222.069, -734.377, -225.069, -734.369, -231.067, -733.352, -239.069, -734.329, -260.069, -734.27, -271.069, -734.239, -271.106, -747.239 )
+
+[node name="pared 8" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( -66, -1824 )
+polygon = PoolVector2Array( 1385, 3797, 1402, 3794, 1416, 3790, 1422, 3792, 1435, 3796, 1436, 3791, 1426, 3786, 1418, 3785, 1405, 3789, 1401, 3788, 1388, 3789, 1385, 3793, 1382, 3796 )
+
+[node name="pozo  2" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( 1639, 2750 )
+polygon = PoolVector2Array( -286.309, -819.197, -273.303, -817.233, -253.303, -817.29, -236.309, -819.337, -229.343, -831.357, -231.388, -847.351, -234.41, -855.343, -255.407, -854.284, -260.385, -846.27, -265.385, -846.256, -270.393, -849.241, -278.388, -847.219, -285.376, -843.199, -286.365, -839.197, -286.354, -835.197, -286.334, -828.197 )
+
+[node name="pared 9" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( 200, -77 )
+polygon = PoolVector2Array( 1367, 2054, 1381, 2055, 1382, 2094, 1384, 2131, 1409, 2132, 1421, 2133, 1427, 2136, 1431, 2140, 1435, 2143, 1441, 2137, 1449, 2137, 1463, 2136, 1463, 2147, 1463, 2157, 1401, 2156, 1399, 2164, 1385, 2167, 1378, 2165, 1375, 2162, 1368, 2149 )
+
+[node name="pared 10" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( 2, -1 )
+polygon = PoolVector2Array( 1618, 2014, 1605, 2014, 1605, 1958, 1653, 1932, 1668, 1923, 1672, 1912, 1681, 1905, 1693, 1909, 1707, 1921, 1716, 1930, 1727, 1960, 1739, 1980, 1747.24, 1986.04, 1754, 1991, 1761, 2014, 1748, 2025, 1734, 2027, 1727, 2027, 1723, 2022, 1721, 1999, 1707, 1998, 1703, 1992, 1700, 1989, 1695, 1984, 1664, 1983, 1659, 1993, 1649, 1997, 1639, 1992, 1634, 1984, 1620, 1984, 1618, 1995 )
+
+[node name="pared 11" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1734, 2053, 1762, 2052, 1754, 2021, 1786, 2054, 1866, 2054, 1879, 2053, 1889, 2058, 1891, 2067, 1887, 2072, 1880, 2074, 1846, 2075, 1802, 2088, 1777, 2088, 1758, 2079, 1732, 2080 )
+
+[node name="pared 12" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1686, 2162, 1693, 2157, 1701, 2155, 1709, 2155, 1715, 2151, 1755, 2151, 1755, 2178, 1744, 2188, 1733, 2189, 1717, 2187, 1705, 2184, 1703, 2180, 1697, 2179, 1690, 2179, 1686, 2184 )
+
+[node name="pared 13" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1797, 2151, 1872, 2149, 1881, 2149, 1881, 2183, 1881, 2224.98, 1882, 2292, 1872, 2293, 1873, 2283, 1850, 2287, 1846, 2297, 1837, 2299, 1823, 2308, 1809, 2308, 1797, 2307, 1786, 2302, 1784, 2285, 1796, 2278, 1803, 2267, 1808, 2246, 1809, 2240, 1869, 2237, 1871, 2206, 1855, 2209, 1843, 2203, 1832, 2203, 1826, 2200, 1810, 2200, 1805, 2196, 1807, 2189, 1811, 2182, 1814, 2174, 1797, 2174, 1797, 2160 )
+
+[node name="pared 14" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1785, 2286, 1785, 2300, 1767, 2302, 1744, 2300, 1737, 2290, 1734, 2281, 1729, 2271, 1706, 2271, 1686, 2270, 1670, 2275, 1662, 2281, 1653, 2281, 1644, 2280, 1635, 2275, 1630, 2270, 1630, 2203, 1630, 2173, 1633, 2169, 1640, 2168, 1646, 2176, 1646, 2198, 1646, 2215, 1645, 2245, 1669, 2246, 1680, 2246, 1687, 2250, 1693, 2255, 1698, 2257, 1703, 2253, 1712, 2251, 1723, 2247, 1758, 2247, 1779, 2257, 1781, 2265 )
+
+[node name="pared 15" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1512, 2316, 1520, 2315, 1521, 2311, 1550, 2310, 1551, 2312, 1557, 2313, 1559, 2316, 1558, 2323, 1563, 2325, 1565, 2330, 1565, 2364, 1516, 2366, 1516, 2353, 1512, 2347, 1512, 2344, 1512, 2338 )
+
+[node name="pared 16" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( 417, 63 )
+polygon = PoolVector2Array( 1512, 2316, 1520, 2315, 1521, 2311, 1550, 2310, 1551, 2312, 1557, 2313, 1559, 2316, 1558, 2323, 1563, 2325, 1565, 2330, 1565, 2364, 1516, 2366, 1516, 2353, 1512, 2347, 1512, 2344, 1512, 2338 )
+
+[node name="pared 17" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+position = Vector2( 38, -37 )
+polygon = PoolVector2Array( 1369, 2409, 1452, 2410, 1459, 2412, 1467, 2414, 1482, 2430, 1486, 2442, 1485, 2455, 1480, 2459, 1449, 2460, 1409, 2459, 1376, 2460, 1356, 2459, 1351, 2457, 1348, 2455, 1346, 2448, 1343, 2443, 1337, 2438, 1311, 2431, 1308, 2416, 1309, 2408, 1318, 2407 )
+
+[node name="pared 18" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1607, 2413, 1607, 2419, 1604, 2428, 1592, 2431, 1593, 2446, 1623, 2445, 1625, 2449, 1629, 2455, 1638, 2457, 1648, 2455, 1647, 2472, 1651, 2474, 1658, 2474, 1671, 2479, 1696, 2479, 1722, 2478, 1732, 2473, 1739, 2466, 1744, 2460, 1756, 2458, 1755, 2433, 1738, 2439, 1634, 2439, 1635, 2420, 1634, 2412, 1633, 2407, 1621, 2406, 1618, 2411 )
+
+[node name="pared 19" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1413, 2181, 1435, 2182, 1436, 2199, 1434, 2217, 1414, 2217, 1411, 2205 )
+
+[node name="fuente" type="CollisionPolygon2D" parent="ruinas zeri paredes interior"]
+polygon = PoolVector2Array( 1495, 2172, 1495, 2189, 1534, 2220, 1542, 2227, 1563, 2227, 1610, 2189, 1610, 2172, 1566, 2129, 1539, 2129 )
+
+[node name="decoracion ruinas rezi" type="StaticBody2D" parent="."]
+
+[node name="tumba 1" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1151, 2455, 1151, 2448, 1151, 2444, 1153, 2444, 1156, 2443, 1156, 2432, 1158, 2429, 1163, 2429, 1165, 2426, 1170, 2424, 1176, 2424, 1177, 2421, 1181, 2420, 1185, 2418, 1188, 2420, 1194, 2420, 1201, 2421, 1210, 2424, 1213, 2422, 1220, 2423, 1225, 2423, 1229, 2424, 1229, 2435, 1229, 2457, 1209, 2456 )
+
+[node name="tumba 2" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1089, 2388, 1120, 2388, 1119, 2342, 1089, 2342 )
+
+[node name="tumba 3" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1005, 2335, 1009, 2326, 1012, 2319, 1020, 2323, 1025, 2322, 1027, 2327, 1029, 2334, 1029, 2340, 1031, 2344, 1034, 2340, 1039, 2339, 1045, 2340, 1051, 2341, 1053, 2344, 1060, 2344, 1068, 2349, 1072, 2354, 1072, 2359, 1071, 2366, 1067, 2368, 1059, 2373, 1054, 2378, 1055, 2386, 1036, 2383, 1036, 2370, 1032, 2364, 1028, 2359, 1020, 2359, 1006, 2356, 998, 2351 )
+
+[node name="tumba 4" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1190, 2328, 1209, 2328, 1214, 2326, 1214, 2321, 1209, 2319, 1209, 2315, 1212, 2310, 1211, 2301, 1208, 2301, 1205, 2299, 1203, 2297, 1196, 2297, 1193, 2301, 1189, 2302, 1188, 2304, 1188, 2314, 1191, 2315, 1190, 2320, 1186, 2320, 1186, 2326 )
+
+[node name="potal cementerio" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+position = Vector2( -166, 77 )
+polygon = PoolVector2Array( 1168, 2365, 1157, 2364, 1159, 2359, 1158, 2355, 1154, 2357, 1151, 2356, 1152, 2379, 1140, 2457, 1142, 2456, 1150, 2442, 1156, 2442, 1161, 2441, 1168, 2441, 1177, 2441, 1181, 2440, 1185, 2438, 1187, 2437, 1183, 2433, 1179, 2432, 1181, 2427, 1187, 2424, 1189, 2419, 1190, 2415, 1188, 2410, 1189, 2404, 1195, 2404, 1208, 2404, 1221, 2400, 1232, 2396, 1242, 2386, 1252, 2381, 1253, 2372, 1252, 2369, 1247, 2369, 1244, 2363, 1236, 2358, 1228, 2354, 1222, 2351, 1219, 2350, 1216, 2354, 1194, 2353, 1191, 2350, 1181, 2353 )
+
+[node name="piedra 1" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 984, 2566, 988, 2563, 989, 2557, 992, 2556, 994, 2551, 1000, 2548, 1005, 2547, 1011, 2552, 1016, 2556, 1017, 2561, 1020, 2563, 1023, 2562, 1025, 2564, 1025, 2568, 1023, 2575, 1008, 2576, 982, 2571 )
+
+[node name="cesped" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1139, 2512, 1155, 2514, 1180, 2517, 1185, 2531, 1187, 2539, 1189, 2546, 1185, 2552, 1188, 2552, 1193, 2554, 1198, 2554, 1208, 2550, 1213, 2548, 1215, 2542, 1214, 2534, 1218, 2530, 1216, 2521, 1218, 2513, 1229, 2484, 1218, 2483, 1205, 2486, 1193, 2487, 1183, 2487, 1181, 2484, 1175, 2481, 1169, 2482, 1166, 2484, 1166, 2486, 1166, 2488, 1162, 2489, 1159, 2491, 1155, 2488, 1153, 2486, 1145, 2486, 1143, 2488, 1139, 2490, 1135, 2495, 1133, 2505, 1131, 2511 )
+
+[node name="virgencita de guadalupe 2" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1154, 2294, 1166, 2296, 1183, 2295, 1190, 2301, 1197, 2295, 1201, 2282, 1186, 2282, 1180, 2256, 1161, 2247, 1147, 2258, 1138, 2268, 1138, 2276, 1136, 2283, 1133, 2288, 1134, 2292, 1141, 2295, 1148, 2294 )
+
+[node name="arbol 1" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1013, 2132, 1024, 2159, 1031, 2164, 1037, 2166, 1043, 2164, 1056, 2169, 1082, 2173, 1095, 2171, 1107, 2169, 1113, 2162, 1111, 2143, 1101, 2137, 1084, 2133, 1063, 2113, 1037, 2109, 1012, 2118, 1009, 2121, 1009, 2127 )
+
+[node name="arbol 2" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1818, 2470, 1835, 2475, 1877, 2485, 1905, 2495, 1921, 2504, 1940, 2502, 1945, 2497, 1952, 2497, 1960, 2503, 1966, 2507, 1967, 2543, 1941, 2578, 1909, 2582, 1901, 2571, 1891, 2559, 1888, 2552, 1880, 2548, 1866, 2549, 1857, 2549, 1846, 2549, 1828, 2548, 1810, 2547, 1799, 2546, 1792, 2542, 1786, 2536, 1782, 2530, 1786, 2514, 1797, 2516, 1797, 2510, 1791, 2497, 1786, 2489, 1777, 2479, 1778, 2472, 1784, 2468 )
+
+[node name="arbol 3" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1171, 1809, 1132, 1817, 1124, 1823, 1121, 1833, 1110, 1834, 1112, 1847, 1109, 1861, 1116, 1878, 1155, 1881, 1178, 1873, 1201, 1868, 1216, 1878, 1233, 1881, 1249, 1881, 1257, 1891, 1278, 1895, 1293, 1886, 1304, 1884, 1326, 1878, 1345, 1881, 1355, 1881, 1369, 1880, 1376, 1872, 1373, 1853, 1366, 1830, 1353, 1813, 1289, 1815 )
+
+[node name="arbol 4" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1175, 1724, 1274, 1718, 1308, 1717, 1304, 1694, 1308, 1685, 1302, 1676, 1284, 1681, 1281, 1674, 1214, 1620, 1220, 1534, 1247, 1453, 1242, 1438, 1235, 1422, 1224, 1399, 1200, 1376, 1172, 1378, 1112, 1420, 1105, 1525, 1138, 1594, 1108, 1728, 1138, 1728 )
+
+[node name="arbol 5" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1733, 1523, 1779, 1522, 1795, 1519, 1810, 1515, 1817, 1509, 1816, 1503, 1806, 1500, 1802, 1490, 1805, 1476, 1719, 1474, 1713, 1478, 1716, 1492, 1704, 1494, 1701, 1499, 1715, 1509, 1724, 1520 )
+
+[node name="altar" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1410, 1670, 1420, 1665, 1457, 1664, 1469, 1673, 1473, 1669, 1458, 1657, 1440, 1640, 1432, 1632, 1430, 1612, 1428, 1581, 1430, 1560, 1444, 1546, 1452, 1538, 1463, 1525, 1475, 1512, 1507, 1513, 1528, 1513, 1568, 1513, 1577, 1523, 1593, 1539, 1612, 1560, 1612, 1567, 1612, 1584, 1612, 1608, 1612, 1624, 1585, 1650, 1567, 1668, 1567, 1669, 1586, 1650, 1613, 1624, 1613, 1608, 1613, 1585, 1613, 1567, 1613, 1560, 1593, 1538, 1578, 1523, 1568, 1512, 1507, 1512, 1471, 1512, 1458, 1523, 1450, 1533, 1446, 1528, 1440, 1523, 1439, 1510, 1412, 1510, 1412, 1521, 1409, 1526, 1403, 1526, 1398, 1530, 1393, 1533, 1392, 1540, 1396, 1545, 1400, 1549, 1431, 1550, 1426, 1561, 1426, 1590, 1428, 1623, 1428, 1638, 1411, 1639, 1408, 1656 )
+
+[node name="pilar derecho abajo" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+position = Vector2( 211, 99 )
+polygon = PoolVector2Array( 1409, 1584, 1454, 1582, 1460, 1579, 1476, 1579, 1502, 1582, 1507, 1576, 1512, 1570, 1514, 1562, 1515, 1556, 1519, 1552, 1526, 1550, 1530.17, 1550.46, 1534, 1548, 1536, 1545, 1535, 1538, 1534, 1533, 1531, 1530, 1526, 1525, 1520, 1522, 1511, 1526, 1505, 1525, 1503, 1521, 1497, 1518, 1487, 1523, 1475, 1524, 1466, 1523, 1463, 1524, 1462, 1521, 1459, 1518, 1456, 1517, 1455, 1514, 1451, 1513, 1450, 1520, 1445, 1521, 1442, 1523, 1438, 1523, 1436, 1521, 1432, 1524, 1429, 1527, 1429, 1531, 1429, 1535, 1428, 1542, 1430, 1548, 1425, 1551, 1416, 1552, 1416, 1538, 1395, 1539, 1385, 1544, 1393, 1559, 1415, 1559, 1407, 1575 )
+
+[node name="pilar derecho arriba" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1598, 1544, 1606, 1550, 1615, 1550, 1631, 1547, 1637, 1543, 1637, 1535, 1628, 1521, 1626, 1510, 1606, 1510, 1606, 1522, 1602, 1524 )
+
+[node name="tronco" type="CollisionPolygon2D" parent="decoracion ruinas rezi"]
+polygon = PoolVector2Array( 1688, 1452, 1701, 1452, 1714, 1453, 1712, 1436, 1688, 1437, 1688, 1443 )
+
+[node name="bosque camino muralla" type="StaticBody2D" parent="."]
+
+[node name="bosque camino muralla derecha" type="CollisionPolygon2D" parent="bosque camino muralla"]
+polygon = PoolVector2Array( 1699, 1431, 1705, 1417, 1699, 1403, 1693, 1388, 1682, 1379, 1664, 1384, 1655, 1388, 1654, 1406, 1642, 1416, 1628, 1418, 1619, 1416, 1607, 1404, 1602, 1389, 1594, 1380, 1580, 1377, 1572, 1376, 1550, 1385, 1516, 1390, 1490, 1351, 1480, 1334, 1472, 1318, 1453, 1301, 1437, 1296, 1429, 1289, 1415, 1285, 1402, 1291, 1389, 1290, 1364, 1289, 1352, 1283, 1329, 1267, 1318, 1255, 1315, 1243, 1318, 1210, 1326, 1183, 1317, 1141, 1323, 1116, 1310, 1092, 1297, 1084, 1291, 1079, 1291, 1074, 1290, 1064, 1291, 1053, 1309, 1019, 1299, 1008, 1290, 981, 1285, 963, 1290, 949, 1282, 930, 1290, 911, 1298, 881, 1311, 861, 1300, 844, 1285, 824, 1282, 803, 1287, 784, 1287, 767, 1287, 722, 1296, 669, 1306, 642, 1324, 624, 1348, 619, 1362, 628, 1371, 620, 1391, 598, 1405, 596, 1420, 603, 1426, 615, 1432, 622, 1436, 611, 1445, 600, 1461, 581, 1469, 571, 1488, 571, 1499, 581, 1507, 579, 1519, 572, 1522, 557, 1546, 556, 1562, 560, 1563, 569, 1579, 571, 1587, 581, 1591, 587, 1602, 587, 1608, 570, 1620, 559, 1630, 546, 1642, 540, 1654, 547, 1667, 548, 1678, 536, 1683, 524, 1698, 524, 1712, 529, 1727, 539, 1732, 521, 1750, 499, 1760, 486, 1761, 470, 1770, 454, 1766, 442, 1760, 453, 1748, 450, 1737, 450, 1728, 444, 1729, 435, 1730, 431, 1734, 426, 1740, 422, 1749, 419, 1754, 417, 1757, 409, 1771, 406, 1784, 381, 1794, 362, 1804, 340, 1792, 350, 1774, 354, 1766, 359, 1767, 368, 1759, 375, 1743, 381, 1735, 370, 1735, 357, 1737, 346, 1745, 339, 1751, 335, 1747, 329, 1758, 321, 1779, 321, 1798, 321, 1816, 337, 1861, 1032, 1780, 1348 )
+
+[node name="bosque camino muralla izquierda" type="CollisionPolygon2D" parent="bosque camino muralla"]
+polygon = PoolVector2Array( 1169, 1373, 1146, 1339, 1152.73, 1324.88, 1177, 1274, 1180, 1242, 1203, 1239, 1222, 1240, 1237, 1234, 1240, 1219, 1245, 1207, 1239, 1204, 1238, 1198, 1237, 1193, 1228, 1189, 1227, 1182, 1227, 1176, 1226, 1166, 1224, 1165, 1217, 1162, 1212, 1161, 1212, 1155, 1203, 1129, 1197, 1120, 1204, 1110, 1232, 1111, 1247, 1111, 1259, 1113, 1263, 1105, 1252, 1097, 1229, 1089, 1231, 1062, 1234, 1050, 1243, 1042, 1243, 1020, 1235, 1005, 1230, 990, 1213, 962, 1214, 951, 1228, 932, 1241, 926, 1244, 901, 1235, 871, 1225, 850, 1213, 837, 1207, 827, 1210, 805, 1207, 785, 1198, 771, 1189, 752, 1179, 737, 1167, 724, 1158, 716, 1169, 712, 1179, 709, 1196, 705, 1211, 692, 1209, 663, 1200, 638, 1189, 614, 1167, 597, 1154, 593, 1137, 601, 1128, 617, 1122, 620, 1117, 608, 1111, 591, 1090, 577, 1078, 566, 1062, 574, 1051, 578, 1039, 565, 1026, 555, 1009, 556, 998, 565, 996, 547, 1005, 533, 1018, 528, 1035, 521, 1042, 517, 1047, 500, 1049, 489, 1049, 465, 1034, 431, 1036, 422, 1046, 420, 1044, 414, 1042, 405, 1048, 401, 1045, 394, 1051, 393, 1048, 385, 1045, 378, 1048, 373, 1053, 367, 1047, 359, 1050, 352, 1047, 338, 1047, 318, 1041, 302, 1009, 289, 915, 343, 812, 444, 1043, 1302, 1103, 1380 )
+
+[node name="pared 5" type="CollisionPolygon2D" parent="bosque camino muralla"]
+position = Vector2( 1574, 1108 )
+polygon = PoolVector2Array( -429.609, -570.792, -422.573, -557.812, -413.559, -552.837, -397.556, -551.882, -390.573, -557.902, -394.615, -572.89, -366.618, -573.969, -361.548, -548.984, -341.548, -549.04, -332.646, -584.065, -331.663, -590.068, -332.677, -595.065, -359.677, -594.989, -384.68, -595.919, -398.688, -598.879, -403.742, -617.865, -403, -633, -397, -634, -386, -639, -371, -637, -363, -637, -359, -639, -369, -648, -386, -648, -391, -663, -388, -671, -374, -671, -360, -667, -351, -659, -341, -659, -335, -671, -329, -672, -322, -677, -309, -666, -300, -661, -291, -662, -303, -677, -301, -694, -297, -702, -288, -701, -275.974, -700.225, -269.968, -698.242, -274.979, -702.228, -276.99, -706.222, -280.999, -709.211, -283.013, -714.205, -287.016, -715.194, -291.024, -718.183, -300.03, -720.157, -307.035, -722.138, -347.029, -720.025, -391.032, -720.901, -414.052, -727.837, -415.012, -713.834, -416.871, -663.828, -415.733, -614.831, -415.677, -594.831, -416.635, -579.829, -426.629, -577.801 )
+
+[node name="pared 7" type="CollisionPolygon2D" parent="bosque camino muralla"]
+position = Vector2( 1575, 1114 )
+polygon = PoolVector2Array( -269.114, -750.245, -253, -753, -251, -755, -240, -756, -205, -755, -205.112, -749.425, -205.055, -729.425, -205.875, -665.423, -216.875, -665.392, -216.971, -699.391, -228, -696, -235, -700, -239, -702, -242, -707, -248, -709, -262, -714, -260.069, -734.27, -271.069, -734.239, -271.106, -747.239 )
+
+[node name="pared 6" type="CollisionPolygon2D" parent="bosque camino muralla"]
+position = Vector2( 1575, 1114 )
+polygon = PoolVector2Array( -275.684, -597.226, -290.681, -596.183, -290.672, -593.183, -289.633, -579.186, -281.633, -579.209, -280.577, -559.212, -255.579, -560.282, -256.619, -574.279, -237.622, -575.333, -236.678, -595.335, -235.715, -608.338, -236.858, -659.335, -242.884, -668.318, -248.892, -671.301, -249.827, -648.299, -249.687, -598.299, -257.681, -596.276 )
+
+[node name="pared 19" type="CollisionPolygon2D" parent="bosque camino muralla"]
+position = Vector2( -63, -1633 )
+polygon = PoolVector2Array( 1413, 2181, 1435, 2182, 1436, 2199, 1434, 2217, 1414, 2217, 1411, 2205 )
+
+[node name="pozo  2" type="CollisionPolygon2D" parent="bosque camino muralla"]
+position = Vector2( 1736, 1269 )
+polygon = PoolVector2Array( -286.309, -819.197, -273.303, -817.233, -253.303, -817.29, -236.309, -819.337, -229.343, -831.357, -231.388, -847.351, -234.41, -855.343, -255.407, -854.284, -260.385, -846.27, -265.385, -846.256, -270.393, -849.241, -278.388, -847.219, -285.376, -843.199, -286.365, -839.197, -286.354, -835.197, -286.334, -828.197 )
+
+[node name="pared 8" type="CollisionPolygon2D" parent="bosque camino muralla"]
+position = Vector2( -321, -3361 )
+polygon = PoolVector2Array( 1385, 3797, 1402, 3794, 1416, 3790, 1422, 3792, 1435, 3796, 1436, 3791, 1426, 3786, 1418, 3785, 1405, 3789, 1401, 3788, 1388, 3789, 1385, 3793, 1382, 3796 )
+
+[node name="lampara" type="CollisionPolygon2D" parent="bosque camino muralla"]
+polygon = PoolVector2Array( 1575, 344, 1581, 344, 1589, 346, 1593, 344, 1594, 340, 1594, 336, 1594, 332, 1593, 330, 1586, 329, 1579, 330, 1575, 330 )
+
+[node name="lampara2" type="CollisionPolygon2D" parent="bosque camino muralla"]
+position = Vector2( 96, 0 )
+polygon = PoolVector2Array( 1575, 344, 1581, 344, 1589, 346, 1593, 344, 1594, 340, 1594, 336, 1594, 332, 1593, 330, 1586, 329, 1579, 330, 1575, 330 )
+
+[node name="cartel" type="CollisionPolygon2D" parent="bosque camino muralla"]
+polygon = PoolVector2Array( 1480, 343, 1481, 342, 1482, 339, 1485, 338, 1488, 340, 1488, 342, 1518, 343, 1519, 338, 1523, 338, 1525, 340, 1525, 343, 1528, 344, 1527, 368, 1480, 367 )
+
+[node name="banco" type="CollisionPolygon2D" parent="bosque camino muralla"]
+polygon = PoolVector2Array( 1699, 392, 1701, 374, 1715, 375, 1716, 368, 1720, 363, 1725, 364, 1725, 390, 1725, 395, 1725, 402, 1720, 405, 1716, 408, 1709, 408, 1702, 408, 1700, 405, 1699, 400, 1699, 395 )
+
+[node name="tapon" type="CollisionPolygon2D" parent="bosque camino muralla"]
+polygon = PoolVector2Array( 1206, 763, 1244, 780, 1255, 787, 1261, 790, 1270, 793, 1281, 793, 1285, 779, 1283, 712, 1215, 713, 1185, 719, 1176, 730, 1195, 755 )
+
+[node name="UI" parent="." instance=ExtResource( 6 )]
+
 [connection signal="body_entered" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_entered"]
-[connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_deteccion_pelican_body_exited"]
 [connection signal="body_exited" from="Mapa/cesped/Pelican/deteccion pelican" to="Jugador" method="_on_Colision_pelican_body_exited"]
-[connection signal="body_entered" from="Mapa/cesped/ruinas zeri/AreaRuinas" to="Jugador" method="_on_AreaRuinas_body_entered"]
-[connection signal="body_exited" from="Mapa/cesped/ruinas zeri/AreaRuinas" to="Jugador" method="_on_AreaRuinas_body_exited"]
-[connection signal="body_entered" from="Mapa/cesped/ruinas zeri/AreaCombate" to="Jugador" method="_on_AreaCombate_body_entered"]
-[connection signal="body_exited" from="Mapa/cesped/ruinas zeri/AreaCombate" to="Jugador" method="_on_AreaCombate_body_exited"]
+[connection signal="area_entered" from="AreaPelican" to="Jugador" method="_on_AreaPelican_area_entered"]
+[connection signal="area_exited" from="AreaPelican" to="Jugador" method="_on_AreaPelican_area_exited"]
+[connection signal="area_entered" from="AreaRuinas" to="Jugador" method="_on_AreaRuinas_area_entered"]
+[connection signal="area_exited" from="AreaRuinas" to="Jugador" method="_on_AreaRuinas_area_exited"]
+[connection signal="area_entered" from="AreaBatalla" to="Jugador" method="_on_AreaBatalla_area_entered"]
+[connection signal="area_exited" from="AreaBatalla" to="Jugador" method="_on_AreaBatalla_area_exited"]
 
 [editable path="Mapa/cesped"]
