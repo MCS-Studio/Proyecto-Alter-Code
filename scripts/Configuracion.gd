@@ -62,8 +62,6 @@ func _input(event):
 func _on_BtnMapa_pressed():
 	$Configuracion.visible = false
 	$Mapa.visible = true
-	if Globales.Inicio == false:
-		$Mapa/Nohay.visible = false
 	if Globales.Areas == 0:
 		$Mapa/Nohay.visible = true
 	if Globales.Areas == 1:
