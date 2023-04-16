@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://mapas/cesped.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Sprite/Jugador.tscn" type="PackedScene" id=2]
@@ -190,18 +190,42 @@ polygon = PoolVector2Array( 1643, 824, 1632, 878, 1632, 878, 1643, 869, 1643, 82
 [sub_resource type="RectangleShape2D" id=50]
 extents = Vector2( 12, 36 )
 
+[sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 53.389, 22.1589 )
+
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 0.833302, 4.47128 )
+
 [sub_resource type="RectangleShape2D" id=48]
 extents = Vector2( 71.5, 34.75 )
 
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 2.92481, 7.759 )
+
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 220, 10 )
+
 [sub_resource type="RectangleShape2D" id=49]
-extents = Vector2( 182.5, 38 )
+extents = Vector2( 246.055, 38 )
+
+[sub_resource type="RectangleShape2D" id=58]
+extents = Vector2( 202, 8 )
+
+[sub_resource type="RectangleShape2D" id=55]
+extents = Vector2( 155, 8.5 )
+
+[sub_resource type="RectangleShape2D" id=56]
+extents = Vector2( 213, 10 )
+
+[sub_resource type="RectangleShape2D" id=57]
+extents = Vector2( 156, 10 )
 
 [node name="mapa" type="Node2D"]
 script = ExtResource( 7 )
 
 [node name="Jugador" parent="." instance=ExtResource( 2 )]
 light_mask = 9
-position = Vector2( 1569, 4787 )
+position = Vector2( 1569, 4786 )
 rotation = 0.0028171
 z_index = 2
 collision_layer = 9
@@ -280,7 +304,7 @@ position = Vector2( -54, 673 )
 show_behind_parent = true
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 37
+frame = 29
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
@@ -295,27 +319,84 @@ occluder = SubResource( 44 )
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="Mapa/Fuente"]
 occluder = SubResource( 45 )
 
-[node name="AreaPelican" type="Area2D" parent="."]
+[node name="AreaEntradaPelican" type="Area2D" parent="."]
 collision_layer = 8
 
-[node name="ZonaPelican" type="CollisionShape2D" parent="AreaPelican"]
+[node name="ZonaPelican" type="CollisionShape2D" parent="AreaEntradaPelican"]
 position = Vector2( 1567, 4713 )
 scale = Vector2( 0.656087, 1.11362 )
 shape = SubResource( 50 )
 
-[node name="AreaRuinas" type="Area2D" parent="."]
+[node name="AreaEntradaPelican2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEntradaPelican2"]
+position = Vector2( 1597, 3511 )
+scale = Vector2( 0.664931, 0.992825 )
+shape = SubResource( 51 )
+
+[node name="area salida pelican" type="Area2D" parent="."]
+position = Vector2( 1581, 3461 )
+rotation = 3.14159
+scale = Vector2( 537455, -30.0332 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area salida pelican"]
+position = Vector2( -2.86209e-05, -0.153137 )
+rotation = -3.14159
+scale = Vector2( 7.93007e-05, -0.22042 )
+shape = SubResource( 52 )
+
+[node name="AreaEntradaRuinas" type="Area2D" parent="."]
 collision_layer = 8
 
-[node name="ZonaRuinas" type="CollisionShape2D" parent="AreaRuinas"]
+[node name="ZonaRuinas" type="CollisionShape2D" parent="AreaEntradaRuinas"]
 position = Vector2( 1564, 2708 )
 shape = SubResource( 48 )
 
-[node name="AreaBatalla" type="Area2D" parent="."]
+[node name="AreaSalirRuinas" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSalirRuinas"]
+position = Vector2( 1593, 2809 )
+scale = Vector2( 12.6504, 8.33638 )
+shape = SubResource( 53 )
+
+[node name="AreaSalirRuinas2" type="Area2D" parent="."]
+position = Vector2( 1549, 1876 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSalirRuinas2"]
+position = Vector2( 50, 0 )
+shape = SubResource( 54 )
+
+[node name="AreaEntradaBatalla" type="Area2D" parent="."]
 collision_layer = 8
 
-[node name="ZonaBatalla" type="CollisionShape2D" parent="AreaBatalla"]
-position = Vector2( 1547.5, 1743 )
+[node name="ZonaBatalla" type="CollisionShape2D" parent="AreaEntradaBatalla"]
+position = Vector2( 1549.5, 1762 )
+scale = Vector2( 0.753898, 0.249346 )
 shape = SubResource( 49 )
+
+[node name="AreaEntrarRuina2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEntrarRuina2"]
+position = Vector2( 1614, 1896 )
+shape = SubResource( 58 )
+
+[node name="AreaEntrarBatalla2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEntrarBatalla2"]
+position = Vector2( 1330, 1364.5 )
+shape = SubResource( 55 )
+
+[node name="AreaSalirBatalla" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSalirBatalla"]
+position = Vector2( 1592, 1853 )
+shape = SubResource( 56 )
+
+[node name="AreaSalirBatalla2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSalirBatalla2"]
+position = Vector2( 1317, 1344 )
+shape = SubResource( 57 )
 
 [node name="Luces" type="Node2D" parent="."]
 visible = false
@@ -448,7 +529,7 @@ polygon = PoolVector2Array( -558.629, -577.428, -561.668, -591.42, -556.668, -59
 polygon = PoolVector2Array( -456.945, -689.715, -485.944, -689.634, -487.908, -676.628, -480.891, -670.648, -461.888, -669.701, -454.911, -677.721 )
 
 [node name="ruina pared izquierda" type="CollisionPolygon2D" parent="colision objetos pelican"]
-polygon = PoolVector2Array( -429.609, -570.792, -422.573, -557.812, -413.559, -552.837, -397.556, -551.882, -390.573, -557.902, -394.615, -572.89, -366.618, -573.969, -361.548, -548.984, -341.548, -549.04, -332.646, -584.065, -331.663, -590.068, -332.677, -595.065, -359.677, -594.989, -384.68, -595.919, -398.688, -598.879, -403.742, -617.865, -404.854, -657.862, -405.936, -686.859, -398.936, -686.879, -390.936, -686.902, -390.984, -703.901, -392.004, -710.898, -391.024, -717.901, -369.024, -717.963, -353.024, -718.008, -333.021, -717.065, -295.004, -711.172, -289.001, -710.188, -275.974, -700.225, -269.968, -698.242, -274.979, -702.228, -276.99, -706.222, -280.999, -709.211, -283.013, -714.205, -287.016, -715.194, -291.024, -718.183, -300.03, -720.157, -307.035, -722.138, -347.029, -720.025, -391.032, -720.901, -414.052, -727.837, -415.012, -713.834, -416.871, -663.828, -415.733, -614.831, -415.677, -594.831, -416.635, -579.829, -426.629, -577.801 )
+polygon = PoolVector2Array( -429.609, -570.792, -422.573, -557.812, -413.559, -552.837, -397.556, -551.882, -390.573, -557.902, -394.615, -572.89, -366.618, -573.969, -361.548, -548.984, -341.548, -549.04, -332.646, -584.065, -331.663, -590.068, -332.677, -595.065, -359.677, -594.989, -384.68, -595.919, -398.688, -598.879, -403.742, -617.865, -404.854, -657.862, -405.88, -666.859, -399.88, -666.876, -384.88, -666.918, -385.956, -693.916, -385.973, -699.916, -386.973, -699.913, -373.973, -699.949, -332.971, -699.065, -275.974, -700.225, -269.968, -698.242, -274.979, -702.228, -276.99, -706.222, -280.999, -709.211, -283.013, -714.205, -287.016, -715.194, -291.024, -718.183, -300.03, -720.157, -307.035, -722.138, -347.029, -720.025, -370.052, -727.96, -391.032, -720.901, -414.052, -727.837, -415.012, -713.834, -416.871, -663.828, -415.733, -614.831, -415.677, -594.831, -416.635, -579.829, -426.629, -577.801 )
 
 [node name="ruina pared derecha baja" type="CollisionPolygon2D" parent="colision objetos pelican"]
 position = Vector2( 0.00317383, 1 )
@@ -459,7 +540,7 @@ polygon = PoolVector2Array( -269.114, -750.245, -257.12, -752.278, -239.115, -75
 
 [node name="pilar centro ruina" type="CollisionPolygon2D" parent="colision objetos pelican"]
 position = Vector2( 3.99756, -1.01123 )
-polygon = PoolVector2Array( -303.853, -657.146, -303.816, -644.146, -325.819, -645.084, -325.852, -657.084 )
+polygon = PoolVector2Array( -303.853, -657.146, -303.802, -639.147, -325.799, -638.085, -325.852, -657.084 )
 
 [node name="pilar destruido" type="CollisionPolygon2D" parent="colision objetos pelican"]
 polygon = PoolVector2Array( -192.884, -668.459, -172.884, -668.515, -172.946, -690.515, -192.946, -690.459 )
@@ -703,11 +784,19 @@ polygon = PoolVector2Array( 1206, 763, 1244, 780, 1255, 787, 1261, 790, 1270, 79
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
 
-[connection signal="area_entered" from="AreaPelican" to="Jugador" method="_on_AreaPelican_area_entered"]
-[connection signal="area_exited" from="AreaPelican" to="Jugador" method="_on_AreaPelican_area_exited"]
-[connection signal="area_entered" from="AreaRuinas" to="Jugador" method="_on_AreaRuinas_area_entered"]
-[connection signal="area_exited" from="AreaRuinas" to="Jugador" method="_on_AreaRuinas_area_exited"]
-[connection signal="area_entered" from="AreaBatalla" to="Jugador" method="_on_AreaBatalla_area_entered"]
-[connection signal="area_exited" from="AreaBatalla" to="Jugador" method="_on_AreaBatalla_area_exited"]
+[connection signal="area_entered" from="AreaEntradaPelican" to="Jugador" method="_on_AreaPelican_area_entered"]
+[connection signal="area_exited" from="AreaEntradaPelican" to="Jugador" method="_on_AreaPelican_area_exited"]
+[connection signal="area_entered" from="AreaEntradaPelican2" to="Jugador" method="_on_AreaEntradaPelican2_area_entered"]
+[connection signal="area_entered" from="area salida pelican" to="Jugador" method="_on_area_salida_pelican_area_entered"]
+[connection signal="area_entered" from="AreaEntradaRuinas" to="Jugador" method="_on_AreaRuinas_area_entered"]
+[connection signal="area_exited" from="AreaEntradaRuinas" to="Jugador" method="_on_AreaRuinas_area_exited"]
+[connection signal="area_entered" from="AreaSalirRuinas" to="Jugador" method="_on_AreaSalirRuinas_area_entered"]
+[connection signal="area_entered" from="AreaSalirRuinas2" to="Jugador" method="_on_AreaSalirRuinas2_area_entered"]
+[connection signal="area_entered" from="AreaEntradaBatalla" to="Jugador" method="_on_AreaBatalla_area_entered"]
+[connection signal="area_exited" from="AreaEntradaBatalla" to="Jugador" method="_on_AreaBatalla_area_exited"]
+[connection signal="area_entered" from="AreaEntrarRuina2" to="Jugador" method="_on_AreaEntrarRuina2_area_entered"]
+[connection signal="area_entered" from="AreaEntrarBatalla2" to="Jugador" method="_on_AreaEntrarBatalla2_area_entered"]
+[connection signal="area_entered" from="AreaSalirBatalla" to="Jugador" method="_on_AreaSalirBatalla_area_entered"]
+[connection signal="area_entered" from="AreaSalirBatalla2" to="Jugador" method="_on_AreaSalirBatalla2_area_entered"]
 
 [editable path="Mapa/cesped"]

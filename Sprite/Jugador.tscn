@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Sprite/master_chief_sprite_by_aetherwings_d2xk731-fullview.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Jugador.gd" type="Script" id=2]
@@ -137,6 +137,9 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=23]
 
+[sub_resource type="CapsuleShape2D" id=24]
+height = 21.6613
+
 [node name="Jugador" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
@@ -167,3 +170,7 @@ zoom = Vector2( 0.45, 0.45 )
 scale = Vector2( 0.388021, 0.415995 )
 z_index = 1
 shape = SubResource( 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 0.165736, 0.288037 )
+shape = SubResource( 24 )
