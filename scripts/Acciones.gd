@@ -269,7 +269,6 @@ func Excalibur():
 	print("Excalibur")
 	print("vida jefe: ", Globales.VidaJefe)
 	print("-------")
-	ControlsFmod.playSFXOnce("AtaquesSalter/Excalibur")
 	
 	test = aleatorio()
 	if test == 1:
