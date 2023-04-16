@@ -31,25 +31,26 @@ var Ataquejefe = 500.00
 var EspecialJefe = 32.00
 var DefEspJefe = 30.00
 var VelocidadJefe = 75.00
-var EstaminaJefe = 300.00
+var EstaminaJefe = 200.00
 #Valores maximos
 
 var VidaMaximaJefe =2000.00
-var EstaminaMaximaJefe = 300.00
+var EstaminaMaximaJefe = 200.00
 #Estadisticas Salter
 
-var VidaSalter = 3000.00
+var VidaSalter = 2000.00
 var DefensaSalter = 50.00
 var AtaqueSalter = 430.00
 var EspecialSalter = 40.00
 var DefEspSalter = 70.00
 var VelocidadSalter = 70.00
 var EstaminaSalter = 500.00
-var VidaMaximaSalter = 3000.00
+var VidaMaximaSalter = 2000.00
 #Valores maximos
 
 #Turno
 var Turno = 1
+var Charge = 0
 
 #Funciones Globales
 
