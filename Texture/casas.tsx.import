@@ -2,13 +2,11 @@
 
 importer="vnen.tiled_tileset_importer"
 type="TileSet"
-path="res://.import/casas.tsx-d0dca3c12eeade184e0e4e2fd8c4b406.res"
+valid=false
 
 [deps]
 
 source_file="res://Texture/casas.tsx"
-dest_files=[ "res://.import/casas.tsx-d0dca3c12eeade184e0e4e2fd8c4b406.res" ]
-
 [params]
 
 custom_properties=true

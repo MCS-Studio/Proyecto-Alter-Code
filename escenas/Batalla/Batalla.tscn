@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://escenas/Personajes/Jeanne.tscn" type="PackedScene" id=2]
@@ -13,7 +13,7 @@
 [ext_resource path="res://assets/img/barras/Vida empty.png" type="Texture" id=11]
 [ext_resource path="res://scripts/Acciones.gd" type="Script" id=12]
 [ext_resource path="res://animaciones/DamageSalter.tres" type="Animation" id=13]
-[ext_resource path="res://assets/img/Dialogos/CuadroDialogo.png" type="Texture" id=14]
+[ext_resource path="res://escenas/Batalla/GUI PRINCIPAL.png" type="Texture" id=14]
 [ext_resource path="res://assets/img/botones/Batalla/Subfusil hover.png" type="Texture" id=15]
 [ext_resource path="res://assets/img/botones/Batalla/Subfusil.png" type="Texture" id=16]
 [ext_resource path="res://assets/img/botones/Batalla/Subfusil press.png" type="Texture" id=17]
@@ -31,6 +31,7 @@
 [ext_resource path="res://assets/img/barras/Ultimate Full.png" type="Texture" id=29]
 [ext_resource path="res://assets/img/barras/Ultimate.png" type="Texture" id=30]
 [ext_resource path="res://animaciones/Ultimate.tres" type="Animation" id=31]
+[ext_resource path="res://escenas/Batalla/GUI PRINCIPAL (2).png" type="Texture" id=32]
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
@@ -62,14 +63,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Dialogo" type="TextureRect" parent="GUI"]
+visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -10.0
-margin_top = -492.0
-margin_right = 16.0
+margin_top = -288.0
+margin_right = 26.0
+margin_bottom = 8.0
+rect_pivot_offset = Vector2( 258, 105 )
 texture = ExtResource( 14 )
 expand = true
+
+[node name="GuiPrincipal(2)" type="Sprite" parent="GUI"]
+position = Vector2( 937, 800 )
+scale = Vector2( 1.50558, 1.93439 )
+texture = ExtResource( 32 )
 
 [node name="Acciones" type="Control" parent="."]
 margin_right = 40.0
@@ -77,54 +85,56 @@ margin_bottom = 40.0
 script = ExtResource( 12 )
 
 [node name="Subfusil" type="TextureButton" parent="Acciones"]
-margin_left = 645.0
-margin_top = 826.0
-margin_right = 945.0
-margin_bottom = 935.0
+margin_left = 377.0
+margin_top = 791.0
+margin_right = 677.0
+margin_bottom = 896.0
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 15 )
 
 [node name="Granada" type="TextureButton" parent="Acciones"]
-margin_left = 978.0
-margin_top = 826.0
-margin_right = 1278.0
-margin_bottom = 931.0
+margin_left = 741.0
+margin_top = 790.0
+margin_right = 1041.0
+margin_bottom = 895.0
 texture_normal = ExtResource( 26 )
 texture_pressed = ExtResource( 21 )
 texture_hover = ExtResource( 24 )
 texture_disabled = ExtResource( 21 )
 
 [node name="Embestida" type="TextureButton" parent="Acciones"]
-margin_left = 978.0
-margin_top = 943.0
-margin_right = 1278.0
-margin_bottom = 1048.0
+margin_left = 375.0
+margin_top = 684.0
+margin_right = 675.0
+margin_bottom = 789.0
 texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 20 )
 texture_disabled = ExtResource( 19 )
 
 [node name="Vida" type="TextureButton" parent="Acciones"]
-margin_left = 645.0
-margin_top = 943.0
-margin_right = 945.0
-margin_bottom = 1048.0
+margin_left = 742.0
+margin_top = 681.0
+margin_right = 1042.0
+margin_bottom = 786.0
 texture_normal = ExtResource( 25 )
 texture_pressed = ExtResource( 22 )
 texture_hover = ExtResource( 23 )
 texture_disabled = ExtResource( 22 )
 
 [node name="Ultimate" type="TextureButton" parent="Acciones"]
-margin_left = 1639.0
-margin_top = 753.0
-margin_right = 1876.0
-margin_bottom = 990.0
+margin_left = 1640.0
+margin_top = 766.0
+margin_right = 1877.0
+margin_bottom = 1003.0
 disabled = true
 
 [node name="UltimateProgress" type="TextureProgress" parent="Acciones/Ultimate"]
-margin_right = 237.0
-margin_bottom = 237.0
+margin_left = -437.0
+margin_top = -63.0
+margin_right = -203.0
+margin_bottom = 151.0
 texture_under = ExtResource( 28 )
 texture_progress = ExtResource( 29 )
 fill_mode = 8
@@ -132,18 +142,18 @@ radial_initial_angle = 180.0
 nine_patch_stretch = true
 
 [node name="TextUltimate" type="TextureRect" parent="Acciones/Ultimate"]
-margin_left = 6.0
-margin_top = 250.0
-margin_right = 231.0
-margin_bottom = 301.0
+margin_left = -396.0
+margin_top = 171.0
+margin_right = -249.0
+margin_bottom = 212.0
 texture = ExtResource( 30 )
 expand = true
 
 [node name="Turno" type="Label" parent="Acciones"]
-margin_left = 784.0
-margin_top = 542.0
-margin_right = 871.0
-margin_bottom = 601.0
+margin_left = 96.0
+margin_top = 595.0
+margin_right = 302.0
+margin_bottom = 654.0
 custom_fonts/font = SubResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Acciones"]
@@ -157,18 +167,18 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Salir" type="Button" parent="Menu"]
-margin_left = 1375.0
-margin_top = 953.0
-margin_right = 1482.0
-margin_bottom = 1031.0
+margin_left = 1626.0
+margin_top = 878.0
+margin_right = 1733.0
+margin_bottom = 956.0
 custom_fonts/font = SubResource( 4 )
 text = "Salir"
 
 [node name="RegresarMenu" type="Button" parent="Menu"]
-margin_left = 1328.0
-margin_top = 841.0
-margin_right = 1542.0
-margin_bottom = 919.0
+margin_left = 1575.0
+margin_top = 751.0
+margin_right = 1789.0
+margin_bottom = 829.0
 custom_fonts/font = SubResource( 4 )
 text = "Regresar"
 
@@ -177,19 +187,19 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Jefe" type="TextureRect" parent="Personajes"]
-margin_left = 58.0
-margin_top = 637.0
-margin_right = 509.0
-margin_bottom = 1083.0
+margin_left = 93.0
+margin_top = 706.0
+margin_right = 319.0
+margin_bottom = 964.0
 texture = ExtResource( 3 )
 expand = true
 flip_h = true
 
 [node name="Vida Jefe" type="TextureProgress" parent="Personajes"]
-margin_left = 497.0
-margin_top = 727.0
-margin_right = 1071.0
-margin_bottom = 759.0
+margin_left = 357.0
+margin_top = 902.0
+margin_right = 931.0
+margin_bottom = 934.0
 texture_under = ExtResource( 11 )
 texture_progress = ExtResource( 8 )
 nine_patch_stretch = true
@@ -203,24 +213,24 @@ custom_fonts/font = SubResource( 2 )
 text = "100 %"
 
 [node name="EstaminaJefe" type="TextureProgress" parent="Personajes"]
-margin_left = 497.0
-margin_top = 768.0
-margin_right = 954.0
-margin_bottom = 800.0
+margin_left = 440.0
+margin_top = 944.0
+margin_right = 824.0
+margin_bottom = 974.0
 texture_under = ExtResource( 10 )
 texture_progress = ExtResource( 9 )
 nine_patch_stretch = true
 
 [node name="lblEstamina" type="Label" parent="Personajes/EstaminaJefe"]
-margin_left = 458.0
-margin_top = -3.0
-margin_right = 520.0
-margin_bottom = 33.0
+margin_left = 401.0
+margin_top = -5.0
+margin_right = 463.0
+margin_bottom = 31.0
 custom_fonts/font = SubResource( 3 )
 text = "100 %"
 
 [node name="Jeanne" parent="Personajes" instance=ExtResource( 2 )]
-position = Vector2( 1506, -12 )
+position = Vector2( 1503, -2 )
 
 [node name="VidaSalter" type="TextureProgress" parent="Personajes"]
 margin_left = 988.0

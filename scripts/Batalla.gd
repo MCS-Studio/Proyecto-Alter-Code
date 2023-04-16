@@ -20,7 +20,7 @@ func _process(delta):
 	get_node("Personajes/VidaSalter").value = Globales.VidaSalter
 	get_node("Personajes/VidaSalter/lblVidaSalter").text = str(Globales.VidaSalter) + str(" HP")
 	#Label Turno
-	get_node("Acciones/Turno").text = str("Turno: " ) + str(Globales.Turno)
+	get_node("Acciones/Turno").text = str("Ronda: " ) + str(Globales.Turno)
 	var HealthRemaining = round((Globales.VidaJefe / Globales.VidaMaximaJefe) * 100) 
 	ControlsFmod.setGlobalParameter("Health", HealthRemaining)
 
