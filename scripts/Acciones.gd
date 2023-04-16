@@ -41,7 +41,12 @@ func evaluarUltimate():
 #	$Ultimate/UltimateProgress.value = PorcentajeUltimate
 	
 		
-
+func findePartida():
+	if(Globales.VidaJefe <= 0):
+		print("QUE PENDEJO TE MATO")
+	if(Globales.VidaSalter <= 0):
+		print ("CABRON GANASTE")
+		
 func evasion():
 	if activacion ==  true:
 		Globales.evadir = 0
@@ -180,27 +185,32 @@ func quemadura():
 #FUNCIONES DE ATAQUE DEL JEFE
 
 func _on_Subfusil_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	SubfusilJefe()
 	SalterGod()
 	evaluarUltimate()
+	findePartida()
 
 func _on_Granada_pressed():
 	ControlsFmod.playSFXOnce("Button")
 	GranadaJefe()
 	SalterGod()
 	evaluarUltimate()
+	findePartida()
 
 func _on_Embestida_pressed():
 	ControlsFmod.playSFXOnce("Button")
 	EmbestidaJefe()
 	SalterGod()
-	evaluarUltimate()	
+	evaluarUltimate()
+	findePartida()
 
 func _on_Vida_pressed():
 	ControlsFmod.playSFXOnce("Button")
 	SuministrosJefe()
 	SalterGod()
 	evaluarUltimate()
+	findePartida()
 
 func _on_Ultimate_pressed():
 	ControlsFmod.playSFXOnce("Button")
