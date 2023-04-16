@@ -4,6 +4,12 @@
 		<property name="name">
 			<value>SFX</value>
 		</property>
+		<property name="maxInstances">
+			<value>15</value>
+		</property>
+		<property name="instanceStealing">
+			<value>1</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{727a4e65-83a2-4822-92c8-f80aec394c0f}</destination>
 		</relationship>

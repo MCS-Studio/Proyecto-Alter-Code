@@ -41,6 +41,7 @@ func _input(event):
 	#Boton para abir configuracion
 	if flagConfig == false:
 		if Input.is_action_pressed("Escape"):
+			yield(get_tree().create_timer(0.1), "timeout")
 			$Fade.visible = true
 			$AnimationPlayer.play("Fade_In")
 			$Configuracion.visible = true
@@ -51,6 +52,7 @@ func _input(event):
 			flagMapa = false
 	else:
 		if Input.is_action_pressed("Escape"):
+			yield(get_tree().create_timer(0.1), "timeout")
 			$Fade.visible = false
 			$Configuracion.visible = false
 			$BtnMapa.visible = false
