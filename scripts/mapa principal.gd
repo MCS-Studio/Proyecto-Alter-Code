@@ -1,9 +1,8 @@
 extends Node2D
 
-func _ready():
-	print("Pos X: " , $Jugador.position.x, "Pos Y: " , $Jugador.position.y)
+func _on_Button_pressed():
 	Globales.POx = $Jugador.position.x
 	Globales.POy = $Jugador.position.y
-
-func _process(delta):
-	pass
+	
+	print(Globales.POx," : " , Globales.POy)
+	get_tree().change_scene("res://escenas/Batalla/Batalla.tscn")
