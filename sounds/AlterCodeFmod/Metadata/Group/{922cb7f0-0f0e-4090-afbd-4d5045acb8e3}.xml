@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerGroup" id="{922cb7f0-0f0e-4090-afbd-4d5045acb8e3}">
+		<property name="note" />
 		<property name="name">
 			<value>Musica</value>
+		</property>
+		<property name="maxInstances">
+			<value>20</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{ccfc327f-0d02-43aa-b17b-fdf5cbcb1e4e}</destination>

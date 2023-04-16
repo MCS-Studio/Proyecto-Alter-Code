@@ -64,11 +64,10 @@ func playEvent(name):
 	#if Fmod.get_event_playback_state(selectInstance(name)) != Fmod.FMOD_STUDIO_PLAYBACK_PLAYING or Fmod.get_event_playback_state(selectInstance(name)) != Fmod.FMOD_STUDIO_PLAYBACK_STARTING:
 	
 	#Esta es otra validación que ya ni se si de verdad sirve o no
-	if not is_instance_valid(selectInstance(name)):
+	#if not is_instance_valid(selectInstance(name)):
 		#print("es valido")
-		Fmod.start_event(selectInstance(name))
-	else:
-		print("Algo salio mal, creo")
+	Fmod.start_event(selectInstance(name))
+
 
 func stopEvent(name):
 	if areInstancesMissing():
@@ -124,11 +123,8 @@ func releaseEvent(name):
 func reloadInstances():
 	#Recarga las instancias del principio
 	Battle = Fmod.create_event_instance("event:/Musica/Battle")
-	print(Battle)
 	Title = Fmod.create_event_instance("event:/Musica/TitleTheme")
-	print(Title)
 	Overworld = Fmod.create_event_instance("event:/Musica/Overworld")
-	print(Overworld)
 	Item = Fmod.create_event_instance("event:/SFX/ItemCollected")
 	Buster = Fmod.create_event_instance("event:/SFX/AtaquesSalter/CorteLateralBuster")
 	Grass = Fmod.create_event_instance("event:/SFX/GrassSFX")
