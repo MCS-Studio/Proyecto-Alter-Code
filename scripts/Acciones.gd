@@ -240,7 +240,7 @@ func ultimate():
 func Excalibur():
 	multiplicadorDamage = ComparacionDeTipo(2,6)
 	Globales.VidaJefe = Globales.VidaJefe - (multiplicadorDamage * (Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/(100.00-(Globales.VelocidadSalter/10))))))
-	ControlsFmod.playSFXOnce("AtaquesSalter/Excalibur")
+	ControlsFmod.playSFXOnce("AtaquesSalter/ExcaliburFaster")
 	
 	test = aleatorio()
 	if test == 1:
