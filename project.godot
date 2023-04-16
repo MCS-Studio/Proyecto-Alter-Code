@@ -84,7 +84,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/fmod/nodes/FmodEventEmitter.gd"
 }, {
-"base": "Node",
+"base": "",
 "class": "FmodNative",
 "language": "NativeScript",
 "path": "res://addons/fmod/Fmod.gdns"
@@ -189,7 +189,7 @@ version_control_plugin_name="GitAPI"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/fmod/plugin.cfg", "res://addons/godot_editor_discord_presence/plugin.cfg", "res://addons/vnen.tiled_importer/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/fmod/plugin.cfg", "res://addons/godot_editor_discord_presence/plugin.cfg", "res://addons/vnen.tiled_importer/plugin.cfg" )
 
 [gdnative]
 
