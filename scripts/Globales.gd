@@ -61,7 +61,7 @@ func goto_scene(path, current_scene) -> void:
 		print("La herramienta de carga no puede cargar el recurso en la ruta")
 		return
 	
-	var loading_bar = load("res://Esenas/Cargando/Cargando.tscn").instance()
+	var loading_bar = load("res://escenas/Cargando/Cargando.tscn").instance()
 	get_tree().get_root().call_deferred('add_child', loading_bar)
 	
 	var t = OS.get_ticks_msec()

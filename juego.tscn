@@ -3,16 +3,10 @@
 [ext_resource path="res://Sprite/Jugador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://mapas/cesped.tmx" type="PackedScene" id=2]
 [ext_resource path="res://scripts/juego.gd" type="Script" id=3]
-[ext_resource path="res://Esenas/Configuracion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenas/Configuracion/Configuracion.tscn" type="PackedScene" id=4]
 
 [node name="cesped" instance=ExtResource( 2 )]
 script = ExtResource( 3 )
-
-[node name="muralla alta" parent="muralla" index="1"]
-z_index = 2
-
-[node name="murallas" parent="muralla" index="2"]
-z_index = 2
 
 [node name="Sprite" type="Sprite" parent="." index="3"]
 
@@ -26,6 +20,12 @@ polygon = PoolVector2Array( 0, 3678, 0, 3712, 375, 3712, 450, 3712, 450, 3743, 5
 
 [node name="muralla derecha" type="CollisionPolygon2D" parent="collisiones muralla" index="1"]
 polygon = PoolVector2Array( 1664, 3648, 1664, 3698, 1667, 3700, 1667, 3745, 1758, 3744, 1758, 3711, 2242, 3713, 2243, 3709, 2327, 3709, 2334, 3709, 2334, 3713, 2334.67, 3700.3, 2335, 3694, 2336, 3680, 2688, 3680, 2690, 3703, 2782, 3713, 2782, 3712, 3200, 3712, 3200, 3678, 2784, 3678, 2784, 3648, 2688, 3648, 2688, 3678, 2336, 3678, 2336, 3650, 2240, 3648, 2240, 3679, 1760, 3678, 1760, 3648 )
+
+[node name="muralla alta" parent="muralla" index="1"]
+z_index = 2
+
+[node name="murallas" parent="muralla" index="2"]
+z_index = 2
 
 [node name="UI" parent="." index="8" instance=ExtResource( 4 )]
 __meta__ = {

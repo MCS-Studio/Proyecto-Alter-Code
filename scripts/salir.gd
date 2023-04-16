@@ -15,7 +15,7 @@ func _process(delta):
 func _on_reiniciar_pressed():
 	ControlsFmod.playSFXOnce("Button")
 	ControlsFmod.stopEvent("Title")
-	tree.change_scene("res://Esenas/Inicio.tscn")
+	tree.change_scene("res://escenas/Menus/Inicio.tscn")
 
 #Inicia el juego
 func _on_Iniciar_pressed():
@@ -24,7 +24,6 @@ func _on_Iniciar_pressed():
 	get_node("MenuInicial").hide()
 	$Fade.visible = true
 	$AnimacionSalir.play("Cargar")
-	Globales.Inicio = false
 
 #Salir de el juego
 func _on_Salir_pressed():
@@ -36,7 +35,7 @@ func _on_Salir_pressed():
 #Ejecuta una esccena secreta
 func _on_Secreto_pressed():
 	ControlsFmod.playSFXOnce("Button")
-	tree.change_scene("res://Esenas/Waifus/Waifus.tscn")
+	tree.change_scene("res://escenas/Waifus/Waifus.tscn")
 
 func _on_Config_pressed():
 	ControlsFmod.playSFXOnce("Button")
@@ -73,4 +72,4 @@ func comprobarMenu():
 		Globales.Cerrar = false
 
 func _on_AnimacionSalir_animation_finished(anim_name):
-	Globales.call_deferred("goto_scene", "res://escenas/mapa principal.tscn", self)
+	Globales.call_deferred("goto_scene", "res://escenas/Mapa/mapa principal.tscn", self)

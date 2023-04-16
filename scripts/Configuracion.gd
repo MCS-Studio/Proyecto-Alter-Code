@@ -15,8 +15,6 @@ func _input(event):
 			$BtnConfig.visible =  true
 			flagMapa = true
 			flagConfig = false
-			if Globales.Inicio:
-				$Mapa/Nohay.visible = true
 			if Globales.Areas == 0:
 				$Mapa/Nohay.visible = true
 			if Globales.Areas == 1:
@@ -32,8 +30,6 @@ func _input(event):
 			$BtnMapa.visible = false
 			$BtnConfig.visible =  false
 			flagMapa = false
-			if Globales.Inicio == false:
-				$Mapa/Nohay.visible = false
 			if Globales.Areas == 0:
 				$Mapa/Nohay.visible = false
 			if Globales.Areas == 1:

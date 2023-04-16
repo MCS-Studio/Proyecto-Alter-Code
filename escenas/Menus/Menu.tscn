@@ -1,31 +1,31 @@
 [gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=1]
-[ext_resource path="res://scripts/salir.gd" type="Script" id=2]
-[ext_resource path="res://Esenas/Parallax.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/img/Copy.png" type="Texture" id=4]
-[ext_resource path="res://assets/img/botones/Inicio.png" type="Texture" id=5]
-[ext_resource path="res://assets/img/botones/Salir.png" type="Texture" id=6]
-[ext_resource path="res://assets/img/botones/Salir Hover.png" type="Texture" id=7]
-[ext_resource path="res://assets/img/botones/salir Press.png" type="Texture" id=8]
-[ext_resource path="res://assets/img/botones/Inicio Press.png" type="Texture" id=9]
-[ext_resource path="res://assets/img/botones/Inicio hover.png" type="Texture" id=10]
-[ext_resource path="res://assets/img/AlterCode.png" type="Texture" id=11]
-[ext_resource path="res://animaciones/Fade_In.tres" type="Animation" id=12]
-[ext_resource path="res://assets/img/Config press.png" type="Texture" id=14]
-[ext_resource path="res://assets/img/Config hover.png" type="Texture" id=15]
-[ext_resource path="res://assets/img/Confirmacion.png" type="Texture" id=16]
+[ext_resource path="res://animaciones/Cargar.tres" type="Animation" id=1]
+[ext_resource path="res://animaciones/Fade_Out.tres" type="Animation" id=2]
+[ext_resource path="res://escenas/Configuracion/Configuracion.tscn" type="PackedScene" id=3]
+[ext_resource path="res://escenas/Parallax/Parallax.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/salir.gd" type="Script" id=5]
+[ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://animaciones/Fade_In.tres" type="Animation" id=7]
+[ext_resource path="res://assets/img/botones/Cancelar Press.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/botones/salir Press.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/botones/Cancelar Hover.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/botones/Salir.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/Confirmacion.png" type="Texture" id=12]
+[ext_resource path="res://assets/img/botones/Salir Hover.png" type="Texture" id=13]
+[ext_resource path="res://assets/img/AlterCode.png" type="Texture" id=14]
+[ext_resource path="res://assets/img/botones/Cancelar.png" type="Texture" id=15]
+[ext_resource path="res://assets/img/Copy.png" type="Texture" id=16]
 [ext_resource path="res://assets/img/Config.png" type="Texture" id=17]
-[ext_resource path="res://animaciones/Fade_Out.tres" type="Animation" id=18]
-[ext_resource path="res://assets/img/botones/Cancelar Hover.png" type="Texture" id=19]
-[ext_resource path="res://assets/img/botones/Cancelar.png" type="Texture" id=20]
-[ext_resource path="res://assets/img/botones/Cancelar Press.png" type="Texture" id=21]
-[ext_resource path="res://Esenas/Configuracion.tscn" type="PackedScene" id=58]
-[ext_resource path="res://animaciones/Cargar.tres" type="Animation" id=62]
+[ext_resource path="res://assets/img/botones/Inicio.png" type="Texture" id=18]
+[ext_resource path="res://assets/img/botones/Inicio Press.png" type="Texture" id=19]
+[ext_resource path="res://assets/img/Config press.png" type="Texture" id=20]
+[ext_resource path="res://assets/img/Config hover.png" type="Texture" id=21]
+[ext_resource path="res://assets/img/botones/Inicio hover.png" type="Texture" id=22]
 
 [sub_resource type="DynamicFont" id=1]
 size = 29
-font_data = ExtResource( 1 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="Animation" id=14]
 length = 0.001
@@ -48,7 +48,7 @@ anchor_bottom = 1.0
 margin_right = -640.0
 margin_bottom = -360.0
 rect_scale = Vector2( 1.5, 1.5 )
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="Fade" type="ColorRect" parent="."]
 visible = false
@@ -65,7 +65,7 @@ margin_bottom = -2.0
 [node name="Logo" type="Sprite" parent="MenuInicial"]
 position = Vector2( 48, 26 )
 scale = Vector2( 0.342912, 0.342912 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 centered = false
 
 [node name="Botones" type="Control" parent="MenuInicial"]
@@ -80,9 +80,9 @@ margin_bottom = 364.0
 focus_neighbour_top = NodePath("../Salir")
 focus_neighbour_bottom = NodePath("../Salir")
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 10 )
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 19 )
+texture_hover = ExtResource( 22 )
 expand = true
 
 [node name="Salir" type="TextureButton" parent="MenuInicial/Botones"]
@@ -93,9 +93,9 @@ margin_bottom = 487.0
 focus_neighbour_top = NodePath("../Iniciar")
 focus_neighbour_bottom = NodePath("../Iniciar")
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 8 )
-texture_hover = ExtResource( 7 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 13 )
 expand = true
 
 [node name="Config" type="TextureButton" parent="MenuInicial/Botones"]
@@ -104,8 +104,8 @@ margin_top = 632.0
 margin_right = 1269.0
 margin_bottom = 710.0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 14 )
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
 texture_hover = ExtResource( 17 )
 expand = true
 
@@ -125,7 +125,7 @@ margin_bottom = 856.0
 
 [node name="Copy" type="Sprite" parent="MenuInicial"]
 position = Vector2( 6, 697 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 centered = false
 
 [node name="Fondo" type="Control" parent="."]
@@ -134,7 +134,7 @@ anchor_bottom = 1.0
 margin_right = -1911.0
 margin_bottom = -1073.0
 
-[node name="ParallaxBackground" parent="Fondo" instance=ExtResource( 3 )]
+[node name="ParallaxBackground" parent="Fondo" instance=ExtResource( 4 )]
 
 [node name="ConfirmacionSalida" type="TextureRect" parent="."]
 visible = false
@@ -146,13 +146,13 @@ margin_left = -200.0
 margin_top = -100.0
 margin_right = 200.0
 margin_bottom = 100.0
-texture = ExtResource( 16 )
+texture = ExtResource( 12 )
 expand = true
 
 [node name="Logo" type="Sprite" parent="ConfirmacionSalida"]
 position = Vector2( -148, -250 )
 scale = Vector2( 0.445538, 0.445538 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 centered = false
 
 [node name="Salirpop" type="TextureButton" parent="ConfirmacionSalida"]
@@ -160,9 +160,9 @@ margin_left = 40.0
 margin_top = 132.0
 margin_right = 158.0
 margin_bottom = 177.0
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 8 )
-texture_hover = ExtResource( 7 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 13 )
 expand = true
 
 [node name="Cancelarpop" type="TextureButton" parent="ConfirmacionSalida"]
@@ -170,29 +170,50 @@ margin_left = 205.0
 margin_top = 137.0
 margin_right = 355.0
 margin_bottom = 177.0
-texture_normal = ExtResource( 20 )
-texture_pressed = ExtResource( 21 )
-texture_hover = ExtResource( 19 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 10 )
 expand = true
 
 [node name="Logo" type="Sprite" parent="."]
 visible = false
 position = Vector2( 89.3333, 170 )
 scale = Vector2( 0.720123, 0.720123 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 centered = false
 
 [node name="Fades" type="AnimationPlayer" parent="."]
-anims/Fade_In = ExtResource( 12 )
-anims/Fade_Out = ExtResource( 18 )
+anims/Fade_In = ExtResource( 7 )
+anims/Fade_Out = ExtResource( 2 )
 
 [node name="AnimacionSalir" type="AnimationPlayer" parent="."]
-anims/Cargar = ExtResource( 62 )
-anims/Fade_In = ExtResource( 12 )
-anims/Fade_Out = ExtResource( 18 )
+anims/Cargar = ExtResource( 1 )
+anims/Fade_In = ExtResource( 7 )
+anims/Fade_Out = ExtResource( 2 )
 anims/RESET = SubResource( 14 )
 
-[node name="UI" parent="." instance=ExtResource( 58 )]
+[node name="UI" parent="." instance=ExtResource( 3 )]
+
+[node name="Arriba" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="0"]
+frame = 1
+
+[node name="Abajo" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="1"]
+frame = 1
+
+[node name="Izquierda" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="2"]
+frame = 1
+
+[node name="Derecha" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="3"]
+frame = 1
+
+[node name="Accion" parent="UI/Configuracion/Controles/ControlesCtrl/Interactuar" index="0"]
+frame = 3
+
+[node name="menu" parent="UI/Configuracion/Controles/ControlesCtrl/AbrirMenu" index="0"]
+frame = 1
+
+[node name="Mapa" parent="UI/Configuracion/Controles/ControlesCtrl/Mapa" index="0"]
+frame = 1
 
 [connection signal="pressed" from="MenuInicial/Botones/Iniciar" to="." method="_on_Iniciar_pressed"]
 [connection signal="pressed" from="MenuInicial/Botones/Salir" to="." method="_on_Salir_pressed"]

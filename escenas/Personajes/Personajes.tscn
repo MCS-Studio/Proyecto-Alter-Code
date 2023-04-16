@@ -4,7 +4,8 @@
 [ext_resource path="res://assets/img/Sprites/Ryuko/Ryuko-Matoi_09.png" type="Texture" id=2]
 [ext_resource path="res://assets/img/Sprites/Ryuko/Ryuko-Matoi_11.png" type="Texture" id=3]
 [ext_resource path="res://assets/img/Sprites/Ryuko/Ryuko-Matoi_03.png" type="Texture" id=4]
-[ext_resource path="res://Esenas/Personajes/Dialogos.tscn" type="PackedScene" id=5]
+[ext_resource path="res://escenas/Personajes/Dialogos.tscn" type="PackedScene" id=5]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

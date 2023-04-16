@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://assets/img/config/Config.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Configuracion.gd" type="Script" id=2]
@@ -64,6 +64,7 @@
 [ext_resource path="res://assets/img/Confirmacion.png" type="Texture" id=62]
 [ext_resource path="res://assets/img/botones/Salir.png" type="Texture" id=63]
 [ext_resource path="res://assets/img/botones/Salir Hover.png" type="Texture" id=64]
+[ext_resource path="res://assets/img/config/Mapa Inaccesible.png" type="Texture" id=65]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -203,7 +204,6 @@ position = Vector2( 98.0001, 162.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Abajo"
-frame = 1
 playing = true
 
 [node name="Abajo" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
@@ -211,7 +211,6 @@ position = Vector2( 98, 92.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Arriba"
-frame = 1
 playing = true
 
 [node name="Izquierda" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
@@ -219,7 +218,6 @@ position = Vector2( 29, 162.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Izquierda"
-frame = 1
 playing = true
 
 [node name="Derecha" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
@@ -227,7 +225,6 @@ position = Vector2( 167, 162.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Derecha"
-frame = 1
 playing = true
 
 [node name="Interactuar" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
@@ -242,7 +239,7 @@ text = "Interactuar"
 position = Vector2( 91.0001, 163 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 4 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="AbrirMenu" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
@@ -257,7 +254,6 @@ text = "Abrir el menú"
 position = Vector2( 98, 163 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [node name="Mapa" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
@@ -272,7 +268,6 @@ text = "Mapa"
 position = Vector2( 36, 97 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 8 )
-frame = 1
 playing = true
 
 [node name="Video" type="TextureButton" parent="Configuracion"]
@@ -556,10 +551,16 @@ expand = true
 
 [node name="Nohay" type="TextureRect" parent="Mapa"]
 visible = false
-margin_left = 39.0
-margin_top = 99.0
-margin_right = 1250.0
-margin_bottom = 719.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -435.0
+margin_top = -256.5
+margin_right = 435.0
+margin_bottom = 300.5
+texture = ExtResource( 65 )
+expand = true
 
 [node name="BtnMapa" type="TextureButton" parent="."]
 margin_left = 558.0
