@@ -54,6 +54,7 @@ bbcode_text = "[wave amp=50 freq=3]Has muerto[/wave]"
 text = "Has muerto"
 
 [node name="Victoria" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -84,7 +85,6 @@ bbcode_text = "[wave amp=50 freq=3]VICTORIA ! ! ![/wave]"
 text = "VICTORIA ! ! !"
 
 [node name="Click" type="RichTextLabel" parent="."]
-modulate = Color( 1, 1, 1, 0.0850172 )
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5

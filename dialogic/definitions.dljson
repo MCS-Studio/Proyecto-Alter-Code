@@ -4,12 +4,6 @@
 	],
 	"variables": [
 		{
-			"id": "1681695300-378",
-			"name": "ObjetoEspecial",
-			"type": 0,
-			"value": "true"
-		},
-		{
 			"id": "1681695269-677",
 			"name": "ObjetoAldeano",
 			"type": 0,
@@ -42,6 +36,12 @@
 		{
 			"id": "1681704466-970",
 			"name": "Busqueda",
+			"type": 0,
+			"value": "true"
+		},
+		{
+			"id": "1681695300-378",
+			"name": "ObjetoEspecial",
 			"type": 0,
 			"value": "true"
 		}

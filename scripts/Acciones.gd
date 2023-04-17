@@ -24,6 +24,7 @@ func _process(delta):
 	evasion()
 	ultimateJefe()
 	evaluarGameOver()
+	
 func _ready():
 	$Ultimate/UltimateProgress.value = PorcentajeUltimate
 func evaluarUltimate():
@@ -33,15 +34,8 @@ func evaluarUltimate():
 		$Ultimate.disabled = true
 	PorcentajeUltimate += 10
 	$Ultimate/UltimateProgress.value = PorcentajeUltimate
-#	if(Globales.Turno % 5 == 0):
-#		print("El número es múltiplo de 5")
-#		$Ultimate.disabled = false
-#	else:
-#		$Ultimate.disabled = true
-#	PorcentajeUltimate += 20
-#	$Ultimate/UltimateProgress.value = PorcentajeUltimate
-	
-		
+
+
 func findePartida():
 	if(Globales.VidaJefe <= 0):
 		print("QUE PENDEJO TE MATO")
@@ -243,7 +237,6 @@ func SubfusilJefe():
 		multiplicadorDamage = ComparacionDeTipo(1,2)
 		Globales.VidaSalter = Globales.VidaSalter - (multiplicadorDamage * (Globales.Ataquejefe - (Globales.DefensaSalter * (Globales.Ataquejefe/200.00))))
 	Globales.EstaminaJefe = Globales.EstaminaJefe - 15
-	#Globales.VidaJefe = Globales.VidaJefe - ((Globales.AtaqueSalter - (Globales.DefensaJefe * (Globales.AtaqueSalter/100.00))) * Globales.evadir ) 
 	Globales.Turno = Globales.Turno + 1
 	Globales.Charge += 1
 	$AnimationPlayer.play("DamageSalter")
@@ -368,12 +361,9 @@ func evaluarGameOver():
 		pass
 	else:
 		if Globales.VidaSalter <= 0:
-			print("Salter ded")
-			#$"../AnimationPlayer".play("Victoria")
 			Globales.victoria = true
 			ControlsFmod.setLocalParameter("Battle", "hasWon", 1)
 		elif Globales.VidaJefe <= 0:
-			print("MC dead")
-			#$"../AnimationPlayer".play("Muerto")
+			PorcentajeUltimate = 20
 		yield(get_tree().create_timer(1.0), "timeout")
 		get_tree().change_scene("res://escenas/Menus/Informacion.tscn")
