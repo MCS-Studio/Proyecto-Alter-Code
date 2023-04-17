@@ -215,7 +215,6 @@ position = Vector2( 98.0001, 162.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Abajo"
-frame = 3
 playing = true
 
 [node name="Abajo" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
@@ -223,7 +222,6 @@ position = Vector2( 98, 92.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Arriba"
-frame = 3
 playing = true
 
 [node name="Izquierda" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
@@ -231,7 +229,6 @@ position = Vector2( 29, 162.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Izquierda"
-frame = 3
 playing = true
 
 [node name="Derecha" type="AnimatedSprite" parent="Configuracion/Controles/ControlesCtrl/Movimiento"]
@@ -239,7 +236,6 @@ position = Vector2( 167, 162.5 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 2 )
 animation = "Derecha"
-frame = 3
 playing = true
 
 [node name="Interactuar" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
@@ -254,7 +250,7 @@ text = "Interactuar"
 position = Vector2( 91.0001, 163 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 4 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="AbrirMenu" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
@@ -269,7 +265,6 @@ text = "Abrir el menú"
 position = Vector2( 98, 163 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [node name="Mapa" type="Label" parent="Configuracion/Controles/ControlesCtrl"]
@@ -284,7 +279,6 @@ text = "Mapa"
 position = Vector2( 36, 97 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 8 )
-frame = 1
 playing = true
 
 [node name="Video" type="TextureButton" parent="Configuracion"]
@@ -433,6 +427,7 @@ texture_hover = ExtResource( 34 )
 expand = true
 
 [node name="Creditoss" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 

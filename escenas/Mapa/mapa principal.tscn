@@ -288,9 +288,6 @@ rotation = 0.0028171
 z_index = 2
 collision_layer = 9
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Jugador"]
 position = Vector2( 1.00293, 0.997559 )
@@ -393,7 +390,7 @@ position = Vector2( -54, 673 )
 show_behind_parent = true
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 4
+frame = 6
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
