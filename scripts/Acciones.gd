@@ -369,10 +369,11 @@ func evaluarGameOver():
 	else:
 		if Globales.VidaSalter <= 0:
 			print("Salter ded")
-			$"../AnimationPlayer".play("Victoria")
+			#$"../AnimationPlayer".play("Victoria")
+			Globales.victoria = true
 			ControlsFmod.setLocalParameter("Battle", "hasWon", 1)
 		elif Globales.VidaJefe <= 0:
 			print("MC dead")
-			$"../AnimationPlayer".play("Muerto")
+			#$"../AnimationPlayer".play("Muerto")
 		yield(get_tree().create_timer(1.0), "timeout")
 		get_tree().change_scene("res://escenas/Menus/Informacion.tscn")

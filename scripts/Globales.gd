@@ -18,6 +18,10 @@ var max_loadtime = 100000
 
 #Mapa
 var Areas
+var Combate = false
+var Radio = "false"
+var ItemSecreto = "false"
+var victoria = false
 # 0 = no hay nada
 # 1 = pelican
 # 2 = ruinas

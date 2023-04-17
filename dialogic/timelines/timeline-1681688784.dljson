@@ -1,21 +1,333 @@
 {
 	"events": [
 		{
+			"condition": "",
+			"definition": "1681689307-426",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
 			"character": "character-1681688247.dljson",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "pito"
+			"text": "Disculpa, me preguntaba si podias darme algunas indicaciones.\nMe pidieron que buscara un radio de un amigo pero nose donde puede estar."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
 		},
 		{
 			"character": "character-1681688260.dljson",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "doble pito"
+			"text": "¿Eh?, ¿Por que deberia de ayudarte? siquiera te conozco, no tengo ninguna razon para ayudarte"
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Lo siento, puedes llamarme Masterchief, actualmente me encuentro perdido en la zona por lo que en realidad nose acerca de aqui.\nSi pudieras ayudarme puedo devolverte el; favor cuando lo necesites."
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ohhh......mmmmmm......"
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bien, ultimamente me he estado aburriendo por no tener nada que hacer, y si tanto necesitas mi ayuda, tal vez tu podrias ayudarme con eso."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¿Eh?¿Como?"
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He He... ¡¡TENDREMOS UNA PELEA !!\nTendremos un pequeño duelo amistoso, si ganas te dire donde estala radio que tanto buscas, si pierdes...\nPues sigue intentando."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ya veo, esta bien hagamoslo."
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¡¡JA JA !! ¡¡ Adelante !!"
+		},
+		{
+			"definition": "1681689307-426",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"change_scene": "res://escenas/Batalla/Batalla.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1681695246-885",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Supongo que nunca te rindes verdad ¿Quieres intentarlo denuevo?"
+		},
+		{
+			"choice": "Si",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://escenas/Batalla/Batalla.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "No",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Regresa cuando estes listo."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1681695246-885",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"condition": "",
+			"definition": "1681698383-712",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Vaya, supongo que fue entretenido, aunque esperaba mas de tu armadurita esa pero supongo que fue suficiente.\nTe dire donde esta esa cosa."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Te estare muy agradecido que lo hagas."
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bien bien, ese aparato estaba sonando hace un rato, creo que estaba cerca de algun pozo el resto es problema tuyo.\nTe despeje el camino mas adelante si es que lo necesitas, vine por eso pero me aburri."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Entendido, muchas gracias.\nTe devolvere el favor asi que pide mi ayuda cuando la necesites."
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Si si, pero tal vez sea mas pronto de lo que piensas,"
+		},
+		{
+			"definition": "1681698383-712",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1681695269-677",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Veo que conseguiste la radio que buscabas, me alegro."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tarde un poco encontrando el objeto pero al final lo encontre.\nEn verdad estoy muy agradecido contigo."
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Un trato es un trato, y espero que luego no lo olvides."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No te preocupes, no lo hare."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1681695300-378",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "HO HO, vaya vaya tienes un objeto muy peculiar entre manos, tal vez no sepas que esa piedra por ahora.\nMmmmm... seria interensante ver que pasa."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¿Que pasara que cosa?"
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He He, no es nada, no te preocupes por eso.\nPero te recomendaria que lo llevaras contigo."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mmmmm... Confiare en ti.\n(Quien sabe en que me sera util)."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hasta la vista soldadito."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681688260.dljson",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.5",
 		"file": "timeline-1681688784.dljson",
-		"name": "Test"
+		"name": "Conversasion"
 	}
 }

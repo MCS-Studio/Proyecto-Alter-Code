@@ -2,7 +2,7 @@ extends Node2D
 
 func _on_Area2D_body_entered(body):
 	$AnimatedSprite.play("Hablando")
-	var dialog = Dialogic.start("Test")
+	var dialog = Dialogic.start("SolicitudAyuda")
 	add_child(dialog)
 
 

@@ -33,7 +33,7 @@ script = ExtResource( 9 )
 scale = Vector2( 0.0909091, 0.0909091 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 2
+frame = 3
 playing = true
 centered = false
 

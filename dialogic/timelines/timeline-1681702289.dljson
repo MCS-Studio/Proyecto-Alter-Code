@@ -1,0 +1,314 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"condition": "",
+			"definition": "1681702424-473",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Disculpe, mi nombre es Masterchief, actualmente me encuentro perdido, me poodria decir donde estamos?"
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Claro Sr. Masterchief, estamos en medio de un bosque por las afueras del imperio Emcies.\n¿No ha de ser de por aqui si paso solo por el bosque verdad?"
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Esta en lo correcto no tengo idea de como llegue aqui, estaba en medio del bosque cuando desperte. (Tal vez no deberia mencionar mi nave ni el portal)."
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Increible Sr. Masterterchief, el estar solo por aqui puede llegar a ser peligroso, mi equipo se conforma de 15 miembros y aun corremos riesgo de ser atacados...\nDisculpe Sr. Masterchief, se que nos acabamos de conocer pero, ¿podria pedirle un favor?"
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cuentame que sucede, tratrare de ayudar"
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Se lo agradezco mucho Sr. Masterterchief, vera un miembro de mi equipo esta perdido, pero la unica radio que teniamos se perdio durante un ataque.\nEs mi hija quien se perdio, su nombre es Ryuko es una chica un poco energica asi que estoy muy preocupado que le pueda ocurrir algo.\n¿Podria por favor encontrar la radio para saber donde esta mi hija? se lo suplico."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No hay problema, suelo ayudar bastante. Continuare investigando la zona para ver si encuentro algo, espere aqui.\nRegresare."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"definition": "1681702424-473",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1681704466-970",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Un gusto volver a verlo Sr. Masterterchief, ¿a logrado encontrar algo?"
+		},
+		{
+			"condition": "",
+			"definition": "1681695269-677",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Afirmativo Sir, encontre la radio mas adelante, recibi un poco de ayuda de un miembro de su equipo llamado Alter.\nPero tome aqui esta la radio."
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Muchas gracias Sr. Masterterchief, no tengo idea de como pagarselo."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No hay de que preocuparse por ello, trate de comunicarse con su hija para saber donde se encuentra."
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tiene razon Sr. Masterterchief, lo hare enseguida.\n ¿Hola?  ¿Hija, me escuchas? Por favor responde."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(Estatica)..."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(Estatica)..."
+		},
+		{
+			"character": "character-1681704621.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " ¿H-holaa....aaa?  ¿Pa....pá? (Estatica) ¿Esta...s Bien...nn?"
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¡¡H-hijaa!! Estas bien?"
+		},
+		{
+			"character": "character-1681704621.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(Estatica)\nSi-i, (estatica) parece que (estatica) esta recuperandose la señal.\nSi, papá estoy bien, logre salir del bosque. "
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Me alegro hija, ¿donde estas? tengo que ir por ti."
+		},
+		{
+			"character": "character-1681704621.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No papá, es peligroso, me estoy quedando en un lugar por las afueras de la capital, pero creo que nos tendremos que mover pronto, solo regresa a la ciudad."
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¿De que hablas, hija que pasa?"
+		},
+		{
+			"character": "character-1681704621.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "En el bosque vi algo que no debia y ahora un grupo o secta me esta persiguiendo.\nRayos!, me tengo que ir, adios cuidate."
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¡¡Nooo, hijaaa!!!! No puede ser no puedo ir tan lejos siendo tan viejo."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Perdone por entrometerme, pero creo que puedo ayudarle a encontrar a su hija, casualmente tengo que ir cerca."
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " ¿En verdad? Se lo agradeceria mucho Sr. Masterterchief si puede hacerlo."
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No hay problema, me ire yendo"
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Suerte Sr. Masterterchief"
+		},
+		{
+			"definition": "1681704466-970",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "false"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1681695269-677",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, seguire buscando"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1681704466-970",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1681701800.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Solo espero que Ryuko este bien."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1681702289.dljson",
+		"name": "SolicitudAyuda"
+	}
+}
