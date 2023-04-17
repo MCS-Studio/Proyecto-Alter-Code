@@ -5,6 +5,7 @@ var velocidad= 100
 var animacion=""
 var flagRadio = false
 var flagPiedra = false
+var flagEndGame = false
 #---------Nodos guardados en variables----------
 onready var animaciones=$AnimatedSprite
 onready var mira= $RayCast2D
@@ -19,7 +20,7 @@ func _physics_process(delta):
 
 
 func comprobarMapa():
-	if $"../UI".get_node("Mapa").visible or $"../UI".get_node("Configuracion").visible == true:
+	if $"../UI".get_node("Mapa").visible or $"../UI".get_node("Configuracion").visible or flagEndGame == true:
 		velocidad = 0
 		ControlsFmod.pauseEvent("Grass")
 	else:
@@ -170,7 +171,6 @@ func _on_Pozo_body_exited(body):
 	$Mensaje.visible = false
 	pass # Replace with function body.
 
-
 func _on_Tumba_body_entered(body):
 	if flagPiedra == false:
 		$Piedra.visible = true
@@ -180,8 +180,14 @@ func _on_Tumba_body_entered(body):
 		flagPiedra = true
 	pass # Replace with function body.
 
-
 func _on_Tumba_body_exited(body):
 	$Piedra.visible = false
 	$Mensaje.visible = false
 	pass # Replace with function body.
+
+func _on_EndCol_body_entered(body):
+	print("EndGame")
+	flagEndGame = true
+	ControlsFmod.pauseEvent("Grass")
+	get_tree().change_scene("res://escenas/Menus/EndGame.tscn")
+	

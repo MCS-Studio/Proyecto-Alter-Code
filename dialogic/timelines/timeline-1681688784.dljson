@@ -109,12 +109,12 @@
 			"set_value": "true"
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
-		},
-		{
 			"change_scene": "res://escenas/Batalla/Batalla.tscn",
 			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		},
 		{
 			"event_id": "dialogic_013"

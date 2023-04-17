@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/img/AlterCode.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/Botones/Hannover Messe Sans.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/EndGame.gd" type="Script" id=3]
+[ext_resource path="res://animaciones/MenusFadeFinal.tres" type="Animation" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 2 )
+
+[node name="EndGame" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_bottom = 3.0
+color = Color( 0.0352941, 0.0235294, 0.176471, 1 )
+
+[node name="Logo" type="Sprite" parent="Control"]
+position = Vector2( 204, 55 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Click" type="RichTextLabel" parent="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -410.0
+margin_top = -212.0
+margin_right = 410.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[color=yellow]Click [/color]para salir"
+text = "Click para salir"
+
+[node name="Salir" type="TextureButton" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "FadeFinal"
+anims/FadeFinal = ExtResource( 4 )
+
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]

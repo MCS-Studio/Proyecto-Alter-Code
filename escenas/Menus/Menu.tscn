@@ -52,7 +52,7 @@ script = ExtResource( 5 )
 
 [node name="Fade" type="ColorRect" parent="."]
 visible = false
-modulate = Color( 0, 0, 0, 0.631373 )
+modulate = Color( 0.0666667, 0.0509804, 0.270588, 1 )
 margin_right = 1280.0
 margin_bottom = 720.0
 
@@ -195,25 +195,19 @@ anims/RESET = SubResource( 14 )
 [node name="UI" parent="." instance=ExtResource( 3 )]
 
 [node name="Arriba" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="0"]
-frame = 0
+frame = 3
 
 [node name="Abajo" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="1"]
-frame = 0
+frame = 3
 
 [node name="Izquierda" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="2"]
-frame = 0
+frame = 3
 
 [node name="Derecha" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="3"]
-frame = 0
+frame = 3
 
 [node name="Accion" parent="UI/Configuracion/Controles/ControlesCtrl/Interactuar" index="0"]
-frame = 2
-
-[node name="menu" parent="UI/Configuracion/Controles/ControlesCtrl/AbrirMenu" index="0"]
-frame = 0
-
-[node name="Mapa" parent="UI/Configuracion/Controles/ControlesCtrl/Mapa" index="0"]
-frame = 0
+frame = 1
 
 [connection signal="pressed" from="MenuInicial/Botones/Iniciar" to="." method="_on_Iniciar_pressed"]
 [connection signal="pressed" from="MenuInicial/Botones/Salir" to="." method="_on_Salir_pressed"]

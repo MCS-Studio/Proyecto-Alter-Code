@@ -14,3 +14,6 @@ func _ready():
 		var dialogo = Dialogic.start("Inicio")
 		add_child(dialogo)
 		Globales.flagDialogo = true
+	if Globales.victoria == "true":
+		$"bosque camino muralla/tapon".disabled = true
+		$Mapa/cesped/tapon.visible = false
