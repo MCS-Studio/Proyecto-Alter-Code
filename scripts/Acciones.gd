@@ -180,35 +180,30 @@ func quemadura():
 #FUNCIONES DE ATAQUE DEL JEFE
 
 func _on_Subfusil_pressed():
-	ControlsFmod.playEvent("Button")
 	SubfusilJefe()
 	SalterGod()
 	evaluarUltimate()
 	findePartida()
 
 func _on_Granada_pressed():
-	ControlsFmod.playEvent("Button")
 	GranadaJefe()
 	SalterGod()
 	evaluarUltimate()
 	findePartida()
 
 func _on_Embestida_pressed():
-	ControlsFmod.playEvent("Button")
 	EmbestidaJefe()
 	SalterGod()
 	evaluarUltimate()
 	findePartida()
 
 func _on_Vida_pressed():
-	ControlsFmod.playEvent("Button")
 	SuministrosJefe()
 	SalterGod()
 	evaluarUltimate()
 	findePartida()
 
 func _on_Ultimate_pressed():
-	ControlsFmod.playEvent("Button")
 #	if(Globales.VidaJefe <= Globales.VidaMaximaJefe * 0.8):
 	ultimate()
 	SalterGod()

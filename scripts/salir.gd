@@ -72,4 +72,5 @@ func comprobarMenu():
 		Globales.Cerrar = false
 
 func _on_AnimacionSalir_animation_finished(anim_name):
-	Globales.call_deferred("goto_scene", "res://escenas/Mapa/mapa principal.tscn", self)
+#	Globales.call_deferred("goto_scene", "res://escenas/Mapa/mapa principal.tscn", self)
+	get_tree().change_scene("res://escenas/Mapa/mapa principal.tscn")

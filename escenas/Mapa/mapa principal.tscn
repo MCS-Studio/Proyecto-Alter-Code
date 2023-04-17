@@ -283,7 +283,7 @@ script = ExtResource( 7 )
 
 [node name="Jugador" parent="." instance=ExtResource( 2 )]
 light_mask = 9
-position = Vector2( 1616, 432 )
+position = Vector2( 1531, 1803 )
 rotation = 0.0028171
 z_index = 2
 collision_layer = 9
@@ -325,9 +325,6 @@ texture = ExtResource( 13 )
 
 [node name="cesped" parent="Mapa" instance=ExtResource( 1 )]
 position = Vector2( -32, 9 )
-
-[node name="decoracion pelican" parent="Mapa/cesped" index="1"]
-z_index = 4
 
 [node name="muralla" parent="Mapa/cesped" index="3"]
 position = Vector2( 64, -3425 )

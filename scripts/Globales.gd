@@ -60,36 +60,36 @@ var Charge = 0
 
 #Funciones Globales
 
-func goto_scene(path, current_scene) -> void:
-	var loader = ResourceLoader.load_interactive(path)
-	
-	#Debug
-	if loader == null:
-		print("La herramienta de carga no puede cargar el recurso en la ruta")
-		return
-	
-	var loading_bar = load("res://escenas/Cargando/Cargando.tscn").instance()
-	get_tree().get_root().call_deferred('add_child', loading_bar)
-	
-	var t = OS.get_ticks_msec()
-	
-	while OS.get_ticks_msec() - t < max_loadtime:
-		var err = loader.poll()
-		
-		if err == ERR_FILE_EOF:
-			#Carga completa
-			var resource = loader.get_resource()
-			
-			current_scene.queue_free()
-			loading_bar.queue_free()
-			get_tree().get_root().call_deferred('add_child', resource.instance())
-			break
-		elif err == OK:
-			#Sigue cargando
-			var progress = float(loader.get_stage()) / loader.get_stage_count()
-			loading_bar.get_node("TextureProgress").value = progress * 100
-		else:
-			print("Error al cargar el archivo")
-			break
-		
-		yield(get_tree(), "idle_frame")
+#func goto_scene(path, current_scene) -> void:
+#	var loader = ResourceLoader.load_interactive(path)
+#
+#	#Debug
+#	if loader == null:
+#		print("La herramienta de carga no puede cargar el recurso en la ruta")
+#		return
+#
+#	var loading_bar = load("res://escenas/Cargando/Cargando.tscn").instance()
+#	get_tree().get_root().call_deferred('add_child', loading_bar)
+#
+#	var t = OS.get_ticks_msec()
+#
+#	while OS.get_ticks_msec() - t < max_loadtime:
+#		var err = loader.poll()
+#
+#		if err == ERR_FILE_EOF:
+#			#Carga completa
+#			var resource = loader.get_resource()
+#
+#			current_scene.queue_free()
+#			loading_bar.queue_free()
+#			get_tree().get_root().call_deferred('add_child', resource.instance())
+#			break
+#		elif err == OK:
+#			#Sigue cargando
+#			var progress = float(loader.get_stage()) / loader.get_stage_count()
+#			loading_bar.get_node("TextureProgress").value = progress * 100
+#		else:
+#			print("Error al cargar el archivo")
+#			break
+#
+#		yield(get_tree(), "idle_frame")

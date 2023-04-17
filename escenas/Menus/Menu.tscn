@@ -195,18 +195,24 @@ anims/RESET = SubResource( 14 )
 [node name="UI" parent="." instance=ExtResource( 3 )]
 
 [node name="Arriba" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="0"]
-frame = 3
+frame = 2
 
 [node name="Abajo" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="1"]
-frame = 3
+frame = 2
 
 [node name="Izquierda" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="2"]
-frame = 3
+frame = 2
 
 [node name="Derecha" parent="UI/Configuracion/Controles/ControlesCtrl/Movimiento" index="3"]
-frame = 3
+frame = 2
 
 [node name="Accion" parent="UI/Configuracion/Controles/ControlesCtrl/Interactuar" index="0"]
+frame = 0
+
+[node name="menu" parent="UI/Configuracion/Controles/ControlesCtrl/AbrirMenu" index="0"]
+frame = 1
+
+[node name="Mapa" parent="UI/Configuracion/Controles/ControlesCtrl/Mapa" index="0"]
 frame = 1
 
 [connection signal="pressed" from="MenuInicial/Botones/Iniciar" to="." method="_on_Iniciar_pressed"]

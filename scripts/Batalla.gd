@@ -3,10 +3,9 @@ extends Control
 func _ready():
 	get_node("Personajes/Vida Jefe").max_value = Globales.VidaJefe
 	get_node("Personajes/EstaminaJefe").max_value = Globales.EstaminaJefe
-	
+#	#Define la esena actual
+#	get_tree().set_current_scene(self)
 	get_node("Personajes/VidaSalter").max_value = Globales.VidaSalter
-	#Define la esena actual
-	get_tree().set_current_scene(self)
 	randomize()
 	ControlsFmod.playEvent("Battle")
 
