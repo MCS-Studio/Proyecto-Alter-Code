@@ -365,8 +365,9 @@ func evaluarGameOver():
 			#$"../AnimationPlayer".play("Victoria")
 			Globales.victoria = "true"
 			ControlsFmod.setLocalParameter("Battle", "hasWon", 1)
-			
-		elif Globales.VidaJefe <= 0:
+		if Globales.VidaJefe <= 0:
 			PorcentajeUltimate = 20
-		yield(get_tree().create_timer(1.0), "timeout")
+		if Globales.VidaJefe and Globales.VidaSalter <=0:
+			PorcentajeUltimate = 20
+		yield(get_tree().create_timer(0.1), "timeout")
 		get_tree().change_scene("res://escenas/Menus/Informacion.tscn")
