@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://mapas/cesped.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Sprite/Jugador.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://escenas/Configuracion/Configuracion.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/mapa principal.gd" type="Script" id=7]
 [ext_resource path="res://escenas/Personajes/npc.tscn" type="PackedScene" id=8]
+[ext_resource path="res://escenas/Personajes/JanneChibi.tscn" type="PackedScene" id=9]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0.0336914, 11.9998, 1.01685, 5.99707, -3.98303, 6.01111, -2.96619, 12.0082 )
@@ -212,7 +213,7 @@ animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 7.0
 } ]
 
 [sub_resource type="OccluderPolygon2D" id=42]
@@ -344,7 +345,7 @@ position = Vector2( -54, 673 )
 show_behind_parent = true
 position = Vector2( 1575, 921 )
 frames = SubResource( 41 )
-frame = 22
+frame = 38
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Mapa/Fuente"]
@@ -366,6 +367,14 @@ position = Vector2( 1605, 3738 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/NPC/StaticBody2D"]
 polygon = PoolVector2Array( 0, 0, 22, 0, 22, 23, 18, 35, 4, 35, 0, 22 )
+
+[node name="Node2D" parent="Mapa" instance=ExtResource( 9 )]
+position = Vector2( 1510, 1570 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mapa/Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Node2D/StaticBody2D"]
+polygon = PoolVector2Array( 0, 35, 21, 35, 21, 18, 14, 14, 8, 14, 1, 17 )
 
 [node name="AreaEntradaPelican" type="Area2D" parent="."]
 collision_layer = 8
