@@ -48,7 +48,7 @@ func evasion():
 		if Globales.Turno == turnoActivacion + 4:
 			Globales.evadir = 1
 			activacion = false 
-			print("ya no evado")	
+			print("ya no evado")
 
 func ComparacionDeTipo(var player,var enemy):
 	#comparativa atk 1
@@ -361,7 +361,9 @@ func evaluarGameOver():
 		pass
 	else:
 		if Globales.VidaSalter <= 0:
-			Globales.victoria = true
+			print("Salter ded")
+			#$"../AnimationPlayer".play("Victoria")
+			Globales.victoria = "true"
 			ControlsFmod.setLocalParameter("Battle", "hasWon", 1)
 		elif Globales.VidaJefe <= 0:
 			PorcentajeUltimate = 20

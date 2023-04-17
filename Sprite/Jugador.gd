@@ -3,6 +3,8 @@ extends KinematicBody2D
 #---------Variables------------
 var velocidad= 100
 var animacion=""
+var flagRadio = false
+var flagPiedra = false
 #---------Nodos guardados en variables----------
 onready var animaciones=$AnimatedSprite
 onready var mira= $RayCast2D
@@ -150,4 +152,36 @@ func _on_AreaEntrarRuina2_area_entered(area):
 	print("ENTRASTE AREA RUINA")
 	Globales.Areas = 2
 	print(Globales.Areas)
+	pass # Replace with function body.
+
+
+func _on_Pozo_body_entered(body):
+	if Globales.victoria == "true":
+		if flagRadio == false:
+			$Radio.visible = true
+			$Mensaje.bbcode_text = "Has encontrado Radio"
+			$Mensaje.visible = true
+			Globales.Radio = "true"
+			flagRadio = true
+	pass # Replace with function body.
+
+func _on_Pozo_body_exited(body):
+	$Radio.visible = false
+	$Mensaje.visible = false
+	pass # Replace with function body.
+
+
+func _on_Tumba_body_entered(body):
+	if flagPiedra == false:
+		$Piedra.visible = true
+		$Mensaje.bbcode_text = "Piedra sospechosa encontrada"
+		$Mensaje.visible = true
+		Globales.ItemSecreto = "true"
+		flagPiedra = true
+	pass # Replace with function body.
+
+
+func _on_Tumba_body_exited(body):
+	$Piedra.visible = false
+	$Mensaje.visible = false
 	pass # Replace with function body.

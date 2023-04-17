@@ -23,10 +23,11 @@ var Combate = false
 var Radio = "false"
 var ItemSecreto = "false"
 var victoria = "false"
-# 0 = no hay nada
-# 1 = pelican
-# 2 = ruinas
-# 3 = combate
+#areas:
+	# 0 = no hay nada
+	# 1 = pelican
+	# 2 = ruinas
+	# 3 = combate
 
 #Estadisticas Jefe
 
