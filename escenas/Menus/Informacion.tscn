@@ -84,6 +84,38 @@ bbcode_enabled = true
 bbcode_text = "[wave amp=50 freq=3]VICTORIA ! ! ![/wave]"
 text = "VICTORIA ! ! !"
 
+[node name="Empate" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="Empate"]
+modulate = Color( 0.384314, 0.352941, 0.352941, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1075.5
+margin_top = -762.0
+margin_right = 1075.5
+margin_bottom = 762.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Empate"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -520.5
+margin_top = -164.5
+margin_right = 520.5
+margin_bottom = 164.5
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[wave amp=50 freq=3]EMPATE ? ?[/wave]"
+text = "EMPATE ? ?"
+
 [node name="Click" type="RichTextLabel" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
