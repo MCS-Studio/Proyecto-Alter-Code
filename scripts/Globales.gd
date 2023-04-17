@@ -3,10 +3,11 @@ extends Node
 #Variable Menu3
 var Cerrar
 var Inicio
+var flagDialogo = false
 
 #Variables MAPA
-var POx = 0.00
-var POy = 0.00
+var POx = 1569
+var POy = 4786
 #Variables de volumen
 var VolMaster = 0.00
 var VolMusic = 0.00
@@ -21,7 +22,7 @@ var Areas
 var Combate = false
 var Radio = "false"
 var ItemSecreto = "false"
-var victoria = false
+var victoria = "false"
 # 0 = no hay nada
 # 1 = pelican
 # 2 = ruinas

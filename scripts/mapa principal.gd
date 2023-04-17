@@ -1,8 +1,11 @@
 extends Node2D
 
-func _on_Button_pressed():
-	Globales.POx = $Jugador.position.x
-	Globales.POy = $Jugador.position.y
+
+func _ready():
+	$Jugador.position.x = Globales.POx
+	$Jugador.position.y = Globales.POy
 	
-	print(Globales.POx," : " , Globales.POy)
-	get_tree().change_scene("res://escenas/Batalla/Batalla.tscn")
+	if Globales.flagDialogo == false:
+		var dialogo = Dialogic.start("Inicio")
+		add_child(dialogo)
+		Globales.flagDialogo = true

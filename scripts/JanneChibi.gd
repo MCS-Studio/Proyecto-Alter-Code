@@ -8,7 +8,9 @@ func _on_Area2D_body_entered(body):
 	Dialogic.set_variable('ObjetoEspecial', Globales.ItemSecreto)
 	var conversacionAlter = Dialogic.start("Conversasion")
 	add_child(conversacionAlter)
-	Globales.Combate =  Dialogic.get_variable('Combate')
+#	Globales.Combate =  Dialogic.get_variable('Combate')
+	Globales.POx = ($"../../Jugador".position.x -30)
+	Globales.POy = ($"../../Jugador".position.y - 30)
 	#Agregar un If para entrar a combate
 	#if Globales.Combate == "true":
 	#	get_tree().change_scene("res://escenas/Batalla/Batalla.tscn")
