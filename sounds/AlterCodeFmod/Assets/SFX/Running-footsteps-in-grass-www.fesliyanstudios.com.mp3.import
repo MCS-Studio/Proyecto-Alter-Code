@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Running-footsteps-in-grass-www.fesliyanstudios.com.mp3-b0db580556b405a405b6d7cd13882967.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Running-footsteps-in-grass-www.fesliyanstudios.com.mp3"
+dest_files=[ "res://.import/Running-footsteps-in-grass-www.fesliyanstudios.com.mp3-b0db580556b405a405b6d7cd13882967.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+{
+	"color": "#ff97643b",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1681701800.dljson",
+	"mirror_portraits": false,
+	"name": "Aldeano",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

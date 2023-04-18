@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1614c85a-ad02-4721-930d-cc198ce41245}">
+		<property name="assetPath">
+			<value>SFX/Salter/ES_Magic Spell Whoosh 19 - SFX Producer.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.464</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e60d1c17-db37-4e09-a016-172ac9cfa2ef}</destination>
+		</relationship>
+	</object>
+</objects>

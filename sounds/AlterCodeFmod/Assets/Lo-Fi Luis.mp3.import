@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lo-Fi Luis.mp3-4adb5d5c67655566ce44ae5be205c464.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Lo-Fi Luis.mp3"
+dest_files=[ "res://.import/Lo-Fi Luis.mp3-4adb5d5c67655566ce44ae5be205c464.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

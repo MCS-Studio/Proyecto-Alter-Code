@@ -1,0 +1,49 @@
+{
+	"glossary": [
+
+	],
+	"variables": [
+		{
+			"id": "1681689307-426",
+			"name": "Encuentro",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1681695246-885",
+			"name": "victoria",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1681695269-677",
+			"name": "ObjetoAldeano",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1681695300-378",
+			"name": "ObjetoEspecial",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1681698383-712",
+			"name": "Recompensa",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1681702424-473",
+			"name": "Aldeano",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1681704466-970",
+			"name": "Busqueda",
+			"type": 0,
+			"value": "true"
+		}
+	]
+}

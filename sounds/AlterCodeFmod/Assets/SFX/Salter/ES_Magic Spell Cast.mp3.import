@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Magic Spell Cast.mp3-d1e9c762f5df52c4490c7b10ad5a3a63.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Salter/ES_Magic Spell Cast.mp3"
+dest_files=[ "res://.import/ES_Magic Spell Cast.mp3-d1e9c762f5df52c4490c7b10ad5a3a63.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

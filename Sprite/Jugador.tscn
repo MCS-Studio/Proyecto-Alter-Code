@@ -1,7 +1,11 @@
 [gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://Sprite/png/master_chief_sprite_by_aetherwings_d2xk731-fullview.png" type="Texture" id=1]
-[ext_resource path="res://Sprite/Jugador.gd" type="Script" id=2]
+[ext_resource path="res://Sprite/master_chief_sprite_by_aetherwings_d2xk731-fullview.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Jugador.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.0
+height = 0.0
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -131,23 +135,22 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=23]
-radius = 27.0
+[sub_resource type="CapsuleShape2D" id=23]
 
-[sub_resource type="RectangleShape2D" id=24]
-extents = Vector2( 23, 61.5 )
-
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 18.0
-height = 0.0
+[sub_resource type="CapsuleShape2D" id=24]
+height = 21.6613
 
 [node name="Jugador" type="KinematicBody2D"]
-position = Vector2( 920, 540 )
 script = ExtResource( 2 )
 
+[node name="pies" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 10 )
+z_index = 1
+shape = SubResource( 1 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1, -4 )
-scale = Vector2( 4.35938, 4.47115 )
+position = Vector2( -1, -5 )
+scale = Vector2( 0.8125, 0.833333 )
 z_index = 1
 frames = SubResource( 18 )
 animation = "movement static down"
@@ -156,17 +159,18 @@ frame = 3
 [node name="RayCast2D" type="RayCast2D" parent="."]
 z_index = 1
 
-[node name="cabeza" type="CollisionShape2D" parent="."]
-position = Vector2( 3, -58 )
+[node name="Camera2D" type="Camera2D" parent="."]
+z_index = 1
+current = true
+zoom = Vector2( 0.45, 0.45 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2( 0.388021, 0.415995 )
 z_index = 1
 shape = SubResource( 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3, 11.5 )
-z_index = 1
+scale = Vector2( 0.165736, 0.288037 )
 shape = SubResource( 24 )
-
-[node name="pies" type="CollisionShape2D" parent="."]
-position = Vector2( 3, 78 )
-z_index = 1
-shape = SubResource( 1 )

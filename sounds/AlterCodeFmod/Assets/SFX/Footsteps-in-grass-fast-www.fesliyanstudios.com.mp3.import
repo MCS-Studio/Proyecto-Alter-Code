@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Footsteps-in-grass-fast-www.fesliyanstudios.com.mp3-33cd61424281ea870ff843874053e6d1.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Footsteps-in-grass-fast-www.fesliyanstudios.com.mp3"
+dest_files=[ "res://.import/Footsteps-in-grass-fast-www.fesliyanstudios.com.mp3-33cd61424281ea870ff843874053e6d1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

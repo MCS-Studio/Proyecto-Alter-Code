@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Piano.mp3-63a5227df85bcdb82b25873779ab6204.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/TitleThemeAssets/Piano.mp3"
+dest_files=[ "res://.import/Piano.mp3-63a5227df85bcdb82b25873779ab6204.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

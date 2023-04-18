@@ -1,0 +1,19 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/Sombras.tsx-e86f0c243c71d558b79efb57d2c14353.res"
+
+[deps]
+
+source_file="res://Texture/Sombras.tsx"
+dest_files=[ "res://.import/Sombras.tsx-e86f0c243c71d558b79efb57d2c14353.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+post_import_script=""

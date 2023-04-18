@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8d82b5_Halo_3_Plasma_Grenade_Explode_Sound_Effect.mp3-becba396609a856dff53f03483c6cbd2.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/JefeMaestro/8d82b5_Halo_3_Plasma_Grenade_Explode_Sound_Effect.mp3"
+dest_files=[ "res://.import/8d82b5_Halo_3_Plasma_Grenade_Explode_Sound_Effect.mp3-becba396609a856dff53f03483c6cbd2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

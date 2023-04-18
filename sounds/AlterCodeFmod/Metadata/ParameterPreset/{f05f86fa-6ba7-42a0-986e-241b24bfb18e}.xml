@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f05f86fa-6ba7-42a0-986e-241b24bfb18e}">
+		<property name="name">
+			<value>CuantosGolpes</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5be4247a-59a2-47fe-9851-cd1a1eb0b6f1}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9804d9f5-c394-41cd-8c72-324df1417f5a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9804d9f5-c394-41cd-8c72-324df1417f5a}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>8</value>
+		</property>
+		<property name="initialValue">
+			<value>7</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ExcaliburTrimmed.mp3-e49992ad92f83b1fb242915e9cb4d422.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Salter/ExcaliburTrimmed.mp3"
+dest_files=[ "res://.import/ExcaliburTrimmed.mp3-e49992ad92f83b1fb242915e9cb4d422.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

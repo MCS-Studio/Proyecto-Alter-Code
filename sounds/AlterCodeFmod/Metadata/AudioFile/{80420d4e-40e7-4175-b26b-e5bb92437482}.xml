@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{80420d4e-40e7-4175-b26b-e5bb92437482}">
+		<property name="assetPath">
+			<value>SFX/Salter/ExcaliburTrimmed.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.8775510204081636</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e60d1c17-db37-4e09-a016-172ac9cfa2ef}</destination>
+		</relationship>
+	</object>
+</objects>

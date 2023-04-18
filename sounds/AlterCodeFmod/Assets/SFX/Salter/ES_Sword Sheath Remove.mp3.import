@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Sword Sheath Remove.mp3-8f2f6af811e5261961b140a880e41f74.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Salter/ES_Sword Sheath Remove.mp3"
+dest_files=[ "res://.import/ES_Sword Sheath Remove.mp3-8f2f6af811e5261961b140a880e41f74.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

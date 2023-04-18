@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Brass Ensamble.mp3-6badf74beeb503d14d7d3620d97deeb0.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/BattleTheme/Brass Ensamble.mp3"
+dest_files=[ "res://.import/Brass Ensamble.mp3-6badf74beeb503d14d7d3620d97deeb0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

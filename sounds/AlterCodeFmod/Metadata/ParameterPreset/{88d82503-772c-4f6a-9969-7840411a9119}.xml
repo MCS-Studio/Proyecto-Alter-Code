@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{88d82503-772c-4f6a-9969-7840411a9119}">
+		<property name="name">
+			<value>hasWon</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5be4247a-59a2-47fe-9851-cd1a1eb0b6f1}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f10d48f0-bf5a-4696-9574-ac2ce9499fe9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f10d48f0-bf5a-4696-9574-ac2ce9499fe9}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>False</value>
+			<value>True</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="automators">
+			<destination>{03dca01c-4aa2-49b5-9af5-2ce9e2ea124f}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{03dca01c-4aa2-49b5-9af5-2ce9e2ea124f}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Strings Pizzcato.mp3-9e5ba11ee4a5623d2c2bdbc6e7e44417.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/OverworldAssets/Strings Pizzcato.mp3"
+dest_files=[ "res://.import/Strings Pizzcato.mp3-9e5ba11ee4a5623d2c2bdbc6e7e44417.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

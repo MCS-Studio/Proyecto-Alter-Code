@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Wind 6039_49_preview.mp3-0295de250e5715a6596db55bdbae706d.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/Salter/Wind 6039_49_preview.mp3"
+dest_files=[ "res://.import/Wind 6039_49_preview.mp3-0295de250e5715a6596db55bdbae706d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

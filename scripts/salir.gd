@@ -2,86 +2,75 @@ extends Control
 
 onready var tree = get_tree()
 var WinFlag = false
+var EscFlag = false
+
+func _ready():
+	ControlsFmod.playEvent("Title")
+	Globales.Inicio = true
+
+func _process(delta):
+	comprobarMenu()
 
 #Reinicia la animacion de inicio(Para debug)
 func _on_reiniciar_pressed():
-	tree.change_scene("res://Esenas/Inicio.tscn")
+	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.stopEvent("Title")
+	tree.change_scene("res://escenas/Menus/Inicio.tscn")
 
 #Inicia el juego
 func _on_Iniciar_pressed():
-	tree.change_scene("res://Esenas/Batalla/Batalla.tscn")
+	ControlsFmod.playSFXOnce("Button")
+	ControlsFmod.stopEvent("Title")
+	get_node("MenuInicial").hide()
+	$Fade.visible = true
+	$AnimacionSalir.play("Cargar")
 
 #Salir de el juego
 func _on_Salir_pressed():
-	get_node("ColorRect").visible = true
-	get_node("AnimationPlayer").play("Fade_In")
+	ControlsFmod.playSFXOnce("Button")
+	$Fade.visible = true
 	get_node("ConfirmacionSalida").visible = true
 	get_node("MenuInicial").hide()
 
 #Ejecuta una esccena secreta
 func _on_Secreto_pressed():
-	tree.change_scene("res://Esenas/Waifus/Waifus.tscn")
+	ControlsFmod.playSFXOnce("Button")
+	tree.change_scene("res://escenas/Waifus/Waifus.tscn")
 
 func _on_Config_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	OcultarMenu()
 
 func _on_Salirpop_pressed():
 	tree.quit()
 
 func _on_Cancelarpop_pressed():
-	get_node("ColorRect").hide()
+	ControlsFmod.playSFXOnce("Button")
+	$Fade.hide()
 	get_node("ConfirmacionSalida").hide()
 	get_node("MenuInicial").visible = true
 
 func _on_SalirConfig_pressed():
+	ControlsFmod.playSFXOnce("Button")
 	MostrarMenu()
 
-func _physics_process(delta):
-	if Input.is_action_pressed("Escape"):
-		get_node("ConfirmacionSalida").visible = true
-
 func OcultarMenu():
-	get_node("MenuInicial").hide()
-	get_node("MenuConfig").visible = true
-	get_node("ColorRect").visible = true
-	get_node("AnimationPlayer").play("Fade_In")
+	$MenuInicial.visible = false
+	$Fade.visible = true
+	$Fades.play("Fade_In")
+	$UI.get_node("Configuracion").visible = true
 
 func MostrarMenu():
-	get_node("MenuInicial").visible = true
-	get_node("ColorRect").hide()
-	get_node("MenuConfig").hide()
+	$MenuInicial.visible = true
+	$Fade.hide()
+	$UI/Configuracion.hide()
 
-func DesabilitarBotones():
-	get_node("MenuInicial/Botones/Iniciar").disabled = true
-	get_node("MenuInicial/Botones/Config").disabled = true
-	get_node("MenuInicial/Botones/reiniciar").disabled = true
-	get_node("MenuInicial/Botones/Secreto").disabled = true
-	get_node("MenuInicial/Botones/Salir").disabled = true
-	get_node("ColorRect").visible = true
-	get_node("AnimationPlayer").play("Fade_In")
+func comprobarMenu():
+	if Globales.Cerrar:
+		$MenuInicial.visible = true
+		$Fade.visible = false
+		Globales.Cerrar = false
 
-func HabilitarBotones():
-	get_node("MenuInicial/Botones/Iniciar").disabled = false
-	get_node("MenuInicial/Botones/Config").disabled = false
-	get_node("MenuInicial/Botones/reiniciar").disabled = false
-	get_node("MenuInicial/Botones/Secreto").disabled = false
-	get_node("MenuInicial/Botones/Salir").disabled = false
-	get_node("ColorRect").hide()
-
-func _on_CheckButton_pressed():
-	if WinFlag !=  true:
-		OS.window_fullscreen = true
-		WinFlag = true
-	else:
-		OS.window_fullscreen = false
-		WinFlag = false
-
-func _on_Creditos_pressed():
-	get_node("ColorRect").hide()
-	get_node("MenuConfig").hide()
-	get_node("Creditos").visible = true
-
-func _on_Reresar_pressed():
-	get_node("Creditos").visible = false
-	get_node("MenuConfig").visible = true
-	get_node("ColorRect").visible = true
+func _on_AnimacionSalir_animation_finished(anim_name):
+#	Globales.call_deferred("goto_scene", "res://escenas/Mapa/mapa principal.tscn", self)
+	get_tree().change_scene("res://escenas/Mapa/mapa principal.tscn")

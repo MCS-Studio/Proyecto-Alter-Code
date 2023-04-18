@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MACHaloSFX.mp3-88f8d0587a6d0039388813ab8bfd89f7.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/SFX/JefeMaestro/MACHaloSFX.mp3"
+dest_files=[ "res://.import/MACHaloSFX.mp3-88f8d0587a6d0039388813ab8bfd89f7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

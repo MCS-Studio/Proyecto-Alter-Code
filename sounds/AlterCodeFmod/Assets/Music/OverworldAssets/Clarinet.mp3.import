@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Clarinet.mp3-d1c0db5e0f68e14a1aefc324a06e81e8.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/OverworldAssets/Clarinet.mp3"
+dest_files=[ "res://.import/Clarinet.mp3-d1c0db5e0f68e14a1aefc324a06e81e8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

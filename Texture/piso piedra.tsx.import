@@ -1,0 +1,19 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/piso piedra.tsx-b7dbab4c2e99d36630a2a86139f5d386.res"
+
+[deps]
+
+source_file="res://Texture/piso piedra.tsx"
+dest_files=[ "res://.import/piso piedra.tsx-b7dbab4c2e99d36630a2a86139f5d386.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+post_import_script=""

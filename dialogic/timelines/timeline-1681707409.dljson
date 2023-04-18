@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1681688247.dljson",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "aa-ahgg... ¿Que paso? La nave esta completamente destruida, todavia no entiendo que era esa especie de portal.\nPero no sirve de nada preocuparse de eso por ahora, tengo que analizar la situacion.\nSaldre a investigar y ver donde me encuentro."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1681707409.dljson",
+		"name": "Inicio"
+	}
+}

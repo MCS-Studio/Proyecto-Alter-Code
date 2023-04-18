@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Drums.mp3-cd225923947c18e627510c02a6454302.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/OverworldAssets/Drums.mp3"
+dest_files=[ "res://.import/Drums.mp3-cd225923947c18e627510c02a6454302.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

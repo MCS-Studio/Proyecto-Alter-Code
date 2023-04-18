@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Riser.mp3-37df420ed0cc8a1e12ef85652352d2d2.mp3str"
+
+[deps]
+
+source_file="res://sounds/AlterCodeFmod/Assets/Music/BattleTheme/Riser.mp3"
+dest_files=[ "res://.import/Riser.mp3-37df420ed0cc8a1e12ef85652352d2d2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
